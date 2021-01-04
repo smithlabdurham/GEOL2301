@@ -288,6 +288,11 @@ input, select, textarea {
 
 		}
 
+.question {
+  font-style: italic;
+  
+}
+
 /* Row */
 
 	.row {
