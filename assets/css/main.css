@@ -2182,7 +2182,7 @@ input, select, textarea {
 	#header {
 		position: relative;
 		margin: 0;
-		background-image: url("images/overlay.png"), url("../../images/header.jpg");
+		background-image: url("images/overlay.png"), url("../../images/beach-sea-coast-water-nature-ocean-650678-pxhere.com.jpg");
 		background-size: auto, cover;
 		background-position: top left, center center;
 		background-repeat: repeat, no-repeat;
@@ -2195,15 +2195,26 @@ input, select, textarea {
 			font-size: 2.25em;
 			line-height: 1.25em;
 			margin-bottom: 0;
+      font-weight: 900;
+      text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
 		}
 
 		#header header p {
 			margin-top: 1.25em;
-			font-weight: 100;
+			font-weight: 650;
 			padding: 0;
 			font-size: 1.25em;
 			line-height: 1.5em;
 			text-align: center;
+      text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
 		}
 
 		#header footer {
