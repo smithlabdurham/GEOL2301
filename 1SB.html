@@ -31,186 +31,122 @@
 					<div class="container">
 						<h2>Reconstructing a marine ecosystem</h2>
             <h3> [30 minutes]</h3>
-						<p>It&rsquo;s time to put your interpretative skills to the test. 
-            Marine biologists have collected samples from a variety of points off a
-            shoreline.
-            At each locality, they have counted the individuals that were alive at the 
-            time of sampling, as well as the dead individuals whose remains could be 
-            identified from a sediment sample taken at the site.
-            </p>
             
-            <style>                          
-              *{font-family:sans-serif;}
-              #settings { display: block; text-align:center}
-              #paint {border: 1px solid black; background : #333333; margin-left: auto; margin-right: auto; display: block;}
-            </style>
-            
-            <div id="sketch">
-              <canvas id="paint"></canvas>
-            </div>
-
-            <div id="settings">
-              <button onclick="getColor('blue');">Blue</button>
-              <button onclick="getColor('red');">Red</button>
-              <button onclick="getColor('green');">Green</button>
-              <button onclick="getColor('white');">White</button>
-              <button onclick="getColor('#333333');">Eraser</button>
-            </div>
-
-            <div id="settings">
-              <button onclick="getSize('2');">Small</button>
-              <button onclick="getSize('5');">Med</button>
-              <button onclick="getSize('10');">Large</button>
-              <button onclick="getSize('20');">X Large</button>
-            </div>
-            
-            <script> 
-            var canvas = document.getElementById('paint');
-            var ctx = canvas.getContext('2d');
-             
-            var sketch = document.getElementById('sketch');
-            var sketch_style = getComputedStyle(sketch);
-            canvas.width = 500;
-            canvas.height = 250;
-
-            var mouse = {x: 0, y: 0};
-             
-            /* Mouse Capturing Work */
-            canvas.addEventListener('mousemove', function(e) {
-              mouse.x = e.pageX - this.offsetLeft;
-              mouse.y = e.pageY - this.offsetTop;
-            }, false);
-
-            /* Drawing on Paint App */
-            ctx.lineJoin = 'round';
-            ctx.lineCap = 'round';
-
-            ctx.strokeStyle = "red";
-            function getColor(colour){ctx.strokeStyle = colour;}
-
-            function getSize(size){ctx.lineWidth = size;}
-
-
-            //ctx.strokeStyle = 
-            //ctx.strokeStyle = document.settings.colour[1].value;
-             
-            canvas.addEventListener('mousedown', function(e) {
-                ctx.beginPath();
-                ctx.moveTo(mouse.x, mouse.y);
-             
-                canvas.addEventListener('mousemove', onPaint, false);
-            }, false);
-             
-            canvas.addEventListener('mouseup', function() {
-                canvas.removeEventListener('mousemove', onPaint, false);
-            }, false);
-             
-            var onPaint = function() {
-                ctx.lineTo(mouse.x, mouse.y);
-                ctx.stroke();
-            };
-            </script>
-            
-            <p>
-            Use the summary statistics to reconstruct the ecology of the coastline, 
-            and construct a scenario that might account for the observed data.
-            </p>
-					</div>
 				</header>
-				<div class="content dark style1 featured">
-					<div class="container">
-						<div class="row">
-							<div class="col-4 col-12-narrow">
-								<section>
-									<span class="feature-icon"><span class="icon fa-clock"></span></span>
-									<header>
-										<h3>Gravida</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
-								</section>
-							</div>
-							<div class="col-4 col-12-narrow">
-								<section>
-									<span class="feature-icon"><span class="icon solid fa-bolt"></span></span>
-									<header>
-										<h3>Vivamus</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
-								</section>
-							</div>
-							<div class="col-4 col-12-narrow">
-								<section>
-									<span class="feature-icon"><span class="icon solid fa-cloud"></span></span>
-									<header>
-										<h3>Accumsan</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
-								</section>
-							</div>
-							<div class="col-12">
-								<footer>
-									<a href="#second" class="button scrolly">Gravida tempor lacinia</a>
-								</footer>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		<!-- Second -->
-			<section id="second" class="main">
-				<header>
-					<div class="container">
-						<h2>Euismod sed feugiat lorem tempus magna</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
-					</div>
-				</header>
+        
 				<div class="content dark style2">
 					<div class="container">
 						<div class="row">
 							<div class="col-4 col-12-narrow">
-								<section>
-									<h3>Augue vivamus sed ipsum commodo lorem dolor</h3>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-									tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-									vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-									augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-									lorem ipsum dolor placerat magna tempus feugiat.</p>
-									<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-									euismod lorem ipsum dolor.</p>
-									<footer>
-										<a href="#third" class="button scrolly">Accumsan nisi tempor</a>
-									</footer>
-								</section>
-							</div>
-							<div class="col-8 col-12-narrow">
-								<div class="row">
-									<div class="col-6"><a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a></div>
-									<div class="col-6"><a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a></div>
-									<div class="col-6"><a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a></div>
-									<div class="col-6"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
-									<div class="col-6"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
-									<div class="col-6"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+                <p>It&rsquo;s time to put your interpretative skills to the test. 
+                Marine biologists have collected samples from a variety of points off a
+                shoreline.
+                At each locality, they have counted the individuals that were alive at the 
+                time of sampling, as well as the dead individuals whose remains could be 
+                identified from a sediment sample taken at the site.
+                </p><p>Some localities yeilded very similar data, and so are grouped together, 
+                so there is more than one locality with characteristics 'D', for example.            
+                </p>
+                <p>
+                Use the summary statistics given below to reconstruct the ecology of the 
+                coastline, and construct a scenario that might account for the observed 
+                data.
+                </p>
+                <footer>
+                  <a href="#data" class="button scrolly">To the data</a>
+                </footer>
+              </div>
+              <div class="col-8 col-12-narrow">
+                      
+                  <style>                          
+                    *{font-family:sans-serif;}
+                    #settings { display: block; text-align:center; padding: 0.5em;}
+                    #paint {border: 1px solid black;
+                            background-color: #d2c2c7;
+                            background-image: url('images/Coast_section_print.svg');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 400px;
+                            height: 500px;
+                            margin-left: auto; margin-right: auto; display: block;}
+                  </style>
+                  
+                  <div id="sketch" style="margin-top: 1em;">
+                    <canvas id="paint"></canvas>
+                  </div>
 
-		<!-- Third -->
-			<section id="third" class="main">
+                  <div id="settings">
+                  Draw:
+                    <button onclick="getColor('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
+                    <button onclick="getColor('#e69f0011');" style='background-color:#e69f00'>&bull;</button>
+                    <button onclick="getColor('#009e7311');" style='background-color:#009e73'>&bull;</button>
+                    <button onclick="getColor('#f0e44211');" style='background-color:#f0e442; border: black; color: black;'>&bull;</button>
+                    <button onclick="getColor('#d55e0011');" style='background-color:#d55e00'>&bull;</button>
+                    <button onclick="getColor('#3d3d3d11');" style='background-color:#3d3d3d'>&bull;</button>
+                    <button onclick="getColor('#d2c2c711');" style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>&bull;</button>
+                  </div>
+
+                  <div id="settings">
+                  Brush:
+                    <button onclick="getSize('2');">Small</button>
+                    <button onclick="getSize('5');">Med</button>
+                    <button onclick="getSize('10');">Large</button>
+                    <button onclick="getSize('20');">X Large</button>
+                  </div>
+                  
+                  <script> 
+                  var canvas = document.getElementById('paint');
+                  var ctx = canvas.getContext('2d');
+                   
+                  var sketch = document.getElementById('sketch');
+                  var sketch_style = getComputedStyle(sketch);
+                  canvas.width = 400;
+                  canvas.height = 500;
+
+                  var mouse = {x: 0, y: 0};
+                   
+                  /* Mouse Capturing Work */
+                  canvas.addEventListener('mousemove', function(e) {
+                    mouse.x = e.pageX - this.getBoundingClientRect().left - window.pageXOffset;
+                    mouse.y = e.pageY - this.getBoundingClientRect().top - window.pageYOffset;
+                  }, false);
+
+                  /* Drawing on Paint App */
+                  ctx.lineJoin = 'round';
+                  ctx.lineCap = 'round';
+                  ctx.lineWidth = '5';
+
+                  ctx.strokeStyle = "#56b4e911";
+                  function getColor(colour){ctx.strokeStyle = colour;}
+
+                  function getSize(size){ctx.lineWidth = size;}
+               
+         
+                  canvas.addEventListener('mousedown', function(e) {
+                      ctx.beginPath();
+                      ctx.moveTo(mouse.x, mouse.y);
+                   
+                      canvas.addEventListener('mousemove', onPaint, false);
+                  }, false);
+                   
+                  canvas.addEventListener('mouseup', function() {
+                      canvas.removeEventListener('mousemove', onPaint, false);
+                  }, false);
+                   
+                  var onPaint = function() {
+                      ctx.lineTo(mouse.x, mouse.y);
+                      ctx.stroke();
+                  };
+                  </script>
+                  
+                </div>
+            
+            </div>
+          </div>
+        </div
+
+		<!-- Data -->
+			<section id="data" class="main">
 				<header>
 					<div class="container">
 						<h2>Ornare varius lorem ipsum ante lectus</h2>
@@ -267,198 +203,6 @@
 				</div>
 			</section>
 
-		<!-- Basic Elements -->
-		<!--
-			<section class="main">
-				<header>
-					<div class="container">
-						<h2>A Whole Lotta Elements</h2>
-						<p>General purpose elements for every general purpose. Or something like that.</p>
-					</div>
-				</header>
-				<div class="content style1 dark">
-					<div class="container">
-						<section>
-							<header>
-								<h3>Paragraph</h3>
-								<p>This is a byline</p>
-							</header>
-							<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-							habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-							leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-							amet risus elit.</p>
-						</section>
-						<section>
-							<header>
-								<h3>Blockquote</h3>
-							</header>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-							tempus euismod. Vestibulum ante ipsum primis in faucibus. Cras sit amet urna eros, id egestas
-							tempus ante ipsum primis in faucibus orci luctus et ultrices.</blockquote>
-						</section>
-						<section>
-							<header>
-								<h3>Divider</h3>
-							</header>
-							<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
-							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-							posuere cubilia.</p>
-							<hr />
-							<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-							posuere cubilia.</p>
-						</section>
-						<section>
-							<header>
-								<h3>Unordered List</h3>
-							</header>
-							<ul class="default">
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-							</ul>
-						</section>
-						<section>
-							<header>
-								<h3>Ordered List</h3>
-							</header>
-							<ol class="default">
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-							</ol>
-						</section>
-						<section>
-							<header>
-								<h3>Table</h3>
-							</header>
-							<div class="table-wrapper">
-								<table class="default">
-									<thead>
-										<tr>
-											<th>ID</th>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>00001</td>
-											<td>Lorem ipsum dolor</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>00002</td>
-											<td>Sit amet nullam</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>00003</td>
-											<td>Feugiat felis viverra</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>00004</td>
-											<td>Sagittis enim felis</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>00005</td>
-											<td>Nullam sed vestibulum</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="3"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-						<section>
-							<header>
-								<h3>Form</h3>
-							</header>
-							<form method="post" action="#">
-								<div class="row gtr-50">
-									<div class="col-6 col-12-narrow">
-										<input type="text" name="name" id="name" value="" placeholder="John Doe" />
-									</div>
-									<div class="col-6 col-12-narrow">
-										<input type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-									</div>
-									<div class="col-12">
-										<div class="select" tabindex="-1">
-											<select name="department" id="department">
-												<option value="">Choose a department</option>
-												<option value="1">Manufacturing</option>
-												<option value="2">Administration</option>
-												<option value="3">Support</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Enter your message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" class="button" value="Send Message" /></li>
-											<li><input type="reset" class="button alt" value="Clear Form" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-					</div>
-				</div>
-			</section>
-		-->
-
-		<!-- Fourth -->
-			<section id="fourth" class="main">
-				<header>
-					<div class="container">
-						<h2>Sed feugiat ipsum consequat</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
-					</div>
-				</header>
-				<div class="content style4 featured">
-					<div class="container medium">
-						<form method="post" action="#">
-							<div class="row gtr-50">
-								<div class="col-6 col-12-mobile"><input type="text" placeholder="Name" /></div>
-								<div class="col-6 col-12-mobile"><input type="text" placeholder="Email" /></div>
-								<div class="col-12"><textarea name="message" placeholder="Message"></textarea></div>
-								<div class="col-12">
-									<ul class="actions special">
-										<li><input type="submit" class="button" value="Send Message" /></li>
-										<li><input type="reset" class="button alt" value="Clear Form" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</section>
-
 		<!-- Footer -->
 			<section id="footer">
 				<ul class="icons">
@@ -467,7 +211,9 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>&copy; Martin R. Smith. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2021 <a href="http://smithlabdurham.github.io/">Martin R. Smith</a>. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net" rel='noopener'>HTML5 UP</a></li>
+            <li>Sketchpad: adapted from <a href="https://codepen.io/bsum/pen/XWbMqyJ" target='_blank' rel='noopener'>Brian Summers</a></la>
 					</ul>
 				</div>
 			</section>

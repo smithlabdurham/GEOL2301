@@ -2300,6 +2300,9 @@ input, select, textarea {
 			box-shadow: inset 0 0 0 1px #d6d6d6;
 		}
 
+  #settings button {
+    padding: 0.85em;
+  }
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
