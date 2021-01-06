@@ -292,6 +292,50 @@ input, select, textarea {
   font-style: italic;  
 }
 
+li.question::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f044";
+}
+
+li.hidden {
+  display: none;
+}
+
+li.answer::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f518";
+}
+
+li.reveal::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f128";
+}
+
+li.caution::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f12a";
+}
+
+li.bulb::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f0eb";
+}
+
 /* Row */
 
 	.row {

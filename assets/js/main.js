@@ -28,3 +28,7 @@
 		$('.scrolly').scrolly();
 
 })(jQuery);
+
+function Reveal(id) {
+  $('#' + id).slideToggle();
+}
