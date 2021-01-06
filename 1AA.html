@@ -99,7 +99,7 @@
 							</div>
 						</div>
             <div class="row">
-              <div class="col-6 col-12-narrow">
+              <div class="col-8 col-12-narrow">
                 <section>
                 <ul>
                 <li class="question" onclick="Reveal('i128');Reveal('i129')">
@@ -192,6 +192,13 @@
                 that rapidly transport organic matter to the sea floor.
                 </p>
                 
+							</div>
+							<div class="col-8 col-12-narrow">
+								<iframe src="https://durham.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=9dc8c2ab-48f8-4167-b338-aca800d5ec0b&start=0&interactivity=all" 
+                height="360" width="640" allow="fullscreen" loading="lazy"></iframe>
+							</div>
+              <div class="col-8 col-12-narrow">
+              
                 <p>The fate of these particles, as with any other sedimentary particle,
                 depends on the energy levels at the sea floor.  
                 In high energy environments, the particles will typically be suspended in 
@@ -199,13 +206,7 @@
                 in low energy environments, the particles will settle on the sea bed 
                 and eventually be buried.
                 </p>
-							</div>
-							<div class="col-8 col-12-narrow">
-								<iframe src="https://durham.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=9dc8c2ab-48f8-4167-b338-aca800d5ec0b&start=0&interactivity=all" 
-                height="360" width="640" allow="fullscreen" loading="lazy"></iframe>
-							</div>
-              <div class="col-12-narrow">
-              
+                
                 <p>As such, <strong>suspension feeders</strong> – 
                 which feed on particles in suspension –
                 will be more abundant in high-energy environments, 
@@ -226,103 +227,101 @@
                 points and can
                 only be colonized by ‘floating’ taxa (icebergs / snow shoes). 
                 </p>
-                
+                  
+                <h3>Quiz</h3>
+                <p>
+                Hopefully you are starting to see how the observed abundance of organisms in 
+                different sediment niches can be used to infer the environment.
+                Let&rsquo;s put this to the test!
+                </p>
+                <ul>
+                  <li class='question'>
+                    A community contains many suspension feeders, and few deposit feeders.
+                    Is it more likely to live in:
+                  </li>
+                  <li class='option' onclick="Wrong(this, 'q1a');">
+                    The quiet, still waters of a tropical lagoon
+                  </li>
+                  <li class='answer hidden' id='q1a'>
+                    Hmm... In calm waters, food particles quickly settle to the sea floor.
+                    This means that there aren&rsquo;t enough particles suspended in the water to
+                    keep suspension feeders well fed.  But deposit feeders can feast on the 
+                    particles that settle out into the muds – so these will be more abundant
+                    than suspension feeders.
+                  </li>
+                  <li class='option' onclick="Right(this, 'q1b');">
+                    The turbulent waters of a tidal, storm-ridden basin
+                  </li>
+                  <li class='answer hidden' id='q1b'>
+                    Correct!  Storms and tidal currents will frequenly lift food particles 
+                    out of the reach of deposit feeders, suspending them in the water column.
+                  </li>
+                  
+                  <li class='question'>
+                    A community lives in a setting that periodically experiences low oxygen 
+                    conditions.  Are its consumers likely to be:
+                  </li>
+                  <li class='option' onclick="Wrong(this, 'loxa');">
+                    Infaunal
+                  </li>
+                  <li class='hidden answer' id='loxa'>
+                    With little oxygen dissolved in the seawater,
+                    it's difficult to meet the oxygen requirements for metabolism whilst 
+                    buried below the sediment – oxygen's rate of diffusion is low, so a lot
+                    of energy must be expended to keep burrows ventilated.
+                  </li>
+                  <li class='option' onclick="Right(this, 'loxb');">
+                    Epifaunal
+                  </li>
+                  <li class='hidden answer' id='loxb'>
+                    Correct!  Low oxygen levels pose a big obstacle to living within the sediment.
+                  </li>
+                  
+                  
+                  <li class='question'>
+                    A community lives below storm wave base on the continental slope.
+                    Is it likely to be dominated by:
+                  </li>
+                  <li class='option' onclick="Wrong(this, 'q2a');">
+                    Suspension feeders
+                  </li>
+                  <li class='answer hidden' id='q2a'>
+                    Hmm... Below storm wave base, it's hard to imagine a source of energy that
+                    will consistently create currents to suspend food particles. 
+                  </li>
+                  <li class='option' onclick="Right(this, 'q2b');">
+                    Deposit feeders
+                  </li>
+                  <li class='answer hidden' id='q2b'>
+                    Correct!  Below storm wave base, it's hard to imagine a source of energy that
+                    will consistently create currents to suspend food particles.
+                    What little food rains in from above will settle into the sea floor sediments.
+                  </li>
+                  
+                  <li class='question'>
+                    A community contains many epifaunal individuals, but few infaunal.
+                    Is it more likely to inhabit:
+                  </li>
+                  <li class='option' onclick="Right(this, 'loxua');">
+                    A rocky foreshore
+                  </li>
+                  <li class='hidden answer' id='loxua'>
+                    This highly erosive setting is likely to be amply oxygenated to allow
+                    for infaunal organisms: the challenge they'll face is burrowing into
+                    the rocky substrate, which may host a rich diversity of epifaunal
+                    suspension feeders and vagrant grazers.
+                  </li>
+                  <li class='option' onclick="Wrong(this, 'loxub');">
+                    A sandy beach
+                  </li>
+                  <li class='hidden answer' id='loxub'>
+                    Beach waves introduce plenty of oxygen into the water, and a firm sand
+                    can be a great substrate for burrowing – but wave action makes 
+                    dwelling on the surface less attractive. 
+                    The balance here favours infaunal organisms.
+                  </li>
+                </ul>
               </div>
-						</div>
-            <div class="row">
-              <h3>Quiz</h3>
-              <p>
-              Hopefully you are starting to see how the observed abundance of organisms in 
-              different sediment niches can be used to infer the environment.
-              Let&rsquo;s put this to the test!
-              </p>
-              <ul>
-                <li class='question'>
-                  A community contains many suspension feeders, and few deposit feeders.
-                  Is it more likely to live in:
-                </li>
-                <li class='option' onclick="Wrong(this, 'q1a');">
-                  The quiet, still waters of a tropical lagoon
-                </li>
-                <li class='answer hidden' id='q1a'>
-                  Hmm... In calm waters, food particles quickly settle to the sea floor.
-                  This means that there aren&rsquo;t enough particles suspended in the water to
-                  keep suspension feeders well fed.  But deposit feeders can feast on the 
-                  particles that settle out into the muds – so these will be more abundant
-                  than suspension feeders.
-                </li>
-                <li class='option' onclick="Right(this, 'q1b');">
-                  The turbulent waters of a tidal, storm-ridden basin
-                </li>
-                <li class='answer hidden' id='q1b'>
-                  Correct!  Storms and tidal currents will frequenly lift food particles 
-                  out of the reach of deposit feeders, suspending them in the water column.
-                </li>
-                
-                <li class='question'>
-                  A community lives in a setting that periodically experiences low oxygen 
-                  conditions.  Are its consumers likely to be:
-                </li>
-                <li class='option' onclick="Wrong(this, 'loxa');">
-                  Infaunal
-                </li>
-                <li class='hidden answer' id='loxa'>
-                  With little oxygen dissolved in the seawater,
-                  it's difficult to meet the oxygen requirements for metabolism whilst 
-                  buried below the sediment – oxygen's rate of diffusion is low, so a lot
-                  of energy must be expended to keep burrows ventilated.
-                </li>
-                <li class='option' onclick="Right(this, 'loxb');">
-                  Epifaunal
-                </li>
-                <li class='hidden answer' id='loxb'>
-                  Correct!  Low oxygen levels pose a big obstacle to living within the sediment.
-                </li>
-                
-                
-                <li class='question'>
-                  A community lives below storm wave base on the continental slope.
-                  Is it likely to be dominated by:
-                </li>
-                <li class='option' onclick="Wrong(this, 'q2a');">
-                  Suspension feeders
-                </li>
-                <li class='answer hidden' id='q2a'>
-                  Hmm... Below storm wave base, it's hard to imagine a source of energy that
-                  will consistently create currents to suspend food particles. 
-                </li>
-                <li class='option' onclick="Right(this, 'q2b');">
-                  Deposit feeders
-                </li>
-                <li class='answer hidden' id='q2b'>
-                  Correct!  Below storm wave base, it's hard to imagine a source of energy that
-                  will consistently create currents to suspend food particles.
-                  What little food rains in from above will settle into the sea floor sediments.
-                </li>
-                
-                <li class='question'>
-                  A community contains many epifaunal individuals, but few infaunal.
-                  Is it more likely to inhabit:
-                </li>
-                <li class='option' onclick="Right(this, 'loxua');">
-                  A rocky foreshore
-                </li>
-                <li class='hidden answer' id='loxua'>
-                  This highly erosive setting is likely to be amply oxygenated to allow
-                  for infaunal organisms: the challenge they'll face is burrowing into
-                  the rocky substrate, which may host a rich diversity of epifaunal
-                  suspension feeders and vagrant grazers.
-                </li>
-                <li class='option' onclick="Wrong(this, 'loxub');">
-                  A sandy beach
-                </li>
-                <li class='hidden answer' id='loxub'>
-                  Beach waves introduce plenty of oxygen into the water, and a firm sand
-                  can be a great substrate for burrowing – but wave action makes 
-                  dwelling on the surface less attractive. 
-                  The balance here favours infaunal organisms.
-                </li>
-              </ul>
             </div>
 					</div>
 				</div>
@@ -357,7 +356,7 @@
 								<iframe src="https://durham.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e31362d5-c588-4a5a-8bec-aca800d920b8&start=0&interactivity=all" 
                 height="360" width="640" allow="fullscreen" loading="lazy"></iframe>
 							</div>
-              <div class="col-12-narrow">
+              <div class="col-8 col-12-narrow">
                 <p>Ideally, such a plot should be based on a survey of the total biomass
                 within a community, rather than the number of individuals or taxa –
                 otherwise small taxa will contribute disproportionately to the count.
@@ -410,7 +409,7 @@
 								<iframe src="https://durham.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7a60d313-9ab7-408e-9afa-aca800de985a&start=0&interactivity=all" 
                 height="360" width="640" allow="fullscreen" loading="lazy"></iframe>
 							</div>
-              <div class="col-12-narrow">
+              <div class="col-8 col-12-narrow">
                 <p>On the whole, comfortable environments give rise to high diversity.
                 Fewer taxa can survive in stressed environments, such as brackish water
                 (a mixture of freshwater and sea water, found for example in estuarine 
@@ -424,88 +423,105 @@
                 Diversity also changes during ecological succession: more on this next time.
                 </p>
                 
+                
+                <h3>Quiz</h3>
+                <ul>
+                  <li class='question'>
+                    All else being equal, which is likely to contain a higher 
+                    <em>proportion</em> of predators:
+                  </li>
+                  <li class='option' onclick="Wrong(this, 'dv1a');">
+                    A community of 12 species
+                  </li>
+                  <li class='answer hidden' id='dv1a'>
+                    Hmm&hellip; a low diversity suggests an adverse environment, though
+                    I <em>did</em> say that all else was equal.  Typically, low-diversity
+                    assemblages are expecially low in predators.
+                  </li>
+                  <li class='option' onclick="Right(this, 'dv1b');">
+                    A community of a thousand species
+                  </li>
+                  <li class='answer hidden' id='dv1b'>
+                    Correct!  There are a number of reasons that higher diversity might 
+                    correspond to a higher proportion of predators.  
+                    High diversity suggests stability, and gives predators more opportunities
+                    to specialise to prey on specific species – creating more niches, and
+                    thus allowing more species to be sustained.  
+                    And each species of predator might in turn be prey to its own species
+                    of hunter: more species means that food chains can be longer, 
+                    adding extra tiers of predators (and thus more species) to the top of
+                    trophic pyramids.                  
+                  </li>
+                  <li class='option' onclick="Wrong(this, 'dv1c');">
+                    Neither – there's no reason for one to have a higher proportion of predators
+                  </li>
+                  <li class='answer hidden' id='dv1c'>
+                    Think again.  How might the number of species influence the height of
+                    a trophic pyramid and the length of its constituent food chains?
+                  </li>
+                  
+                  <li class='question' onclick="Reveal('dv2');">
+                    Given the differences in the number of species between the assemblages
+                    above, the "all else being equal" claim is pretty unlikely.
+                    How are the environments of the two assemblages likely to differ?
+                  </li>
+                  <li class='hidden answer' id='dv2'>
+                    A higher total diversity suggests a stable, resource-rich, low-stress 
+                    environment in which many different specialist species can prosper
+                    at sufficient population sizes that finding a mate is never a problem.
+                  </li>
+                  
+                  <li class='question'>
+                    Which of the two communities below is likely to have a higher diversity?
+                  </li>
+                  <li class='option' onclick="Wrong(this, 'dv3a');">
+                    A community where most taxa are generalists
+                  </li>
+                  <li class='answer hidden' id='dv3a'>
+                    <p>Generalists tend to do well in unpredictable environments, where they
+                    need to be ready for whatever tomorrow throws at them; and to high-stress
+                    environments, when specialists divert too many resources to specialization
+                    and so don't have any spare to cope with stressful conditions.
+                    This doesn't sound like a setting that favours diversity.
+                    </p><p>From a more pragmatic perspective, generalists tend not to be
+                    adapted to specific niches, suggesting a homogeneous and thus low-diversity
+                    ecosystem.</p>
+                   
+                  </li>
+                  <li class='option' onclick="Right(this, 'dv3b');">
+                    A community where most taxa are specialists
+                  </li>
+                  <li class='answer hidden' id='dv3b'>
+                    Correct. Specialists can occupy niches that are more tightly defined, 
+                    thus allowing more species to be packed into a given gradient of 
+                    resource availability, temperature, etc.
+                  </li>
+                </ul>
               </div>
-						</div>
-            <div class="row">
-              <h3>Quiz</h3>
-              <ul>
-                <li class='question'>
-                  All else being equal, which is likely to contain a higher 
-                  <em>proportion</em> of predators:
-                </li>
-                <li class='option' onclick="Wrong(this, 'dv1a');">
-                  A community of 12 species
-                </li>
-                <li class='answer hidden' id='dv1a'>
-                  Hmm&hellip; a low diversity suggests an adverse environment, though
-                  I <em>did</em> say that all else was equal.  Typically, low-diversity
-                  assemblages are expecially low in predators.
-                </li>
-                <li class='option' onclick="Right(this, 'dv1b');">
-                  A community of a thousand species
-                </li>
-                <li class='answer hidden' id='dv1b'>
-                  Correct!  There are a number of reasons that higher diversity might 
-                  correspond to a higher proportion of predators.  
-                  High diversity suggests stability, and gives predators more opportunities
-                  to specialise to prey on specific species – creating more niches, and
-                  thus allowing more species to be sustained.  
-                  And each species of predator might in turn be prey to its own species
-                  of hunter: more species means that food chains can be longer, 
-                  adding extra tiers of predators (and thus more species) to the top of
-                  trophic pyramids.                  
-                </li>
-                <li class='option' onclick="Wrong(this, 'dv1c');">
-                  Neither – there's no reason for one to have a higher proportion of predators
-                </li>
-                <li class='answer hidden' id='dv1c'>
-                  Think again.  How might the number of species influence the height of
-                  a trophic pyramid and the length of its constituent food chains?
-                </li>
-                
-                <li class='question' onclick="Reveal('dv2');">
-                  Given the differences in the number of species between the assemblages
-                  above, the "all else being equal" claim is pretty unlikely.
-                  How are the environments of the two assemblages likely to differ?
-                </li>
-                <li class='hidden answer' id='dv2'>
-                  A higher total diversity suggests a stable, resource-rich, low-stress 
-                  environment in which many different specialist species can prosper
-                  at sufficient population sizes that finding a mate is never a problem.
-                </li>
-                
-                <li class='question'>
-                  Which of the two communities below is likely to have a higher diversity?
-                </li>
-                <li class='option' onclick="Wrong(this, 'dv3a');">
-                  A community where most taxa are generalists
-                </li>
-                <li class='answer hidden' id='dv3a'>
-                  <p>Generalists tend to do well in unpredictable environments, where they
-                  need to be ready for whatever tomorrow throws at them; and to high-stress
-                  environments, when specialists divert too many resources to specialization
-                  and so don't have any spare to cope with stressful conditions.
-                  This doesn't sound like a setting that favours diversity.
-                  </p><p>From a more pragmatic perspective, generalists tend not to be
-                  adapted to specific niches, suggesting a homogeneous and thus low-diversity
-                  ecosystem.</p>
-                 
-                </li>
-                <li class='option' onclick="Right(this, 'dv3b');">
-                  A community where most taxa are specialists
-                </li>
-                <li class='answer hidden' id='dv3b'>
-                  Correct. Specialists can occupy niches that are more tightly defined, 
-                  thus allowing more species to be packed into a given gradient of 
-                  resource availability, temperature, etc.
-                </li>
-              </ul>
             </div>
 					</div>
 				</div>
 			</section>
       
       
+			<section id="further-reading" class="main">
+				<header>
+					<div class="container">
+						<h2>What next?</h2>
+					</div>
+				</header>
+				<div class="content style4">
+          <p>Thanks for sticking with me.  I hope everything made sense.</p>
+          <p>If not, please head to the discussion board on duo.  Feel free to post
+          a thread, anonymously if you prefer, with any questions or anything that didn't
+          make sense.  We'll cover some questions during the synchronous session; 
+          demonstrators or your peers may give you answers in the meantime.</p>
+          <p>Then, we'll cover some practical exercises to consolidate and apply 
+          what we've learned during the synchronous session.</p>
+        </div>
+      </section>
+
+
 			<section id="further-reading" class="main">
 				<header>
 					<div class="container">
@@ -536,8 +552,7 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>&copy; 2021 <a href="http://smithlabdurham.github.io/">Martin R. Smith</a>,
-            incorporating material from Russell Garwood.</li>
+						<li>&copy; 2021 <a href="http://smithlabdurham.github.io/">Martin R. Smith</a></li>
             <!--<li>All content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where noted.</li>-->
             <li>Design: <a href="http://html5up.net" rel='noopener'>HTML5 UP</a></li>
 					</ul>
