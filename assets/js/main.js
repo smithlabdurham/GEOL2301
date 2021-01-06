@@ -32,3 +32,14 @@
 function Reveal(id) {
   $('#' + id).slideToggle();
 }
+
+function Right(el, id) {
+  Reveal(id);
+  $(el).removeClass('option');
+  $(el).addClass('right');
+}
+function Wrong(el, id) {
+  Reveal(id);
+  $(el).removeClass('option');
+  $(el).addClass('wrong');
+}

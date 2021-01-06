@@ -289,7 +289,10 @@ input, select, textarea {
 		}
 
 .question {
-  font-style: italic;  
+  font-style: italic;
+}
+li.question {
+  margin-top: 1.6em;
 }
 
 li.question::marker {
@@ -334,6 +337,37 @@ li.bulb::marker {
   font-weight: 900;
 	font-family: "Font Awesome 5 Free";
   content: "\f0eb";
+}
+
+li.option::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f101";
+}
+
+li.wrong::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  color: #ee9988;
+  content: "\f057";
+}
+
+li.right::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  color: #22cc33;
+  content: "\f058";
+}
+
+li.reference {
+  list-style: none;
+  margin-bottom: 0.5em;
 }
 
 /* Row */
