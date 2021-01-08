@@ -98,9 +98,7 @@
                 mathematically from slow-and-steady specialists ('tortoises')
                 based on the formula
                 </p>
-                <math>
-                <img src='images/eqn.wmf' />
-                </math>
+                <span class='image'><img src='images/eqn.svg' /></span>
                 <p>where:</p>
                 <ul>
                   <li><i>N</i> = number of individuals</li>
@@ -121,13 +119,13 @@
                 <p>
                 When an environment is empty (perhaps a storm deposit has just smothered the pre-existing community), the value of r is the dominant control on population size. </p>
                 
-                <div class="table-wrapper">
-                  <table class="default">
+                <div class="table-wrapper" style='overflow-x: visible'>
+                  <table>
                     <tbody>
                       <tr>
                         <td><i class='fas fa-bulb'></i>Why?</td>
                         <td>if</td>
-                        <td>N &muchlessthan; K,</td>
+                        <td>N &Lt; K,</td>
                       </tr>
                       <tr>
                         <td></td>
@@ -167,17 +165,39 @@
                 <div class="table-wrapper">
                   <table class="default">
                     <thead class='question'>
-                      What properties might characterize <i>r</i> and <i>K</i>-strategists
-                      in marine communities?
+                      <ul>
+                        <li class="question" onclick="Reveal('tdr');Reveal('tdK');">
+                          What properties might characterize <i>r</i> and <i>K</i>-strategists
+                          in marine communities?
+                        </li>
+                      </ul>
                     </thead>
                     <tbody>
-                      <th>
-                        <td><i>r</i>-strategists</td>
-                        <td><i>K</i>-strategists</td>
-                      </th>
+                      <tr onclick="Reveal('tdr');Reveal('tdK');">
+                        <th class="central"><i>r</i>-strategists</th>
+                        <th class="central"><i>K</i>-strategists</th>
+                      </tr>
                       <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;<!--TODO answer--></td>
+                        <td>
+                          <ul class='hidden' id='tdr'>
+                            <li>Planktonic dispersal</li>
+                            <li>Small larvae</li>
+                            <li>Generalists (survive anywhere)</li>
+                            <li>Fast growth</li>
+                            <li>Few anti-predator mechanisms?</li>
+                            <li>Theme: "take risks, live fast, die young"</li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class='hidden' id='tdK'>
+                             <li>Direct development</li>
+                            <li>Large offspring</li>
+                            <li>Specialists</li>
+                            <li>Long-lived</li>
+                            <li>Heavily mineralized?</li>
+                            <li>Theme: "slow and steady wins the race"</li>
+                          </ul>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -301,12 +321,22 @@
                   curve.
                 </p>
                 <ul>
-                  <li class='question'>
+                  <li class='question' onclick="Reveal('rsurv');">
                   Select the appropriate survivorship curve for a typical r-selected taxon
                   </li>
-                  <!--TODO provide answers-->
-                  <li class='question'>
+                  <li class="hidden answer" id="rsurv">
+                    Live fast, die young: r-selected taxa have zillions of offspring,
+                    and only a lucky few find a suitable place to thrive and reach adulthood.
+                    This corresponds to the <strong>Type III</strong> curve.
+                  </li>
+                  <li class='question' onclick="Reveal('Ksurv');">
                   Select the appropriate survivorship curve for a typical K-selected taxon
+                  </li>
+                  <li class="hidden answer" id="Ksurv">
+                    Slow and steady wins the race: K-selected taxa invest heavily in
+                    giving their offspring the best start in life, to maximise
+                    their chance of reaching adulthood.  This is a <strong>Type I</strong>
+                    trajectory.
                   </li>
               </div>
               <div class='col-4 col-12-narrow'>
@@ -350,6 +380,12 @@
 							</div>
 						</div>
             <div class="row">
+              <div class="col-8 col-12-narrow">
+                <span class="image"><img src="images/trophic_nucleus.png" 
+                alt="Abundance counts from a fossil assemblage"
+                style='padding: 1em; background: rgba(255, 255, 255, 0.65);'
+                /></span>
+              </div>
               <div class="col-4 col-12-narrow">
               <ul>
                 <li class="question" onclick="Reveal('t123');">
@@ -370,16 +406,15 @@
                   community at the later stages of succession.
                 </li>
               </div>
-              <div class="col-8 col-12-narrow">
-                <span class="image"><img src="images/trophic_nucleus.png" 
-                alt="Abundance counts from a fossil assemblage"
-                style='padding: 1em; background: rgba(255, 255, 255, 0.65);'
-                /></span>
+              
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow featured">
+                <h3>Dimensions of diversity</h3>
               </div>
             </div>
             <div class="row">
               <div class="col-8 col-12-narrow">
-                <h3>Dimensions of diversity</h3>
                  <p>
                  Pioneer and climax communities also differ in two different aspects of diversity:
                  </p>
@@ -398,8 +433,8 @@
                 </ul>
                 <p>
                   The stacked bar charts on the right depict two communities:
-                  each block is a separate species; larger blocks contain more 
-                  individuals.
+                  each block represents a separate species;
+                  larger blocks contain more individuals.
                 </p>
               </div>
               <div class="col-4 col-12-narrow">
@@ -479,8 +514,10 @@
                 </ul>
               </div>
             </div>
+            
+            
             <div class="row">
-              <div class="col-8 col-12-narrow">
+              <div class="col-4 col-12-narrow featured">
                 <h3>Rank-abundance plots</h3>
               </div>
             </div>
@@ -577,9 +614,15 @@
               <div class="col-4 col-12-narrow">       
               </div>
             </div>
+            
+            
+            <div class="row">
+              <div class="col-12 col-12-narrow featured">
+                <h3>Extension: Octave plots</h3>
+              </div>
+            </div>
             <div class="row">
               <div class="col-4 col-12-narrow">
-                <h3>Extension: Octave plots</h3>
                 <p>
                   With me so far?  Things get a bit more complicated with 
                   <strong>octave plots</strong>.
@@ -601,7 +644,7 @@
                 </p>
               </div>
               <div class="col-8 col-12-narrow">
-                <span class="image"><img src="images/octave.emf" 
+                <span class="image"><img src="images/octave.svg" 
                 style='padding: 1em; background: rgba(255, 255, 255, 0.65);'
                 /></span>              
               </div>
@@ -666,7 +709,17 @@
                   What sort of factors might disturb marine communities?
                   </li>
                   <li class="hidden answer" id="j867">
-                  <!--TODO-->
+                  Some examples, across a range of timescales:
+                  <ul>
+                    <li>Submarine landslides</li>
+                    <li>Storms</li>
+                    <li>Stranding at extreme tides</li>
+                    <li>Freshwater input</li>
+                    <li>Earthquakes changing water depth</li>
+                    <li>Volcanic activity</li>
+                    <li>Eutrophication / algal blooms</li>
+                    <li>Periods of dysoxia</li>
+                  </ul>
                   </li>                
 							</div>
 							<div class="col-8 col-12-narrow">

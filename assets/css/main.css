@@ -303,7 +303,7 @@ li.question::marker {
   content: "\f044";
 }
 
-li.hidden {
+.hidden {
   display: none;
 }
 
@@ -2068,6 +2068,11 @@ li.reference {
 			table.default th {
 				text-align: left;
 				padding: 0.5em 1em 1em 1em;
+			}
+
+			table.default th.central {
+				text-align: center;
+				padding: 1em;
 			}
 
 			table.default tfoot td {
