@@ -319,6 +319,244 @@
         </div>
       </section>
 
+      <section id="third" class="main">  
+        <header>
+					<div class="container">
+						<span class="image featured"><img src="images/6dz9ftwz-1394456828.jpg" 
+            alt="Phytoplankton diversity" /></span>
+            <h2>Measuring diversity</h2>
+          </div>
+        </header>
+				<div class="content dark style3">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-narrow">
+                <p>
+                  Pioneer communities are typically dominated by a low diversity of
+                  r-strategists, whereas climax communities usually host a more diverse
+                  suite of K-strategists.
+                </p>
+                <p>
+                  As such, pioneer communities typically have a small trophic nucleus
+                  (the majority of individuals belong to just one or two species that
+                  boast a very high reproductive rate), whereas climax communities
+                  have a larger trophic nucleus incorporating a wide variety of
+                  specialists.
+                </p>
+              </div>
+							<div class="col-8 col-12-narrow">
+								<iframe src="https://durham.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5d833587-e191-49ba-bbfa-aca800d3e970&start=0&interactivity=all" 
+                height="360" width="640" allow="fullscreen" loading="lazy"></iframe>
+							</div>
+						</div>
+            <div class="row">
+              <div class="col-4 col-12-narrow">
+              <ul>
+                <li class="question" onclick="Reveal('t123');">
+                  How many species are in the trophic nucleus of the pictured assemblage?
+                </li>
+                <li class="hidden answer" id="t123">
+                  The first eight bars (species) are the trophic nucleus: 
+                  they account for 80% of the total number of individuals.
+                </li>
+                <li class="question" onclick="Reveal('t613');">
+                  What does this suggest about the successional stage of this community?
+                </li>
+                <li class="hidden answer" id="t613">
+                  This is a large trophic nucleus, comprising more than a third of 
+                  species.
+                  This suggests that there are lots of specialist taxa, each doing 
+                  quite well at doing their own thing – characteristic of an established
+                  community at the later stages of succession.
+                </li>
+              </div>
+              <div class="col-8 col-12-narrow">
+                <span class="image"><img src="images/trophic_nucleus.png" 
+                alt="Abundance counts from a fossil assemblage"
+                style='padding: 1em; background: rgba(255, 255, 255, 0.65);'
+                /></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <h3>Dimensions of diversity</h3>
+                 <p>
+                 Pioneer and climax communities also differ in two different aspects of diversity:
+                 </p>
+                 <ul>
+                  <li>
+                    <strong>Species richness</strong> addresses the 
+                    <strong>number of species</strong>, relative to what
+                    might be expected;
+                  </li>
+                  <li>
+                    <strong>Dominance</strong> measures the degree to which the majority
+                    of individuals belong to a small number of taxa – 
+                    how a sample of individuals is 
+                    <strong>distributed between species</strong>.
+                  </li>
+                </ul>
+                <p>
+                  The stacked bar charts on the right depict two communities:
+                  each block is a separate species; larger blocks contain more 
+                  individuals.
+                </p>
+                <ul>
+                  <li class="question">
+                    Which community has the higher <strong>species richness</strong>?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't175');">
+                    The left-hand community
+                  </li>
+                  <li class="option" onclick="Right(this, 't175');">
+                    The right-hand community
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't175');">
+                    Neither
+                  </li>
+                  <li class="hidden answer" id="t175">
+                    The left-hand assemblage contains seven species, so is less species
+                    rich than the right-hand assemblage with its nine species.
+                  </li>
+                    
+                  <li class="question">
+                    Which community has the higher <strong>dominance</strong>?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't176');">
+                    The left-hand community
+                  </li>
+                  <li class="option" onclick="Right(this, 't176');">
+                    The right-hand community
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't176');">
+                    Neither
+                  </li>
+                  <li class="hidden answer" id="t176">
+                    Most of the individuals in the right-hand assemblage belong to a
+                    single dominant species, so this assemblage is more 
+                    <strong>dominated</strong>; the left-hand assemblage has a higher
+                    <strong>evenness</strong>.
+                  </li> 
+                  
+                  <li class="question">
+                    Which community is more <strong>diverse</strong>?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't177');">
+                    The left-hand community
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't177');">
+                    The right-hand community
+                  </li>
+                  <li class="option" onclick="Right(this, 't177');">
+                    Neither
+                  </li>
+                  <li class="hidden answer" id="t177">
+                    Now the answer depends on your definition of diversity! 
+                    Although the right-hand community contains more species, 
+                    most individuals belong to just one of these species.
+                    Though there are more species there in the right-hand community,
+                    you really have to look hard to find any besides the most abundant.
+                    Do these extra species really have much of an ecological impact?
+                    <br />
+                    This is why it's useful to distinguish these two aspects of diversity.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-4 col-12-narrow">
+                <span class="image"><img src="images/diversity.png" 
+                alt="Abundance counts from a fossil assemblage"
+                style='padding: 1em; background: rgba(255, 255, 255, 0.65);'
+                /></span>              
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <h3>Rank-abundance plots</h3>
+                <p>
+                  A rank-abundance plot (sometimes called a Whittaker plot) shows how
+                  diversity is spread between species.
+                  It's a more sophisticated way of depicting species richness alongside
+                  dominance.
+                  Taxa are ordered by the number of observed individuals, with the rank
+                  order plotted on the x axis, and the logarithm of the number of
+                  individuals plotted on the y axis. 
+                </p>
+                <p>
+                  Use the two rank-abundance plots to answer the following questions:
+                </p>
+                <ul>
+                  <li class="question">
+                    Which community has the higher <strong>species richness</strong>?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't275');">
+                    The left-hand community
+                  </li>
+                  <li class="option" onclick="Right(this, 't275');">
+                    The right-hand community
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't275');">
+                    Neither
+                  </li>
+                  <li class="hidden answer" id="t275">
+                    The left-hand assemblage contains seven species, each
+                    represented by a point in the plot.
+                    This makes it less species
+                    rich than the right-hand assemblage with its nine species.
+                  </li>
+                    
+                  <li class="question">
+                    Which community has the higher <strong>dominance</strong>?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't276');">
+                    The left-hand community
+                  </li>
+                  <li class="option" onclick="Right(this, 't276');">
+                    The right-hand community
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't276');">
+                    Neither
+                  </li>
+                  <li class="hidden answer" id="t276">
+                    Most of the individuals in the right-hand assemblage belong to a
+                    single dominant species, so this assemblage is more 
+                    <strong>dominated</strong>; the left-hand assemblage has a higher
+                    <strong>evenness</strong>.
+                  </li> 
+                  
+                  <li class="question">
+                    Which community is more <strong>diverse</strong>?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't277');">
+                    The left-hand community
+                  </li>
+                  <li class="option" onclick="Wrong(this, 't277');">
+                    The right-hand community
+                  </li>
+                  <li class="option" onclick="Right(this, 't277');">
+                    Neither
+                  </li>
+                  <li class="hidden answer" id="t277">
+                    Now the answer depends on your definition of diversity! 
+                    Although the right-hand community contains more species, 
+                    most individuals belong to just one of these species.
+                    Though there are more species there in the right-hand community,
+                    you really have to look hard to find any besides the most abundant.
+                    Do these extra species really have much of an ecological impact?
+                    <br />
+                    This is why it's useful to distinguish these two aspects of diversity.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-4 col-12-narrow">
+                <span class="image"><img src="images/whittaker.png" 
+                alt="Abundance counts from a fossil assemblage"
+                style='padding: 1em; background: rgba(255, 255, 255, 0.65);'
+                /></span>              
+              </div>
+            </div>
+          </div>
+				</div>
+			</section>
 
 
             </div>
