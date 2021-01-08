@@ -195,52 +195,110 @@
                 </div>
               </div>
             </div>
-            <p>When an environment is ‘full’ (N ≈ K), conversely, the population size is
-            controlled by the value of K; successful taxa are those that can best
-            compete for the resources that limit carrying capacity.
-            </p>
-            <p>
-              On this basis, one might distinguish two biological strategies.
-              One strategy, the r-strategy, is to make sure that you are the first on
-              the scene, and can reproduce rapidly once you get there (i.e. have a big
-              r).  Then you’ll quickly rise to dominance.  The opposite strategy, the
-              K-strategy, is to play the long game, and be a good competitor; it might
-              take you longer to get a foothold, but when population size is limited by
-              K rather than r, you will be better suited to compete for the resource
-              that is limiting the carrying capacity.  Next time you take a train
-              journey, you’ll notice r-strategists (silver birch, buddleia) colonizing
-              disused sidings and abandoned platforms, whilst K-strategists (holly,
-              oaks) typify ancient woodland that’s had plenty of time to mature.
-            </p>
-            <div class="table-wrapper">
-              <table class="default">
-                <thead class='question'>
-                  What properties might characterize <i>r</i> and <i>K</i>-strategists
-                  in marine communities?
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><i class='fas fa-bulb'></i>Why?</td>
-                    <td>if</td>
-                    <td>N &muchlessthan; K,</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>then</td>
-                    <td>K−N ≈ K, </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>so</td>
-                    <td>(K−N) / K ≈ 1 </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>and</td>
-                    <td>dN/dt ≈ rN.</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class='row'>
+              <div class='col-8 col-12-narrow'>
+                <h3>Age-frequency curves</h3>
+                <p>An age-frequency curve plots the relative frequency of individuals of
+                a certain age in <strong>death</strong> assemblages. 
+                Pragmatically, it's usually much easier to measure a dead organism's size
+                than to calculate its age, so you'll typically see size-frequency plots
+                as a proxy.
+                </p>
+                <ul>
+                <li class='bulb'>Remember, by looking at <strong>dead</strong> organisms
+                  we get a picture of typical <strong>life expectancy</strong>, rather
+                  than the average age of members of a living community.</li>
+                </ul>  
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-4 col-12-narrow'>
+                <ul>
+                  <li class='question'>Use your mouse to sketch size-frequency curves for each strategy:</li>
+                  </ul>
+                  
+                  <div id="settings">
+                  Draw:
+                    <button onclick="getColor('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
+                    <button onclick="getColor('#e69f0011');" style='background-color:#e69f00'>&bull;</button>
+                    <button onclick="getColor('#009e7311');" style='background-color:#009e73'>&bull;</button>
+                    <button onclick="getColor('#f0e44211');" style='background-color:#f0e442; border: black; color: black;'>&bull;</button>
+                    <button onclick="getColor('#d55e0011');" style='background-color:#d55e00'>&bull;</button>
+                    <button onclick="getColor('#3d3d3d11');" style='background-color:#3d3d3d'>&bull;</button>
+                    <button onclick="getColor('#d2c2c711');" style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>&bull;</button>
+                  </div>
+                  
+                  <li class="bulb">
+                    Your drawing will not persist; for a blank canvas, just refresh the page.
+                  </li>
+              </div>
+              <div class='col-8 col-12-narrow'>
+              
+                  <style>                          
+                    #settings { display: block; text-align:center; padding: 0.5em;}
+                    #paint {border: 1px solid black;
+                            background-color: #d2c2c7;
+                            background-image: url('images/freq_size.svg');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 600px;
+                            height: 300px;
+                            margin-left: auto; margin-right: auto; display: block;}
+                  </style>
+                  
+                  <div id="sketch" style="margin-top: 1em;">
+                    <canvas id="paint"></canvas>
+                  </div>
+
+                  
+                  <script> 
+                  var canvas = document.getElementById('paint');
+                  var ctx = canvas.getContext('2d');
+                   
+                  var sketch = document.getElementById('sketch');
+                  var sketch_style = getComputedStyle(sketch);
+                  canvas.width = 600;
+                  canvas.height = 300;
+
+                  var mouse = {x: 0, y: 0};
+                   
+                  /* Mouse Capturing Work */
+                  canvas.addEventListener('mousemove', function(e) {
+                    mouse.x = e.pageX - this.getBoundingClientRect().left - window.pageXOffset;
+                    mouse.y = e.pageY - this.getBoundingClientRect().top - window.pageYOffset;
+                  }, false);
+
+                  /* Drawing on Paint App */
+                  ctx.lineJoin = 'round';
+                  ctx.lineCap = 'round';
+                  ctx.lineWidth = '4';
+
+                  ctx.strokeStyle = "#56b4e911";
+                  function getColor(colour){ctx.strokeStyle = colour;}             
+         
+                  canvas.addEventListener('mousedown', function(e) {
+                      ctx.beginPath();
+                      ctx.moveTo(mouse.x, mouse.y);
+                   
+                      canvas.addEventListener('mousemove', onPaint, false);
+                  }, false);
+                   
+                  canvas.addEventListener('mouseup', function() {
+                      canvas.removeEventListener('mousemove', onPaint, false);
+                  }, false);
+                   
+                  var onPaint = function() {
+                      ctx.lineTo(mouse.x, mouse.y);
+                      ctx.stroke();
+                  };
+                  </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
             </div>
           </div>
         </div>
