@@ -1620,7 +1620,7 @@ li.reference {
 		border: 0;
 	}
 
-		.image:after {
+		.noisy-image:after {
 			content: '';
 			position: absolute;
 			left: 0;
