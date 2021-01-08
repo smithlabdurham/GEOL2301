@@ -29,9 +29,11 @@
 				<header>
 					<div class="container">
 						<h2>Succession</h2>
-						<p>In the previous session we explored the types of places where diversity might be high or low.
-            This time we will see how diversity might change at a single location as 
-            empty ecospace is colonized, on ecological timescales (years to centuries).</p>
+						<p>
+              In the previous session we explored the types of places where diversity might be high or low.
+              This time we will see how diversity might change at a single location as 
+              empty ecospace is colonized, on ecological timescales (years to centuries).
+            </p>
 					</div>
 				</header>
 				<div class="content dark style1 featured">
@@ -82,6 +84,9 @@
             time (millions of years) later in the course.
             </p>
             
+						<span class="image"><img src="images/succession.png" 
+            alt="Schematic of forest succession, following a disturbance"
+            /></span>
 					</div>
 				</header>
 				<div class="content dark style2">
@@ -171,24 +176,8 @@
                         <td><i>K</i>-strategists</td>
                       </th>
                       <tr>
-                        <td><i class='fas fa-bulb'></i>Why?</td>
-                        <td>if</td>
-                        <td>N &muchlessthan; K,</td>
-                      </tr>
-                      <tr>
                         <td></td>
-                        <td>then</td>
-                        <td>K−N ≈ K, </td>
-                      </tr>
-                      <tr>
                         <td></td>
-                        <td>so</td>
-                        <td>(K−N) / K ≈ 1 </td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>and</td>
-                        <td>dN/dt ≈ rN.</td>
                       </tr>
                     </tbody>
                   </table>
@@ -215,22 +204,19 @@
               <div class='col-4 col-12-narrow'>
                 <ul>
                   <li class='question'>Use your mouse to sketch size-frequency curves for each strategy:</li>
-                  </ul>
                   
-                  <div id="settings">
-                  Draw:
+                  <li id="settings">
                     <button onclick="getColor('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
                     <button onclick="getColor('#e69f0011');" style='background-color:#e69f00'>&bull;</button>
                     <button onclick="getColor('#009e7311');" style='background-color:#009e73'>&bull;</button>
-                    <button onclick="getColor('#f0e44211');" style='background-color:#f0e442; border: black; color: black;'>&bull;</button>
-                    <button onclick="getColor('#d55e0011');" style='background-color:#d55e00'>&bull;</button>
                     <button onclick="getColor('#3d3d3d11');" style='background-color:#3d3d3d'>&bull;</button>
                     <button onclick="getColor('#d2c2c711');" style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>&bull;</button>
-                  </div>
+                  </li>
                   
                   <li class="bulb">
                     Your drawing will not persist; for a blank canvas, just refresh the page.
                   </li>
+                </ul>
               </div>
               <div class='col-8 col-12-narrow'>
               
@@ -292,6 +278,28 @@
                       ctx.stroke();
                   };
                   </script>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-8 col-12-narrow'>
+                <h3>Survivorship curves</h3>
+                <p>
+                  A <strong>survivorship curve</strong> is another way of depicting the
+                  life history of a species. Survivorship rate plummets rapidly in taxa
+                  with high infant mortality, but individuals that survive to adulthood
+                  can expect a long life ahead (Type III). Taxa in which the probability
+                  of survival is independent of age sit along a linear Type II curve. 
+                  Taxa in which most juveniles survive to adulthood sit upon a Type I
+                  curve.
+                </p>
+                <ul>
+                  <li class='question'>
+                  Select the appropriate survivorship curve for a typical r-selected taxon
+                  </li>
+                  <!--TODO provide answers-->
+                  <li class='question'>
+                  Select the appropriate survivorship curve for a typical K-selected taxon
+                  </li>
               </div>
             </div>
           </div>
