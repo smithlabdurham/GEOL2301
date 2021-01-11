@@ -370,8 +370,17 @@ li.reference {
   margin-bottom: 0.5em;
 }
 
-code {
+code, kbd {
   font-family: "Liberation Mono", "Lucida Console", Courier, monospace;
+}
+
+kbd {
+  background: hsl(210 10% 33% / 1);
+  border: 2px solid;
+  border-color: hsl(210 10% 38% / 1) hsl(210 10% 20% / 1) 
+                hsl(210 10% 20% / 1) hsl(210 10% 38% / 1);
+  padding: 0.25em;
+  border-radius: 0.25em;
 }
 
 /* Row */
