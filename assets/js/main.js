@@ -34,12 +34,12 @@ function Reveal(id) {
 }
 
 function Right(el, id) {
-  Reveal(id);
+  $('#' + id).slideDown();
   $(el).removeClass('option');
   $(el).addClass('right');
 }
 function Wrong(el, id) {
-  Reveal(id);
+  $('#' + id).slideDown();
   $(el).removeClass('option');
   $(el).addClass('wrong');
 }
