@@ -354,12 +354,273 @@
           </div>
         </div>
       </section>
+        
+			<section id="third" class="main">
+        <header>
+					<div class="container">
+						<span class="image featured"><img src="images/P662406.jpg" 
+            title="Credit: British Geological Survey, P662406"
+            alt="Manod Bach" /></span>
+						<h2>Llanvirn assemblages from Wales</h2>
+					</div>
+				</header>
+				<div class="content dark style3">
+					<div class="container">          
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <p>
+                  Now we're going to look at assemblage-level data in order to 
+                  explore changes in the successional stage of an entire community.
+                </p>
+                <p>
+                  Our data (<a href="https://raw.githubusercontent.com/smithlabdurham/palec/main/inst/Llanvirn.txt"
+                  title="Terebratulid length measurements" target="_blank" rel="noopener">download</a>)
+                  are species counts from ten 5–10&nbsp;kg samples taken at intervals 
+                  from an Ordovician sedimentary succession in Wales
+                  (from Williams et al. 1981; see graphical log).
+                </p>
+                
+                <p>
+                Launch the <code>palec::Diversity()</code> app and load the 
+                <code>Llanvirn.txt</code> data.
+                Cross-reference the species with those shown below.
+                </p>
+              </div>
               
-              , but if you really want to cem
-              Open (*File→Open) the data file Terebratulid_length.dat.  This dataset (from Thayer 1977) contains length measurements from 42 terebratulid brachiopods that died between censuses conducted in 1974-1975.
-  Untick the Edit mode checkbox and highlight Column A. 
-  Plot a histogram (*Plot→Histogram) showing the frequency of taxa of different lengths.  Does the data fit a normal distribution, or is it right-skewed (longer tail on the right) or left-skewed?  Use the “Fit Normal” checkbox to overlay the normal distribution that best matches the data.
-  Hint: Try increasing the bin size slightly for a clearer perspective.
+							<div class="col-4 col-12-narrow">
+                <span class="image featured"><img src="images/Williams1981.png" 
+                      style='padding: 15px; background: #ffffff; opacity: 0.9; max-height: 317px; max-width: 170px;'/></span>
+              </div>
+            </div>
+            <div class="featured row">
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon">
+                    <span class="image icon"><img src="images/RUT328b.jpg"/></span>
+                  </span>
+									<p>The large trilobite <i>Basilicus</i></p>
+								</section>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon">
+                    <span class="image icon"><img src="images/Hyalostelia.jpg" /></span>
+                  </span>
+									<p>The sponge <i>Hyalostelia</i></p>
+								</section>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon">
+                    <span class="image icon"><img src="images/Bryozoans.jpg" /></span>
+                  </span>
+									<p><b>Bryo</b>zoans (<b>fene</b>strate, <b>dend</b>roid, 
+                  and dome-shaped <i><b>Praso</b>pora</i>.</p>
+								</section>
+							</div>
+            </div>
+            <div class="featured row">
+              <div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon">
+                    <span class="image icon"><img src="images/sowerbyella.jpg" /></span>
+                  </span>
+                  </span>
+									<p>The small <b>Br</b>achiopod <i>Sowerbyella</i></p>
+								</section>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon">
+                    <span class="image icon"><img src="images/Dalmanella.jpg" /></span>
+                  </span>
+									<p>The medium-sized brachiopod <i>Dalmanella</i></p>
+								</section>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon">
+                    <span class="image icon"><img src="images/Macrocoelia.jpg" /></span>
+                  </span>
+									<p>The large brachiopod <i>Macrocoelia</i></p>
+								</section>
+							</div>
+						</div>
+          
+						<div class="row">
+							<div class="col-8 col-12-narrow">
+                <p>
+                  Each column in the input dataset represents a different assemblage.
+                  Start by selecting assemblage <strong>CD6</strong>.
+                </p>
+                <ul>
+                  <li class="question" onclick="Reveal('div1');">
+                    What are your initial impressions of the diversity and dominance of 
+                    this assemblage? 
+                    Which taxon/taxa would you expect to form the trophic nucleus?
+                  </li>
+                  <li class="hidden answer" id="div1">
+                    <p>
+                     Fair diversity (richness & evenness), slightly dominated by 
+                     the trilobite <i>Basilicus</i> and the brachiopod <i>Sowerbyella</i>.
+                    </p>
+                  </li>
+                  <li class="question" onclick="Reveal('plen2');">
+                    Looking for now just at the bar plot, mark each of these three 
+                    communities on on the spectra below.  
+                    Assemblage CD1 is labelled as an example of an assemblage that has
+                    very low species richness and is strongly dominated.
+                  </li>
+                  <li id="settings">
+                    <button onclick="getColor('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
+                    <button onclick="getColor('#e69f0011');" style='background-color:#e69f00'>&bull;</button>
+                    <button onclick="getColor('#009e7311');" style='background-color:#009e73'>&bull;</button>
+                    <button onclick="getColor('#3d3d3d11');" style='background-color:#3d3d3d'>&bull;</button>
+                    <button onclick="getColor('#d2c2c788'); getSize(20);" style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>&bull;</button>
+                  </li>
+                  
+                  <li class="bulb">
+                    Your drawing will not persist; for a blank canvas, just refresh the page.
+                  </li>
+                </ul>
+              </div>
+                <div class='col-8 col-12-narrow'>
+                  <style>                          
+                    #settings { display: block; text-align:center; padding: 0.5em;}
+                    #paint {border: 1px solid black;
+                            background-color: #d2c2c7;
+                            background-image: url('images/diversity.svg');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 600px;
+                            height: 80px;
+                            margin-left: auto; margin-right: auto; display: block;}
+                  </style>
+                  
+                  <div id="sketch" style="margin-top: 1em;">
+                    <canvas id="paint"></canvas>
+                  </div>
+
+                  
+                  <script> 
+                  var canvas = document.getElementById('paint');
+                  var ctx = canvas.getContext('2d');
+                   
+                  var sketch = document.getElementById('sketch');
+                  var sketch_style = getComputedStyle(sketch);
+                  canvas.width = 600;
+                  canvas.height = 80;
+
+                  var mouse = {x: 0, y: 0};
+                   
+                  /* Mouse Capturing Work */
+                  canvas.addEventListener('mousemove', function(e) {
+                    mouse.x = e.pageX - this.getBoundingClientRect().left - window.pageXOffset;
+                    mouse.y = e.pageY - this.getBoundingClientRect().top - window.pageYOffset;
+                  }, false);
+
+                  /* Drawing on Paint App */
+                  ctx.lineJoin = 'round';
+                  ctx.lineCap = 'round';
+                  ctx.lineWidth = '4';
+
+                  ctx.strokeStyle = "#56b4e911";
+                  function getColor(colour){
+                    ctx.strokeStyle = colour;
+                    ctx.lineWidth = '4';
+                  }
+                  function getSize(size){ctx.lineWidth = size;}          
+         
+                  canvas.addEventListener('mousedown', function(e) {
+                      ctx.beginPath();
+                      ctx.moveTo(mouse.x, mouse.y);
+                   
+                      canvas.addEventListener('mousemove', onPaint, false);
+                  }, false);
+                   
+                  canvas.addEventListener('mouseup', function() {
+                      canvas.removeEventListener('mousemove', onPaint, false);
+                  }, false);
+                   
+                  var onPaint = function() {
+                      ctx.lineTo(mouse.x, mouse.y);
+                      ctx.stroke();
+                  };
+                  </script>
+              </div>
+            
+            </div>
+            <div class="row">
+              <div class="col-12 col-12-narrow">
+                <h3>Recap</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <p>
+                Let's recap what we've learned so far, with our sedimentary environments
+                hat on – remember, we are interested in what we can learn about original
+                habitat based on our ecological observations.
+                </p>
+              </div>
+            </div>
+                
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <h4><i>r</i>-selected taxa:</h4>
+                <ul>
+                  <li>
+                    Rapidly colonize <strong>new</strong> environments
+                    
+                    <ul>
+                    <li class="bulb">
+                      What factors might render a particular place suitable for colonization?
+                    </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Produce loads of offspring
+                    <ul>
+                      <li>High infant mortality</li>
+                      <li>Wide dispersal</li>
+                      <li>Bloom rapidly when resources allow</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="col-4 col-12-narrow">
+                <span class="image featured"><img src="images/pioneer.jpg" 
+                alt="Pioneering Buddlea" /></span>
+              </div>
+            </div>
+                
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+            
+                
+                <h4><i>K</i>-selected taxa:</h4>
+                <ul>
+                  <li>
+                    Masters of competition in <strong>stable</strong> environments
+                    <ul>
+                      <li class="bulb">
+                        What factors characterize stable marine environments?
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Equip offspring with resources to survive until competitive
+                    <ul>
+                    <li>Few, large offspring</li>
+                    <li>Minimal dispersal – specialized to existing environment</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-4 col-12-narrow">
+                <span class="image featured"><img src="images/climax_oak.jpg" 
+                alt="Climax oak" /></span>
               </div>
             </div>
           </div>
