@@ -417,7 +417,10 @@
                 </p>
               </div>
               <div class="col-8 col-12-narrow">
-                
+                <video width="640" height="360" controls>
+                  <source src="https://duo.dur.ac.uk/bbcswebdav/pid-6172609-dt-content-rid-21762985_2/xid-21762985_2" type="video/mp4">
+                  Embedded video not supported by your browser; please view the mp4 on duo.
+                </video>
               </div>
             </div>
             <div class="row">
@@ -509,6 +512,25 @@
                       Your size-frequency and survivorship plots should look similar
                       to those you drew for <i>r</i>-selected species above.
                     </p>
+                  </li>
+                  <li class="question" onclick="Reveal('plen2');">
+                    How would your size-frequency curve differ if you were looking at 
+                    the fossil record of this coral, rather than a complete death 
+                    assemblage?
+                  </li>
+                  <li class="bulb" onclick="Reveal('plen2'); $(this).hide()">
+                    Sketch your answer on the plot above before revealing the answer.
+                  </li>
+                  <li class="hidden answer" id="plen2">
+                    Larvae have no mineralized or even recalcitrant parts; they have
+                    almost zero fossilization potential.
+                    The fossil record will only preserve those individuals lucky enough
+                    to find a suitable substrate and start secreting a skeleton.
+                    But we should suspect a pretty complete record of such individuals,
+                    as components of a cemented reef are not particularly prone to
+                    size-selective transport.
+                    So we may well still pick up the distinctive <i>r</i>-strategist
+                    size-frequency shape.                   
                   </li>
                 </ul>
               </div>
