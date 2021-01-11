@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<!--
+	Template: Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Succession: GEOL2031 Synchronous exercise 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header" class="dark">
+				<header>
+					<h1>GEOL2031: Palaeoecosystems</h1>
+					<p>Synchronous Session 2: Life Histories and Succession</p>
+				</header>
+				<footer>
+					<a href="#first" class="button scrolly">Begin</a>
+				</footer>
+			</section>
+
+		<!-- First -->
+			<section id="first" class="main">
+				<header>
+					<div class="container">
+						<h2>Succession in practice</h2>
+						<p>
+              This session we'll be putting the quantitative approaches we met in the
+              asynchronous session into practice.
+            </p>
+					</div>
+				</header>
+				<div class="content dark style1">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h2>Getting set up</h2>
+                <p>
+                  This session uses R.
+                  Before the session, please:
+                </p>
+                <ul>
+                  <li>
+                    Download and install RStudio, available 
+                     <a href="https://rstudio.com/products/rstudio/download/" 
+                    target="_blank" rel="noreferrer noopener">directly</a>
+                    or via
+                    <a href="https://appsanywhere.durham.ac.uk/" title="Apps Anywhere" 
+                    target="_blank" rel="noreferrer noopener">AppsAnywhere</a>.
+                    <ul>
+                    <li class="bulb">
+                      If running Windows, you will also need RTools – select the
+                      appropriate RStudio version in AppsAnywhere, or install it 
+                      separately – Google will lead you to instructions.
+                    </li>
+                  </ul>
+                  </li>
+                  <li>
+                    From within RStudio, install the packages 'devtools' and 'Ternary'
+                    (case sensitive).
+                    <ul>
+                      <li>
+                      Method 1: Use the toolbar Tools → Install Packages:
+                        <ul>
+                          <li>Install from: CRAN</li>
+                          <li>Packages: devtools, Ternary</li>
+                          <li>Install dependencies: ticked</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Method 2: Run the command 
+                        <code>install.packages("&Lt;PACKAGE NAME&Gt;")</code> 
+                        in the console.
+                      </li>
+                    </li>
+                  </ul>
+                  <li>
+                    Install the teaching package 'palec' by running the command
+                    <code>devtools::install_github("smithlabdurham/palec")</code>
+                    in the console.
+                  
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+				</div>
+			</section>
+
+		<!-- Second -->
+			<section id="second" class="main">
+				<header>
+					<div class="container">
+						<h2>Terebratulid survivorship</h2>
+            <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/b1d2aeba1a8846d29c792b293a2d3a6a/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" allow="autoplay; fullscreen; vr" ></iframe>
+					</div>
+				</header>
+        <div class="content dark style2">
+          <div class="container">
+            <div class="row">
+              <div class="col-4 col-12-narrow">
+                <p>
+                We're going to learn how to interpret survivorship curves by plotting 
+                our own in R.
+                </p>
+                <p>
+                Our data is drawn from Thayer (1977), and represents length measurements 
+                from 42 terebratulid brachiopods that died between censuses conducted in
+                1974 and 1975.
+                </p>
+                
+                <p>
+                I've created a simple point-and-click interface that makes it simple
+                to construct such curves, which will make this exercise as straightforward
+                as possible.
+                You will obtain a deeper understanding of each exercise if you construct 
+                the plots yourself, perhaps using your favourite spreadsheet editor, or 
+                R itself (you'll find code to get you started in some of the exercises.)
+                </p>
+              </div>
+              <div class="col-8 col-12-narrow featured">
+                <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/05ef47b9baee447d822683663435294d/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+              <h3>Getting the data</h3>
+              
+              , but if you really want to cem
+              Open (*File→Open) the data file Terebratulid_length.dat.  This dataset (from Thayer 1977) contains length measurements from 42 terebratulid brachiopods that died between censuses conducted in 1974-1975.
+  Untick the Edit mode checkbox and highlight Column A. 
+  Plot a histogram (*Plot→Histogram) showing the frequency of taxa of different lengths.  Does the data fit a normal distribution, or is it right-skewed (longer tail on the right) or left-skewed?  Use the “Fit Normal” checkbox to overlay the normal distribution that best matches the data.
+  Hint: Try increasing the bin size slightly for a clearer perspective.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+			<section id="further-reading" class="main">
+				<header>
+					<div class="container">
+						<h2>References</h2>
+					</div>
+				</header>
+        <div class="container">
+          <div class="content style4">
+            <ul>
+              <li class="reference">
+                THAYER, C. W. 1977. 
+                Recruitment, growth, and mortality of a living articulate brachiopod, with implications for the interpretation of survivorship curves.
+                <i>Paleobiology</i>, 3, 98–109.
+              </li>
+              <li class="reference">
+                WILLIAMS, A., LOCKLEY, M. G. and HURST, J. M. 1981.
+                Benthic palaeocommunities represented in the Ffairfach Group and Coeval Ordovician successions of Wales.
+                <i>Palaeontology</i>, 24, 661–694.
+              </li>
+            </ul>
+            See the readling list link on duo for access to these resources through the library.
+          </div>
+        </div>
+      </section>
+
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon solid fa-arrow-up"><span class="label">Top</span></a></li>
+					<li><a href="https://duo.dur.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_91139_1&content_id=_6163742_1" class="icon solid fa-university"><span class="label">DUO</span></a></li>
+				</ul>
+				<div class="copyright">
+					<ul class="menu">
+						<li>&copy; 2021 <a href="http://smithlabdurham.github.io/">Martin R. Smith</a></li>
+            <!--<li>All content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where noted.</li>-->
+            <li>Design: <a href="http://html5up.net" rel='noopener'>HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
