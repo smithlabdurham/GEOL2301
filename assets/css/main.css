@@ -370,6 +370,10 @@ li.reference {
   margin-bottom: 0.5em;
 }
 
+code {
+  font-family: "Liberation Mono", "Lucida Console", Courier, monospace;
+}
+
 /* Row */
 
 	.row {
