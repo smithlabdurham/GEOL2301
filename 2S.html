@@ -105,11 +105,12 @@
             <div class="row">
               <div class="col-4 col-12-narrow">
                 <p>
-                We're going to learn how to interpret survivorship curves by plotting 
-                our own in R.
+                We're going to learn how to interpret life history by generating relevant
+                plots from assemblage data, using R.
                 </p>
                 <p>
-                Our data is drawn from Thayer (1977), and represents length measurements 
+                Our data is drawn from Thayer (1977), and represents length measurements
+                (in mm)
                 from 42 terebratulid brachiopods that died between censuses conducted in
                 1974 and 1975.
                 </p>
@@ -124,12 +125,146 @@
                 </p>
               </div>
               <div class="col-8 col-12-narrow featured">
-                <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/05ef47b9baee447d822683663435294d/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/05ef47b9baee447d822683663435294d/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
               </div>
             </div>
             <div class="row">
               <div class="col-8 col-12-narrow">
-              <h3>Getting the data</h3>
+                <h3>Getting the data</h3>
+                <p>
+                  Save the <a href="https://raw.githubusercontent.com/smithlabdurham/palec/main/inst/terebratulid.txt"
+                  title="Terebratulid length measurements" target="_blank" rel="noopener">data file</a>
+                  to your computer, and inspect its contents.
+                  The format is simply a list of measurements, separated by spaces.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <h3>Open the histogram plotter</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 col-12-narrow">
+                <ul>
+                  <li>
+                    In the RStudio console, type <code>palec::Histogram()</code>
+                    to run the histogram 'app'.
+                    <ul><li class="bulb">
+                      You can resize the viewer, or click the 
+                      <i class="fas fa-external-link-alt"></i> icon to launch the app in a 
+                      separate web browser, to gain a little more space.
+                    </li></ul>
+                  </li>
+                  <li>
+                    Click 'Browse&hellip;' to load the data you saved to disk.
+                    The histogram will update automatically, showing the frequency of
+                    taxa with different lengths.
+                  </li>
+                  <li>Set the X Label to "length / mm".</li>
+                </ul>
+              </div>
+              <div class="col-8 col-12-narrow">
+                <span class="image featured"><img src="images/surv.png" 
+                      style='padding: 1em; background: #ffffff; opacity: 0.9;'/></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <p>
+                  Save your plot in a convenient format using one of the download buttons,
+                  then answer the questions below.  
+                  Write your answers down before clicking on them for my answers.
+                </p>
+                
+                <ul>
+                  <li class="question" onclick="Reveal('survAns');">
+                    Do the data fit a normal distribution, or are they
+                    right-skewed (longer tail on the right) or left-skewed?
+                  </li>
+                  <li class="bulb">
+                    Use the “Fit Normal” checkbox to overlay the normal distribution that
+                    best matches the data.
+                  </li>
+                  <li class="bulb">
+                    Adjusting the bin size (number of bins) sometimes gives a 
+                    clearer perspective.
+                  </li>
+                  <li class="hidden answer" id="survAns">
+                    <p>Would you agree that the 'hump' of the distribution is slightly to the 
+                    right of the mean (i.e. the centre of the reference normal 
+                    distribution)?  This would denote a slight left skew, consistent
+                    with the slightly negative skewness value (&minus;0.2153).
+                    </p>
+                    <p>
+                      Skewness values smaller than ±0.5 are typically considered to be 
+                      negligible, so you would be justified in treating terebratulid
+                      length as normally distrubtued.
+                    </p>
+                  </li>
+                  <li class="question" onclick="Reveal('survIM');">
+                    What does the skewness suggest about the level of infant mortality?
+                  </li>
+                  <li class="hidden answer" id="survIM">
+                    If infant mortality were high, then most dead brachiopods would be 
+                    little, so we'd expect the peak of the distribution to be on the 
+                    left of the mean (i.e. positive skew).
+                  </li>
+                </ul>
+              </div>              
+            </div>
+            
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <h3>Open the survivorship plotter</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 col-12-narrow">
+                <ul>
+                  <li>
+                    In the RStudio console, press <kbd>Esc</kbd> to terminate the 
+                    Histogram app, then launch the survivorship app by running
+                    <code>palec::Survivorship()</code>.
+                    <ul><li class="bulb">
+                      You can resize the viewer, or click the 
+                      <i class="fas fa-external-link-alt"></i> icon to launch the app in a 
+                      separate web browser, to gain a little more space.
+                    </li></ul>
+                  </li>
+                  <li>
+                    Click 'Browse&hellip;' to load the data you saved to disk.
+                    The survivorship plot will update automatically, showing the
+                    proportion of individuals that survived to each age (i.e. size).
+                  </li>
+                  <li>
+                    Configure the plot as necessary.
+                    <ul>
+                      <li class="bulb">Remember that the survivorship (<i>x</i>)
+                        axis must be log-transformed.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-8 col-12-narrow">
+                <span class="image featured"><img src="images/hist.png" 
+                      style='padding: 1em; background: #ffffff; opacity: 0.9;'/></span>
+              </div>
+            </div>
+            <div class="row">
+              <ul>
+                <li class="question" onclick="Reveal('HistType');">
+                  Is survivorship curve Type I (convex), Type II (linear), or Type III (concave)?
+                </li>
+                <li class="hidden answer" id="HistType">
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
               
               , but if you really want to cem
               Open (*File→Open) the data file Terebratulid_length.dat.  This dataset (from Thayer 1977) contains length measurements from 42 terebratulid brachiopods that died between censuses conducted in 1974-1975.
