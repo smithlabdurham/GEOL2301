@@ -226,22 +226,23 @@
                     In the RStudio console, press <kbd>Esc</kbd> to terminate the 
                     Histogram app, then launch the survivorship app by running
                     <code>palec::Survivorship()</code>.
-                    <ul><li class="bulb">
-                      You can resize the viewer, or click the 
-                      <i class="fas fa-external-link-alt"></i> icon to launch the app in a 
-                      separate web browser, to gain a little more space.
-                    </li></ul>
                   </li>
                   <li>
-                    Click 'Browse&hellip;' to load the data you saved to disk.
+                    Load the terebratulid data again.
                     The survivorship plot will update automatically, showing the
                     proportion of individuals that survived to each age (i.e. size).
                   </li>
                   <li>
                     Configure the plot as necessary.
                     <ul>
-                      <li class="bulb">Remember that the survivorship (<i>x</i>)
-                        axis must be log-transformed.
+                      <li class="question" onclick="Reveal('trans');">
+                        Which axes should be log-transformed?
+                      </li>
+                      <li class="hidden answer" id="trans">
+                        If size is a linear approximation of age, then the <i>x</i> 
+                        axis should be linear. 
+                        As survivorship represents the <strong>rate</strong> of death 
+                        at any given age, the <i>y</i> axis should be log transformed.
                       </li>
                     </ul>
                   </li>
@@ -253,14 +254,35 @@
               </div>
             </div>
             <div class="row">
-              <ul>
-                <li class="question" onclick="Reveal('HistType');">
-                  Is survivorship curve Type I (convex), Type II (linear), or Type III (concave)?
-                </li>
-                <li class="hidden answer" id="HistType">
-                  
-                </li>
-              </ul>
+              <div class="col-8 col-12-narrow">
+                <ul>
+                  <li class="question" onclick="Reveal('HistType');">
+                    Is survivorship curve Type I (convex), Type II (linear), or Type III (concave)?
+                  </li>
+                  <li class="hidden answer" id="HistType">
+                    Type I: most juveniles survive to adulthood.
+                  </li>
+                </ul>
+                <p>
+                  Careful examination of the living terebratulids determined that older
+                  individuals grow more slowly.
+                  The age of an individual thus scales with log(<i>length</i>).
+                </p>
+                <p>Log-transform the <i>x</i>-axis, so that it represents a better proxy 
+                  for age (rather than size).
+                </p>
+                <ul>
+                  <li class="question" onclick="Reveal('HistX');">
+                    Does this affect your interpretation?
+                  </li>
+                  <li class="hidden answer" id="HistX">
+                    Our previous interpretation is now reinforced.
+                    In this case, the transformed data give a more “honest” picture, as
+                    our <i>x</i>-axis now corresponds more closely to age, which is what we
+                    ideally want to plot – size is just a proxy.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
