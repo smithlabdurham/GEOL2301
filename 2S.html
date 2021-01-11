@@ -477,11 +477,25 @@
                      the trilobite <i>Basilicus</i> and the brachiopod <i>Sowerbyella</i>.
                     </p>
                   </li>
-                  <li class="question" onclick="Reveal('plen2');">
+                  <li class="question" onclick="Reveal('div2');">
                     Looking for now just at the bar plot, mark each of these three 
                     communities on on the spectra below.  
                     Assemblage CD1 is labelled as an example of an assemblage that has
                     very low species richness and is strongly dominated.
+                  </li>
+                  <li class="hidden answer" id="div2">
+                    <p>No right answer here, as it's a subjective exercise, but here are
+                    observations that may have guided your hand:
+                    </p>
+                    <p> CD5 is super-dominated by one species, even though 
+                    a fair number of rare species are present
+                    </p>
+                    <p>CD6 is quite rich, dominated by 2 species.
+                    Do the bars look like they might exhibit a geometric distribution?
+                    </p>
+                    <p>CD7 has a low richness – perhaps just because few individuals 
+                    have been collected?  Looks even.</p>
+
                   </li>
                   <li id="settings">
                     <button onclick="getColor('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
@@ -496,6 +510,7 @@
                   </li>
                 </ul>
               </div>
+              <div class="row">
                 <div class='col-8 col-12-narrow'>
                   <style>                          
                     #settings { display: block; text-align:center; padding: 0.5em;}
@@ -560,84 +575,34 @@
                   };
                   </script>
               </div>
-            
-            </div>
-            <div class="row">
-              <div class="col-12 col-12-narrow">
-                <h3>Recap</h3>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-8 col-12-narrow">
-                <p>
-                Let's recap what we've learned so far, with our sedimentary environments
-                hat on – remember, we are interested in what we can learn about original
-                habitat based on our ecological observations.
-                </p>
-              </div>
-            </div>
-                
-            <div class="row">
-              <div class="col-8 col-12-narrow">
-                <h4><i>r</i>-selected taxa:</h4>
-                <ul>
-                  <li>
-                    Rapidly colonize <strong>new</strong> environments
-                    
-                    <ul>
-                    <li class="bulb">
-                      What factors might render a particular place suitable for colonization?
+              <div class="row">
+                <div class="col-12">
+                  <p>Now look at the diversity indices for each asseblage.</p>
+                  <ul>
+                    <li class="question" onclick="Reveal('SR');">
+                      Rank assemblages CD5–CD7 from least to most diverse, based on their
+                      <strong>Species richness</strong> (S).
                     </li>
-                    </ul>
-                  </li>
-                  <li>
-                    Produce loads of offspring
-                    <ul>
-                      <li>High infant mortality</li>
-                      <li>Wide dispersal</li>
-                      <li>Bloom rapidly when resources allow</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              
-              <div class="col-4 col-12-narrow">
-                <span class="image featured"><img src="images/pioneer.jpg" 
-                alt="Pioneering Buddlea" /></span>
-              </div>
+                    <li class="hidden answer" id="SR">
+                      Least diverse &Lt; CD7 (S=8) | CD5 (S = 14) | CD6 (S = 15) &Gt; Most diverse
+                    </li>
+                    <li class="question" onclick="Reveal('SRbad');">
+                      Do you think that this metric is a reliable measure of diversity?
+                    </li>
+                    <li class="bulb">
+                      Hint: look at the number of individuals sampled in each assemblage.
+                    </li>
+                    <li class="hidden answer" id="SRbad">
+                      <i>n</i> is tiny in CD7, and huge in CD6.  
+                      Clearly if you sample more specimens you are likely to find 
+                      more species.
+                    </li>
+                 </ul>
             </div>
-                
-            <div class="row">
-              <div class="col-8 col-12-narrow">
-            
-                
-                <h4><i>K</i>-selected taxa:</h4>
-                <ul>
-                  <li>
-                    Masters of competition in <strong>stable</strong> environments
-                    <ul>
-                      <li class="bulb">
-                        What factors characterize stable marine environments?
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    Equip offspring with resources to survive until competitive
-                    <ul>
-                    <li>Few, large offspring</li>
-                    <li>Minimal dispersal – specialized to existing environment</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-4 col-12-narrow">
-                <span class="image featured"><img src="images/climax_oak.jpg" 
-                alt="Climax oak" /></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+					</div>
+				</div>
+			</section>
 
 			<section id="further-reading" class="main">
 				<header>
