@@ -497,14 +497,6 @@
                     have been collected?  Looks even.</p>
 
                   </li>
-                  <li id="settings">
-                    <button onclick="getColor('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
-                    <button onclick="getColor('#e69f0011');" style='background-color:#e69f00'>&bull;</button>
-                    <button onclick="getColor('#009e7311');" style='background-color:#009e73'>&bull;</button>
-                    <button onclick="getColor('#3d3d3d11');" style='background-color:#3d3d3d'>&bull;</button>
-                    <button onclick="getColor('#d2c2c788'); getSize(20);" style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>&bull;</button>
-                  </li>
-                  
                   <li class="bulb">
                     Your drawing will not persist; for a blank canvas, just refresh the page.
                   </li>
@@ -515,12 +507,12 @@
                   <style>                          
                     #settings { display: block; text-align:center; padding: 0.5em;}
                     #paint {border: 1px solid black;
-                            background-color: #d2c2c7;
+                            background-color: #bac0c4;
                             background-image: url('images/diversity.svg');
                             background-repeat: no-repeat;
                             background-position: center;
                             width: 600px;
-                            height: 80px;
+                            height: 240px;
                             margin-left: auto; margin-right: auto; display: block;}
                   </style>
                   
@@ -528,6 +520,13 @@
                     <canvas id="paint"></canvas>
                   </div>
 
+                  <div id="settings" class='featured' style='width: 600px;'>
+                    <button onclick="getColor('#3d3d3d88');" style='background-color:#3d3d3d'>?</button>
+                    <button onclick="getColor('#56b4e988');" style='background-color:#56b4e9'>CD5</button>
+                    <button onclick="getColor('#e69f0088');" style='background-color:#e69f00'>CD6</button>
+                    <button onclick="getColor('#009e7388');" style='background-color:#009e73'>CD7</button>
+                    <button onclick="getColor('#bac0c488'); getSize(20);" style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>×</button>
+                  </div>
                   
                   <script> 
                   var canvas = document.getElementById('paint');
@@ -536,7 +535,7 @@
                   var sketch = document.getElementById('sketch');
                   var sketch_style = getComputedStyle(sketch);
                   canvas.width = 600;
-                  canvas.height = 80;
+                  canvas.height = 240;
 
                   var mouse = {x: 0, y: 0};
                    
@@ -574,10 +573,11 @@
                       ctx.stroke();
                   };
                   </script>
+              
               </div>
               </div>
               <div class="row">
-                <div class="col-12">
+                <div class="col-8 col-12-narrow">
                   <p>
                     Now we're going to explore some of the quantitative indices of 
                     diversity, to see how they measure up against the intuitive
@@ -593,7 +593,15 @@
                       <strong>Species richness</strong> (S).
                     </li>
                     <li class="hidden answer" id="SR">
-                      Least diverse &Lt; CD7 (S=8) | CD5 (S = 14) | CD6 (S = 15) &Gt; Most diverse
+                      <ul>
+                        <li class="bare" style="font-style: italic;">
+                          Least diverse
+                        </li>
+                        <li>CD7 (S&nbsp;=&nbsp;8)</li>
+                        <li>CD5 (S&nbsp;=&nbsp;14)</li>
+                        <li>CD6 (S&nbsp;=&nbsp;15)</li>
+                        <li class="bare" style="font-style: italic;">Most diverse</li>
+                      </ul>
                     </li>
                     <li class="question" onclick="Reveal('SRbad');">
                       Do you think that this metric is a reliable measure of diversity?
@@ -607,6 +615,19 @@
                       more species.
                     </li>
                  </ul>
+                 <h3>Richness indices</h3>
+                 <p><strong>Menhinick’s</strong> and <strong>Margalef’s</strong>
+                 richness indices 
+                 (respectively, <i>S</i> / √<i>n</i> and (<i>S</i> – 1) / ln <i>n</i>)
+                 account for sample size (<i>n</i>),
+                 though whether the number of species increases with the square root or 
+                 the logarithm of the number of individuals varies from assemblage to 
+                 assemblage, so neither is necessarily “better”.
+                 </p>
+                 <ul>
+                  <li class="question" onclick="Reveal('mmm');">
+                    How does each approach order the three assemblages?
+                  </li>
             </div>
 					</div>
 				</div>

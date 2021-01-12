@@ -365,6 +365,10 @@ li.right::marker {
   content: "\f058";
 }
 
+li.bare {
+  list-style-type: none;
+}
+
 li.reference {
   list-style: none;
   margin-bottom: 0.5em;
