@@ -625,20 +625,113 @@
                       Clearly if you sample more specimens you are likely to find 
                       more species.
                     </li>
-                 </ul>
-                 <h3>Richness indices</h3>
-                 <p><strong>Menhinick’s</strong> and <strong>Margalef’s</strong>
-                 richness indices 
-                 (respectively, <i>S</i> / √<i>n</i> and (<i>S</i> – 1) / ln <i>n</i>)
-                 account for sample size (<i>n</i>),
-                 though whether the number of species increases with the square root or 
-                 the logarithm of the number of individuals varies from assemblage to 
-                 assemblage, so neither is necessarily “better”.
-                 </p>
-                 <ul>
-                  <li class="question" onclick="Reveal('mmm');">
-                    How does each approach order the three assemblages?
-                  </li>
+                  </ul>
+                  
+                  <h3>Richness indices</h3>
+                  <p>
+                    <strong>Menhinick’s</strong> and <strong>Margalef’s</strong>
+                    richness indices 
+                    (respectively, <i>S</i> / √<i>n</i> and (<i>S</i> – 1) / ln <i>n</i>)
+                    account for sample size (<i>n</i>),
+                    though whether the number of species increases with the square root or 
+                    the logarithm of the number of individuals varies from assemblage to 
+                    assemblage, so neither is necessarily “better”.
+                  </p>
+                  <ul>
+                    <li class="question" onclick="Reveal('mmm');">
+                      How does each approach order the three assemblages?
+                    </li>
+                    <li class="hidden written answer" id="mmm">
+                      <ul>
+                        <li>Menhinick’s richness: Least diverse _6_ / _5_ / _7_ Most diverse</li>
+                        <li>Margalef’s richness: Least diverse _5_ / _6_ / _7_ Most diverse [almost equal?]</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  
+                  <h3>Dominance indices</h3>
+                  <p>
+                    Now let’s consider how we might measure <strong>dominance</strong>.
+                    The simplest measure is the Berger&ndash;Parker index, which states what 
+                    proportion of the <i>n</i> individuals belong to the most common taxon
+                    (<i>n<sub>t</sub></i>) – i.e. <i>n<sub>t</sub></i> / <i>n</i>.
+                  </p>
+                  <ul>
+                    <li class="question" onclick="Reveal('bpi');">
+                     If you have an assemblage that contains 48 individuals and four species, what is the range of possible values that the Berger&ndash;Parker index can take?
+                    </li>
+                    <li class="bulb">
+                      Hint: Consider two scenarios: one where an assemblage is maximally dominated, one where it is maximally even.
+                    </li>
+                    <li class="bulb">
+                      Extension: Why not create a file containing these two assemblages, and load them into the Diversity viewer, to check your answers?
+                    </li>
+                    <li class="hidden written answer">
+                       <p>Max: n1..4 = 45-1-1-1.  	
+                          <i>n<sub>t</sub></i> / <i>n</i> = 45/48 = 	15/16 ~ 1</p>
+                       <p>Min: n1..4 = 12-12-12-12: 	
+                          <i>n<sub>t</sub></i> / <i>n</i> = 12/48 =	1/4  &Gt; 0</p>
+                    </li>
+                  
+                    <li class="question" onclick="Reveal('bpirange');">
+                      More generally, what value does the Berger&ndash;Parker index take in
+                      an assemblage of <i>n</i> individuals that has perfect evenness 
+                      (i.e. minimum domination)?  
+                    </li>
+                    <li class="bulb">
+                      You may need to express this value in terms of the species richness 
+                      <i>S</i>.
+                    </li>
+                    <li class="hidden written answer" id='bpirange'>
+                      n/S &lt; nt &lt; (n−S), so (n/S × 1/n) = 1/S ≤ BPI &lt; 1
+                    </li>
+                    <li class="question" onclick="Reveal('bpival');">
+                      Do the Berger-Parker index values for each assemblage match up 
+                      with your evaluation of their relative dominances?
+                      Do you intuitively agree, based on the graphs, that assemblages 
+                      CD6 and CD7 have very similar dominances?
+                    </li>
+                    <li class="hidden written answer" id="bpival">
+                      BP6 ~ BP7 ~ 0.47.
+                      But BPmin[6] = 1/15 = 0.06; BPmin[7] = 1/8 = 0.125
+                      
+                      So BP6 is further from its minimum value than BP7!
+                    </li>
+                  </ul>
+                  
+                  <p>
+                    Whereas the Berger–Parker index only incorporates the dominance 
+                    of the most abundant taxa, the abundance of each taxon contributes
+                    to the Simpson index of dominance D, 
+                    given by Σ <i>p<sub>i</sub></i>², where <i>p<sub>i</sub></i>
+                    is the proportion of individuals belonging to taxon <i>i</i>.
+                  </p>
+                  
+                    This value is displayed in PAST as Dominance_D; Do not mistake it for its complement , 1–D, the “Simpson index of diversity”).
+                  <ul>
+                    <li class="question" onclick="Reveal('dom1');">
+                    What range of values can this index take for an assemblage with  S species?
+                    </li>
+                    <li class="hidden written answer" id="dom1">
+                      1/S ≤ D &lt; 1 (again)
+                    </li>
+                  </ul>
+                  
+                  <p>
+                    The final measure of diversity is based on the Shannon entropy of a community (–Σ<i>p<sub>i</sub></i> ln <i>p<sub>i</sub></i>, if you want a formula).
+                    Entropy reflects how likely you are to win a bet on what species the next individual to be sampled will belong to – in a dominated community, a bet on the dominant species will usually pay out.
+                    The Diversity app normalizes this value to run from 0 (entirely dominated) to 1 (maximum evenness) and reports it as Equitibility_J.
+                  </p>
+                   <ul>
+                    <li class="question" onclick="Reveal('dom1');">
+                      How do these three metrics of dominance compare with one another, and with your intuition, for the three assemblages?
+                    </li>
+                    <li class="hidden written answer" id="dom1">
+                      ✎	J ranks 5 < 6 < 7. Does this match the ‘intuitive’ order on Page 2?
+                    </li>
+                  </ul>
+                  
+
             </div>
 					</div>
 				</div>
