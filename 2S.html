@@ -498,7 +498,7 @@
 
                   </li>
                   <li class="bulb">
-                    Your drawing will not persist; for a blank canvas, just refresh the page.
+                    Double click the white "×" button to clear the canvas.
                   </li>
                 </ul>
               </div>
@@ -525,7 +525,10 @@
                     <button onclick="getColor('#56b4e988');" style='background-color:#56b4e9'>CD5</button>
                     <button onclick="getColor('#e69f0088');" style='background-color:#e69f00'>CD6</button>
                     <button onclick="getColor('#009e7388');" style='background-color:#009e73'>CD7</button>
-                    <button onclick="getColor('#bac0c488'); getSize(20);" style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>×</button>
+                    <button onclick="getColor('#bac0c488'); getSize(20);" 
+                            ondblclick="clearCanvas();"
+                            title="Double-click to clear canvas"
+                            style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>×</button>
                   </div>
                   
                   <script> 
@@ -572,6 +575,11 @@
                       ctx.lineTo(mouse.x, mouse.y);
                       ctx.stroke();
                   };
+                  
+                  /* Clearing canvas */
+                  function clearCanvas() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                  }
                   </script>
               
               </div>
