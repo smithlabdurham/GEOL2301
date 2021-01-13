@@ -28,7 +28,7 @@
 		$window.on('load', function() {
 			$('.written').each( function (index) {
         var writeHere = document.createElement("textarea");
-        writeHere.placeholder = "Type your answer here before revealing the answer.";
+        writeHere.placeholder = "Type your answer here. Clicking the question text will reveal the answer.";
         this.parentNode.insertBefore(writeHere, this);        
       })
 		});
