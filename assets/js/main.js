@@ -24,6 +24,15 @@
 			}, 100);
 		});
 
+	// Add textareas on page load.
+		$window.on('load', function() {
+			$('.written').each( function (index) {
+        var writeHere = document.createElement("textarea");
+        writeHere.placeholder = "Type your answer here before revealing the answer.";
+        this.parentNode.insertBefore(writeHere, this);        
+      })
+		});
+
 	// Scrolly.
 		$('.scrolly').scrolly();
 

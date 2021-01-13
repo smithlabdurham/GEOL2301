@@ -235,6 +235,10 @@
                           </ul>
                         </td>
                       </tr>
+                      <tr>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -377,6 +381,9 @@
                   <li class='question' onclick="Reveal('rsurv');">
                   Select the appropriate survivorship curve for a typical <i>r</i>-selected taxon
                   </li>
+                  <li class="option" onclick="Wrong(this, 'rsurv');">Type I</li>
+                  <li class="option" onclick="Wrong(this, 'rsurv');">Type II</li>
+                  <li class="option" onclick="Right(this, 'rsurv');">Type III</li>
                   <li class="hidden answer" id="rsurv">
                     Live fast, die young: <i>r</i>-selected taxa have zillions of offspring,
                     and only a lucky few find a suitable place to thrive and reach adulthood.
@@ -386,6 +393,9 @@
                   Select the appropriate survivorship curve for a typical
                   <i>K</i>-selected taxon
                   </li>
+                  <li class="option" onclick="Right(this, 'Ksurv');">Type I</li>
+                  <li class="option" onclick="Wrong(this, 'Ksurv');">Type II</li>
+                  <li class="option" onclick="Wrong(this, 'Ksurv');">Type III</li>
                   <li class="hidden answer" id="Ksurv">
                     Slow and steady wins the race: <i>K</i>-selected taxa invest heavily in
                     giving their offspring the best start in life, to maximise
@@ -501,6 +511,8 @@
                   <li class="question" onclick="Reveal('plen1');">
                     Are these corals <i>K</i>- or <i>r</i>-strategists?
                   </li>
+                  <li class="option" onclick="Right(this, 'plen1');"><i>r</i>-strategists</li>
+                  <li class="option" onclick="Wrong(this, 'plen1');"><i>K</i>-strategists</li>
                   <li class="hidden answer" id="plen1">
                     <p>
                       Large numbers of tiny offspring with a tiny chance of survival,
@@ -521,7 +533,7 @@
                   <li class="bulb" onclick="Reveal('plen2'); $(this).hide()">
                     Sketch your answer on the plot above before revealing the answer.
                   </li>
-                  <li class="hidden answer" id="plen2">
+                  <li class="hidden written answer" id="plen2">
                     Larvae have no mineralized or even recalcitrant parts; they have
                     almost zero fossilization potential.
                     The fossil record will only preserve those individuals lucky enough
@@ -1080,7 +1092,7 @@
                   <li class="question" onclick="Reveal('j867');">
                   What sort of factors might disturb marine communities?
                   </li>
-                  <li class="hidden answer" id="j867">
+                  <li class="hidden written answer" id="j867">
                   Some examples, across a range of timescales:
                   <ul>
                     <li>Submarine landslides</li>
@@ -1114,6 +1126,7 @@
 
 			<section id="further-reading" class="main">
 				<header>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctq0GaN118x20mgFEbbThXOQZAb9Mbeqbbe2tUtTuQrpeDyA/viewform?embedded=true" width="640" height="968" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 					<div class="container">
 						<h2>Suggestions for further reading</h2>
 					</div>
