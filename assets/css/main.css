@@ -1895,6 +1895,18 @@ kbd {
 
 /* Form */
 
+  textarea {    
+		display: block;
+		box-shadow: inset 0 0 0 1px #e6e6e6;
+		background: #f8f8f8;
+		width: 100%;
+    min-height: 8em;
+    font-size: 80%;
+		padding: 0.85em 1em 0.85em 1em;
+		border-radius: 0.25em;
+		border: 0;    
+  }
+ 
 	form .actions {
 		margin-bottom: 0;
 	}
@@ -2623,3 +2635,45 @@ kbd {
 				}
 
 	}
+  
+  @media print {
+    iframe, .image.featured, .scrolly, .feature-icon,
+    #footer    {
+      display: none;      
+    }
+    
+    body {
+      background: white;
+    }
+    
+    #header {
+      position: relative;
+      margin: 0;
+      background: none;
+      padding: 0;
+      text-align: center;
+    }
+    
+	.dark strong, .dark b {
+		color: #000;
+	}
+  
+    .main > .content.dark,
+    .main > .content.style1,
+    .main > .content.style2,
+    .main > .content.style3,
+    .main > .content.style4
+    {
+      background: none;
+      color: black;
+      font-size: 12pt;
+    }
+    
+    .row > .col-2,
+    .row > .col-4, 
+    .row > .col-6,
+    .row > .col-8 {
+      width: 100%;
+    } 
+    
+  }
