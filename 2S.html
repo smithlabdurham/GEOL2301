@@ -190,7 +190,7 @@
                     Adjusting the bin size (number of bins) sometimes gives a 
                     clearer perspective.
                   </li>
-                  <li class="hidden answer" id="survAns">
+                  <li class="hidden written answer" id="survAns">
                     <p>Would you agree that the 'hump' of the distribution is slightly to the 
                     right of the mean (i.e. the centre of the reference normal 
                     distribution)?  This would denote a slight left skew, consistent
@@ -205,7 +205,7 @@
                   <li class="question" onclick="Reveal('survIM');">
                     What does the skewness suggest about the level of infant mortality?
                   </li>
-                  <li class="hidden answer" id="survIM">
+                  <li class="hidden written answer" id="survIM">
                     If infant mortality were high, then most dead brachiopods would be 
                     little, so we'd expect the peak of the distribution to be on the 
                     left of the mean (i.e. positive skew).
@@ -238,7 +238,7 @@
                       <li class="question" onclick="Reveal('trans');">
                         Which axes should be log-transformed?
                       </li>
-                      <li class="hidden answer" id="trans">
+                      <li class="hidden written answer" id="trans">
                         If size is a linear approximation of age, then the <i>x</i> 
                         axis should be linear. 
                         As survivorship represents the <strong>rate</strong> of death 
@@ -257,8 +257,11 @@
               <div class="col-8 col-12-narrow">
                 <ul>
                   <li class="question" onclick="Reveal('HistType');">
-                    Is survivorship curve Type I (convex), Type II (linear), or Type III (concave)?
+                    Is survivorship curve:
                   </li>
+                  <li class="option" onclick="Right(this, 'HistType');">Type I (convex)</li>
+                  <li class="option" onclick="Wrong(this, 'HistType');">Type II (linear)</li>
+                  <li class="option" onclick="Wrong(this, 'HistType');">Type III (concave)</li>
                   <li class="hidden answer" id="HistType">
                     Type I: most juveniles survive to adulthood.
                   </li>
@@ -275,7 +278,7 @@
                   <li class="question" onclick="Reveal('HistX');">
                     Does this affect your interpretation?
                   </li>
-                  <li class="hidden answer" id="HistX">
+                  <li class="hidden written answer" id="HistX">
                     Our previous interpretation is now reinforced.
                     In this case, the transformed data give a more “honest” picture, as
                     our <i>x</i>-axis now corresponds more closely to age, which is what we
@@ -471,7 +474,7 @@
                     this assemblage? 
                     Which taxon/taxa would you expect to form the trophic nucleus?
                   </li>
-                  <li class="hidden answer" id="div1">
+                  <li class="hidden written answer" id="div1">
                     <p>
                      Fair diversity (richness & evenness), slightly dominated by 
                      the trilobite <i>Basilicus</i> and the brachiopod <i>Sowerbyella</i>.
