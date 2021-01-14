@@ -622,20 +622,50 @@
                     </li>
                     <li class="hidden written answer" id="SRbad">
                       <i>n</i> is tiny in CD7, and huge in CD6.  
-                      Clearly if you sample more specimens you are likely to find 
-                      more species.
+                      Clearly, when <i>n</i> is very small relative to <i>S</i>,
+                      you are not going to sample every species that is present.
+                      It is going to take a very large sample indeed to observe
+                      the rarest species.
+                    </li>
+                    <li class="question" onclick="Reveal('SRyouTry');">
+                      Have a go at devising a formula that will allow the 
+                      species richness of two assemblages, each containing a very
+                      different number of individuals, to be compared.
+                    </li>
+                    <li class="bulb" onclick="Reveal('SRyouTry');">
+                      Getting the "right answer" is not important here: I'm interested
+                      in your thought process.
+                    </li>
+                    <li class="hidden written answer" id="SRyouTry">
+                      To backstrip the effect of sampling intensity (<i>n</i>) on
+                      <i>S</i>, you need some concept of how many more rare species you 
+                      will happen to see as you sample more individuals.
+                      
+                      You can then 'shrink' <i>S</i> by this function of <i>n</i>.
+                      
+                      The next section gives two widely used approaches.  Neither is "correct" – the 'right' approach for a specific situation is somewhat unknowable.
                     </li>
                   </ul>
                   
-                  <h3>Richness indices</h3>
+                  <h3 style="margin-top: 12em;">Richness indices</h3>
                   <p>
                     <strong>Menhinick’s</strong> and <strong>Margalef’s</strong>
-                    richness indices 
-                    (respectively, <i>S</i> / √<i>n</i> and (<i>S</i> – 1) / ln <i>n</i>)
-                    account for sample size (<i>n</i>),
-                    though whether the number of species increases with the square root or 
-                    the logarithm of the number of individuals varies from assemblage to 
-                    assemblage, so neither is necessarily “better”.
+                    richness indices are two attempts to normalize the number of species
+                    observed based on the number of individuals sampled.
+                  </p>
+                  <p>
+                    The two approaches differ in their concept of how many more 
+                    'rare' species we expect to see as we sample more individuals: 
+                    
+                    Menhinick's (<i>S</i> / √<i>n</i>) posits that 
+                    the number of species increases with the square root of 
+                    the number of individuals sampled; 
+                    
+                    Margalef's ((<i>S</i> – 1) / ln <i>n</i>) that <i>S</i>
+                    should increase with the logarithm of sample size.
+                    
+                    Empirically, which is a better model seems to vary from
+                    assemblage to assemblage, so neither is necessarily “better”.                  
                   </p>
                   <ul>
                     <li class="question" onclick="Reveal('mmm');">
@@ -647,24 +677,95 @@
                         <li>Margalef’s richness: Least diverse _5_ / _6_ / _7_ Most diverse [almost equal?]</li>
                       </ul>
                     </li>
+                    <li class="question" onclick="Reveal('mmorm');">
+                      Does it matter which you choose to calculate?
+                    </li>
+                    <li class="hidden written answer" id="mmorm">
+                      It looks wise to calculate both: if different indices suggest 
+                      different rankings, then perhaps it's worth pondering whether 
+                      sample size is affecting your results, and not putting
+                      too much weight on rankings that disagree.
+                    </li>
                   </ul>
                   
                   <h3>Dominance indices</h3>
                   <p>
                     Now let’s consider how we might measure <strong>dominance</strong>.
-                    The simplest measure is the Berger&ndash;Parker index, which states what 
-                    proportion of the <i>n</i> individuals belong to the most common taxon
-                    (<i>n<sub>t</sub></i>) – i.e. <i>n<sub>t</sub></i> / <i>n</i>.
+                  </p><p>
+                    It's a good idea to measure this using an <strong>index</strong>:
+                    mathematically, an index is a dimensionless value that ranges from 
+                    zero to one.  In this context, a value of one should denote 
+                    maximum dominance; zero, maximum evenness.
+                    
                   </p>
+                  <p>
+                    
+                    The simplest measure, and the one that you are perhaps most likely
+                    to encouter, is the Berger&ndash;Parker index.  The BPI is the 
+                    proportion of the <i>n</i> individuals that belong to the most 
+                    common taxon (<i>n<sub>t</sub></i>) – 
+                    i.e. <i>n<sub>t</sub></i> / <i>n</i>.
+                  </p>
+                  
+                  <blockquote>
+                    <p>Worked example:</p>
+                    
+                    <p>
+                    Species A: 5 individuals <br />
+                    Species B: 15 individuals<br />
+                    Species C: 10 individuals<br />
+                    Species D: 5 individuals <br />
+                    </p>
+                    
+                    <p>
+                      <i>n</i> = 5 + 15 + 10 + 5 = 40 individuals
+                    </p>
+                    <p>
+                      Most common taxon = Species B (15 individuals)
+                    </p>
+                    <p>
+                      <i>n<sub>t</sub></i> = 15
+                    </p>
+                    <p>
+                      BPI = <i>n<sub>t</sub></i> / <i>t</i> = 15 / 40 = 3 / 8 = 0.375
+                    </p>
+                    
+                    
+                    
+                  </blockquote>
+                  
                   <ul>
+                    <li class="question" onclick="Reveal('indX');">
+                      Consider two assemblages, A and B.  A has a dominance index of 
+                      0.25.  B has a dominance index of 0.25.  Which is more dominated?
+                    </li>
+                    <li class="bulb" onclick="Reveal('indX');">
+                      This is a somewhat mischevious question.  Answer it anyway...
+                    </li>
+                    <li class="hidden written answer" id="indX">
+                      You would expect that both assemblages would be equally dominated,
+                      and not particularly dominated at that (i.e. rather even).
+                      If that's not the case, then you might want to ask hard questions 
+                      of the supposed 'index'.
+                    </li>
+                    
                     <li class="question" onclick="Reveal('bpi');">
-                     If you have an assemblage that contains 48 individuals and four species, what is the range of possible values that the Berger&ndash;Parker index can take?
+                      Consider an assemblage that contains 48 individuals and four species.
+                      What is the range of possible values that the Berger&ndash;Parker 
+                      index can take?
                     </li>
                     <li class="bulb">
                       Hint: Consider two scenarios: one where an assemblage is maximally dominated, one where it is maximally even.
                     </li>
                     <li class="bulb">
-                      Extension: Why not create a file containing these two assemblages, and load them into the Diversity viewer, to check your answers?
+                      <em>Extension exercises</em>:
+                      <ul><li>Create a file containing these two assemblages, 
+                      and load them into the Diversity viewer, to check your answers.</li>
+                      <li>Set up a spreadsheet that will calculate the BPI as you
+                      edit the number of individuals and number of species, 
+                      then play with the figures to see how the BPI changes.</li>
+                      </ul>
+                      
                     </li>
                     <li class="hidden written answer">
                        <p>Max: n1..4 = 45-1-1-1.  	
@@ -676,7 +777,7 @@
                     <li class="question" onclick="Reveal('bpirange');">
                       More generally, what value does the Berger&ndash;Parker index take in
                       an assemblage of <i>n</i> individuals that has perfect evenness 
-                      (i.e. minimum domination)?  
+                      (i.e. minimum domination)?
                     </li>
                     <li class="bulb">
                       You may need to express this value in terms of the species richness 
@@ -696,6 +797,24 @@
                       But BPmin[6] = 1/15 = 0.06; BPmin[7] = 1/8 = 0.125
                       
                       So BP6 is further from its minimum value than BP7!
+                    </li>
+                    <li class="question" onclick="Reveal('bpisux');">
+                      Now's a good time to revisit those two assemblages with a BPI of 0.25.
+                      What else do you need to know about the assemblages to work out
+                      which is more dominated?  
+                      How useful is the BPI as a measure of dominance?
+                    </li>
+                    <li class="written hidden answer" id="bpisux">
+                      <p>The BPI is not an index: it does not really vary from zero to one.
+                      </p>
+                      <p>
+                      To interpret the BPI, you really need to know <i>S</i>, and you
+                      probably want to know <i>n</i> too.
+                      </p>
+                      <p>
+                        Is it just me, or does the BPI seem to complicate, 
+                        rather than simplify, the interpretation of an assemblage?
+                      </p>
                     </li>
                   </ul>
                   
