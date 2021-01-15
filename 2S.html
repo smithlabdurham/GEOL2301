@@ -360,7 +360,7 @@
                 <p>
                   If you've got time, use a text editor such as Notepad++ to create your
                   own <code>.txt</code> documents and load them into the plotters.
-                  Can you create a dataset that correspond to each of the 
+                  Can you create a dataset that corresponds to each of the 
                   three survivorship curve trajectories?  
                   Does the skew of these datasets correspond to what you expect?
                 </p>
@@ -480,28 +480,49 @@
                      the trilobite <i>Basilicus</i> and the brachiopod <i>Sowerbyella</i>.
                     </p>
                   </li>
+                </ul>
+                <p>
+                  Next, we'll compare CD6 with the underlying and overlying assemblages,
+                  CD5 and CD7.
+                  Note from the log that these represent quite different environments,
+                  separated by unconformities.
+                  Look at the bar plots to get a feel for the relative species richness
+                  and dominance of assemblages CD5–CD7. 
+                </p>
+                <ul>
+                  <li class="bulb">
+                    Note the different <i>x</i> axis scales, denoting different sample
+                    sizes. Use the "Axis size" slider to compare the assemblages to 
+                    the same scale.
+                  </li>
                   <li class="question" onclick="Reveal('div2');">
-                    Looking for now just at the bar plot, mark each of these three 
-                    communities on on the spectra below.  
-                    Assemblage CD1 is labelled as an example of an assemblage that has
+                    Looking for now just at the bar plots, mark each of these three 
+                    communities on the crude spectra below.
+                  </li>
+                  <li class="bulb">
+                    As an example, I've sketched in assemblage CD1, which has
                     very low species richness and is strongly dominated.
                   </li>
                   <li class="hidden answer" id="div2">
-                    <p>No right answer here, as it's a subjective exercise, but here are
+                    <p>There's no right answer here, as it's a subjective exercise, but here are
                     observations that may have guided your hand:
                     </p>
-                    <p> CD5 is super-dominated by one species, even though 
-                    a fair number of rare species are present
+                    <p>
+                      CD5 is super-dominated by one species, even though 
+                      a fair number of rare species are present.
                     </p>
-                    <p>CD6 is quite rich, dominated by 2 species.
-                    Do the bars look like they might exhibit a geometric distribution?
                     </p>
-                    <p>CD7 has a low richness – perhaps just because few individuals 
-                    have been collected?  Looks even.</p>
+                    <p>
+                      CD6 is quite rich, with two dominant species but a number 
+                      of mid-abundance species too.
+                      When ordered by rank abundance, do the bars look like they might 
+                      exhibit a geometric distribution?
+                    </p>
+                    <p>
+                      CD7 has a low richness – perhaps just because few individuals 
+                      have been collected?  Looks even.
+                    </p>
 
-                  </li>
-                  <li class="bulb">
-                    Double click the white "×" button to clear the canvas.
                   </li>
                 </ul>
               </div>
@@ -584,8 +605,12 @@
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
                   }
                   </script>
-              
-              </div>
+                  <ul>
+                    <li class="bulb">
+                      Double click the white "×" button to clear the canvas.
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="row">
                 <div class="col-8 col-12-narrow">
@@ -650,7 +675,7 @@
                   <h3 style="margin-top: 12em;">Richness indices</h3>
                   <p>
                     <strong>Menhinick’s</strong> and <strong>Margalef’s</strong>
-                    richness indices are two attempts to normalize the number of species
+                    richness 'indices' are two attempts to normalize the number of species
                     observed based on the number of individuals sampled.
                   </p>
                   <p>
@@ -674,17 +699,24 @@
                     <li class="hidden written answer" id="mmm">
                       <ul>
                         <li>Menhinick’s richness: Least diverse _6_ / _5_ / _7_ Most diverse</li>
-                        <li>Margalef’s richness: Least diverse _5_ / _6_ / _7_ Most diverse [almost equal?]</li>
+                        <li>Margalef’s richness: Least diverse _5_ / _6_ / _7_ Most diverse</li>
                       </ul>
                     </li>
-                    <li class="question" onclick="Reveal('mmorm');">
+                    <li class="question" onclick="Reveal('mmorm');Reveal('mmormb');">
                       Does it matter which you choose to calculate?
                     </li>
                     <li class="hidden written answer" id="mmorm">
                       It looks wise to calculate both: if different indices suggest 
                       different rankings, then perhaps it's worth pondering whether 
                       sample size is affecting your results, and not putting
-                      too much weight on rankings that disagree.
+                      too much weight on rankings that disagree.                      
+                    </li>
+                    <li class="hidden bulb" id="mmormb">
+                      The coloured bars  beside each value contextualize the value, where
+                      a zero-width bar represents minimum richness, and a full width bar
+                      maximum richness.  Notice that despite their very different absolute
+                      values, Menhinick and Margalef's measures always sit in a very 
+                      similar place in their respective ranges.                      
                     </li>
                   </ul>
                   
@@ -757,8 +789,7 @@
                     <li class="bulb">
                       Hint: Consider two scenarios: one where an assemblage is maximally dominated, one where it is maximally even.
                     </li>
-                    <li class="bulb">
-                      <em>Extension exercises</em>:
+                    <li class="extension">
                       <ul><li>Create a file containing these two assemblages, 
                       and load them into the Diversity viewer, to check your answers.</li>
                       <li>Set up a spreadsheet that will calculate the BPI as you
@@ -767,10 +798,10 @@
                       </ul>
                       
                     </li>
-                    <li class="hidden written answer">
-                       <p>Max: n1..4 = 45-1-1-1.  	
+                    <li class="hidden written answer" id="bpi">
+                       <p>Maximum is obtained when: <i>n</i><sub>1</sub>..<sub>4</sub> = 45, 1, 1, 1.  	<br />
                           <i>n<sub>t</sub></i> / <i>n</i> = 45/48 = 	15/16 ~ 1</p>
-                       <p>Min: n1..4 = 12-12-12-12: 	
+                        <p>Minimum is obtained when: <i>n</i><sub>1</sub>..<sub>4</sub> = 12, 12, 12, 12: 	<br />
                           <i>n<sub>t</sub></i> / <i>n</i> = 12/48 =	1/4  &Gt; 0</p>
                     </li>
                   
@@ -784,7 +815,11 @@
                       <i>S</i>.
                     </li>
                     <li class="hidden written answer" id='bpirange'>
-                      n/S &lt; nt &lt; (n−S), so (n/S × 1/n) = 1/S ≤ BPI &lt; 1
+                      <i>n</i> / <i>S</i> &lt; <i>n<sub>t</sub></i> &lt; 
+                      (<i>n</i>&nbsp;−&nbsp;<i>S</i>), 
+                      so <br />
+                      (<i>n</i>&nbsp;/&nbsp;<i>S</i> × 1&nbsp;/&nbsp;<i>n</i>)
+                      = 1&nbsp;/&nbsp;<i>S</i> ≤ BPI &lt;&nbsp;1
                     </li>
                     <li class="question" onclick="Reveal('bpival');">
                       Do the Berger-Parker index values for each assemblage match up 
@@ -793,10 +828,10 @@
                       CD6 and CD7 have very similar dominances?
                     </li>
                     <li class="hidden written answer" id="bpival">
-                      BP6 ~ BP7 ~ 0.47.
-                      But BPmin[6] = 1/15 = 0.06; BPmin[7] = 1/8 = 0.125
+                      BP{CD6} ~ BP{CD7} ~ 0.47.
+                      But BP<i>min</i>{CD6} = 1/15 = 0.06; BP<i>min</i>{CD7} = 1/8 = 0.125
                       
-                      So BP6 is further from its minimum value than BP7!
+                      So BP{CD6} is further from its minimum value than BP{CD7}!
                     </li>
                     <li class="question" onclick="Reveal('bpisux');">
                       Now's a good time to revisit those two assemblages with a BPI of 0.25.
@@ -816,41 +851,256 @@
                         rather than simplify, the interpretation of an assemblage?
                       </p>
                     </li>
+                    <li class="extension">
+                      <p>
+                        To mitigate these effects, I've added an option in the Diversity
+                        app to correct visualization of the BPI and related values for 
+                        sample size effects, such that a zero-width bar corresponds to the
+                        lowest possible value, and a full-width bar corresponds to the 
+                        highest.
+                      </p>
+                      <p>
+                        Use the "Correct range for sample size" tickbox to see how much
+                        difference this makes in practice – what properties characterize
+                        the most-affected assemblages?
+                      </p>
+                    </li>
                   </ul>
                   
+                  <h3>Simpson Index</h3>
                   <p>
-                    Whereas the Berger–Parker index only incorporates the dominance 
-                    of the most abundant taxa, the abundance of each taxon contributes
-                    to the Simpson index of dominance D, 
-                    given by Σ <i>p<sub>i</sub></i>², where <i>p<sub>i</sub></i>
+                    Did you notice in your calculations that the Berger–Parker index only 
+                    incorporates the dominance of the most abundant taxon?
+                  </p>
+                  <p>It doesn't seem right that these two assemblages would be considered
+                    equally dominated:
+                  </p>
+                  <table>
+                    <tr><td>Species:</td><td>A</td><td>B</td><td>C</td><td>D</td><td><i>n</i></td></tr>
+                    <tr><td>Assemblage X:</td><td>25</td><td>25</td><td>1</td><td>1</td><td>52</td></tr>
+                    <tr><td>Assemblage Y:</td><td>25</td><td>9</td><td>9</td><td>9</td><td>52</td></tr>
+                  </table>
+                  
+                  <p>
+                    The <strong>Simpson index</strong> of dominance addresses this concern.
+                    It is given by Σ <i>p<sub>i</sub></i>², where <i>p<sub>i</sub></i>
                     is the proportion of individuals belonging to taxon <i>i</i>.
                   </p>
                   
-                    This value is displayed in PAST as Dominance_D; Do not mistake it for its complement , 1–D, the “Simpson index of diversity”).
                   <ul>
-                    <li class="question" onclick="Reveal('dom1');">
-                    What range of values can this index take for an assemblage with  S species?
+                    <li class="extension" onclick="Reveal('simCalc');">
+                      What are the Simpson indices of these two assemblages?
+                    </li>
+                    <li class="hidden written answer" id="simCalc">
+                      1&nbsp;/&nbsp;<i>S</i> ≤ <i>D</i> &lt; 1 (again)
+                    </li>
+                    <li class="extension" onclick="Reveal('dom1');">
+                      What range of values can this index take for an assemblage with 
+                      <i>S</i> species?
                     </li>
                     <li class="hidden written answer" id="dom1">
-                      1/S ≤ D &lt; 1 (again)
+                      1&nbsp;/&nbsp;<i>S</i> ≤ <i>D</i> &lt; 1 (again)
                     </li>
                   </ul>
                   
+                  <h3>Shannon entropy / Equitability</h3>
                   <p>
-                    The final measure of diversity is based on the Shannon entropy of a community (–Σ<i>p<sub>i</sub></i> ln <i>p<sub>i</sub></i>, if you want a formula).
-                    Entropy reflects how likely you are to win a bet on what species the next individual to be sampled will belong to – in a dominated community, a bet on the dominant species will usually pay out.
-                    The Diversity app normalizes this value to run from 0 (entirely dominated) to 1 (maximum evenness) and reports it as Equitibility_J.
+                    The Shannon entropy, given by –Σ<i>p<sub>i</sub></i> ln <i>p<sub>i</sub></i>,
+                    is a related but more pleasing measure of dominance.
                   </p>
-                   <ul>
-                    <li class="question" onclick="Reveal('dom1');">
+                  <p>  
+                    Entropy reflects how likely you are to win a bet on what species the 
+                    next individual to be sampled will belong to – in a dominated 
+                    community, a bet on the dominant species will usually pay out.
+                  </p>
+                  <p>
+                    Entropy is a measure of information (the average information content
+                    of an outcome), measured in non-arbitrary units 
+                    (bits – the same unit of data that measures your broadband speed).
+                    As such, this is the only measure that has any objective meaning.
+                  </p>
+                  <p>
+                    With some simple maths, this can be normalized to run from 0 
+                    (entirely dominated) to 1 (maximum evenness); this is reported as
+                    the Equitibility (J).
+                  </p>
+                  <ul>
+                    <li class="question" onclick="Reveal('domj');">
                       How do these three metrics of dominance compare with one another, and with your intuition, for the three assemblages?
                     </li>
-                    <li class="hidden written answer" id="dom1">
-                      ✎	J ranks 5 < 6 < 7. Does this match the ‘intuitive’ order on Page 2?
+                    <li class="hidden written answer" id="domj">
+                      <i>J</i> ranks 5 &lt; 6 &lt; 7.
+                      Does this match the ‘intuitive’ order you sketched on the diagram earlier?
                     </li>
                   </ul>
-                  
+                </div>
+              </div>
+            </div>
+					</div>
+				</div>
+			</section>
 
+			<section id="fourth" class="main">
+        <header>
+					<div class="container">
+						<span class="image featured"><img src="images/P662404.jpg" 
+            title="Credit: British Geological Survey, P662404"
+            alt="Manod Bach" /></span>
+						<h2>Envinronmental change in the Llanvirn</h2>
+					</div>
+				</header>
+				<div class="content dark style3">
+					<div class="container">          
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <h3>Application</h3>
+              </div>
+            </div>
+            <div class="row">
+							<div class="col-8 col-12-narrow">
+                <p>
+                  Time to put this theory into practice. 
+                  Examine each of the ten samples in the succession.
+                  View their individual graphs, then compare their dominance and diversity.
+                </p>
+                <ul>
+                  <li class="question" onclick="Reveal('trnd');">
+                    Can you detect any trends as time goes by (from assemblage CD-1 to assemblage CD-10)?
+                  </li>
+                  <li class="hidden written answer" id='trnd'>
+                    CD1→5 are all low diversity and dominated by a single species. 
+                    CD6→10 (except perhaps 9) are richer and less dominated.
+                  </li>
+                </ul>
+                
+              </div>
+              
+							<div class="col-4 col-12-narrow">
+                <span class="image featured"><img src="images/Williams1981.png" 
+                      style='padding: 15px; background: #ffffff; opacity: 0.9; max-height: 317px; max-width: 170px;'/></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <h3>Whittaker plots</h3>
+                <p>
+                  Now we will transform our data to generate rank-abundance plots.
+                </p>
+                <ul>
+                  <li>
+                    In the Diversity app, select "Order by rank abundance". 
+                    That's the 'rank' bit taken care of.
+                  </li>
+                  <li>
+                    We need to log-transform the abundance – handily, there's a box for 
+                    that too.  Make sure it's checked.
+                  </li>
+                  <li>
+                    To make the graph easier to interpret, we want to rotate it,
+                    and present it as points rather than bars.  
+                    Select "Scatter plot" to accomplish this.
+                  </li>
+                  <li>
+                    You can add a 'line of best fit' with the "Fit (log)linear" option:
+                    useful for evaluating possible geometric distributions.
+                  </li>
+                  <li class="question" onclick="Reveal('geom');">
+                    Do any assemblages approximate (loosely) the straight line expected of a geometric distribution?
+                    Do others approximate the S-shape of the log-normal distribution, with few common and few rare species?
+                  </li>
+                  <li class="bulb">
+                    Don’t get thrown by “steps” in the data associated with jumps from one integer count to the next.
+                    Many species may be represented by a single individual – you can’t count 1.3 brachiopods.
+                  </li>
+                  <li class="extension">Use Octave plots to validate your answers</li>
+                  <li class="hidden written answer" id="geom">
+                    <p>
+                      CD6, and perhaps CD7–9, almost look linear:
+                      but can you detect that faint S-shape?
+                      The most abundant species are certainly more dominant than 
+                      predicted by a geometric model.
+                    </p>
+                    <p>
+                      Octave plots reveal a possible log-normal distribution for these
+                      assemblages; the high values of Shapiro's <i>p</i> (> 0.05) 
+                      indicate that a log-normal distribution cannot be rejected.
+                    </p>
+                    <p>
+                      Many others assemblages, e.g. CD2–3, have one or two superabundant 
+                      species far above the line – perhaps representing ‘pioneers’?
+                      Could these counts represent an artefact of some sort? 
+                      Would this affect the bigger picture?
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+							<div class="col-8 col-12-narrow">                
+                <h3>Synthesis</h3>
+              </div>
+            </div>
+            <div class="row">
+							<div class="col-8 col-12-narrow">
+                <p>
+                  Now it’s time to bring all these observations together.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+							<div class="col-8 col-12-narrow">
+                <ul>
+                  <li class="question" onclick="Reveal('syna');">
+                    From what you know about the ecology of the constituent organisms, reconstruct the palaeoenvironment in which they dwelt 
+                       and provide a geological and ecological interpretation for any 
+                       variation in diversity and dominance, 
+                       and the shape of rank abundance plots, through the sedimentary 
+                       sequence.
+                  </li>
+                  <li class="bulb">
+                   You may wish to refer to <i>Fossils at a Glance</i>
+                    and
+                    <a href="images/Scott1978w.png" title="Reference Ternary plots, Scott 1978 Lethaia"
+                       target="_blank" rel="noopener">Scott's reference ternary plots</a>.
+                  </li>
+                  <li class="hidden written answer" id="syna">
+                    <ul>
+                      <li>
+                        Mostly suspension feeders: high energy, ?below photic zone.
+                      </li>
+                      <li>
+                        Steady increase in diversity & evenness through time, 
+                        with later assemblages exhibiting log-normal distributions:
+                        does this reflect more stable environments, or removal of 
+                        stressors?
+                        Why so many trilobites in CD6?
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="question" onclick="Reveal('synb');">
+                    Are your interpretations consistent with the sedimentary log?
+                  </li>
+                  <li class="hidden written answer" id="synb">
+                    <p>
+                      Lower log shows stable, ?low resource, ?low oxygen = stressful settings.
+                      Low energy suggests that detritovores might dominate.                    
+                      Might occasional anoxia stop ecosystems maturing to climax communities?
+                    </p>
+                    <p>
+                      Over time, energy levels increase (decrease in water depth?).
+                      Suspension feeding becomes preferable?
+                      Shallower water → photic zone; more food → more predators → more diversity?
+                      Climax communities becoming established, with log-normal distribution.
+                    </p>
+                    <p>Does CD6 (unconformity-bounded limestone) have a unique character?</p>
+                  </li>
+                </ul>              
+              </div>
+              
+							<div class="col-4 col-12-narrow">
+                <span class="image featured"><img src="images/Williams1981.png" 
+                      style='padding: 15px; background: #ffffff; opacity: 0.9; max-height: 317px; max-width: 170px;'/></span>
+              </div>
             </div>
 					</div>
 				</div>
@@ -876,7 +1126,6 @@
                 <i>Palaeontology</i>, 24, 661–694.
               </li>
             </ul>
-            See the readling list link on duo for access to these resources through the library.
           </div>
         </div>
       </section>

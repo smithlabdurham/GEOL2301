@@ -339,6 +339,19 @@ li.bulb::marker {
   content: "\f0eb";
 }
 
+li.extension::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f70c";
+}
+li.extension::before {
+  text-transform: none !important;
+  font-style: italic;
+  content: "Extension exercise: ";
+}
+
 li.option::marker {
   text-transform: none !important;
   font-style: normal;
