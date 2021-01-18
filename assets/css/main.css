@@ -2390,7 +2390,7 @@ kbd {
 				background: #433;
 			}
 
-			.main > .content.style1 {
+			.main > .content.style1, .main > .content.style5 {
 				background: url("images/bgtr.svg") top right no-repeat,
         url("images/bgbl.svg") bottom left no-repeat,
         url("images/bgbl.svg") bottom left no-repeat, url("images/overlay.png"),
@@ -2699,7 +2699,8 @@ canvas.paintable {
     .main > .content.style1,
     .main > .content.style2,
     .main > .content.style3,
-    .main > .content.style4
+    .main > .content.style4,
+    .main > .content.style5
     {
       background: none;
       color: black;
