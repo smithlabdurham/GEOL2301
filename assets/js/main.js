@@ -24,14 +24,12 @@
 			}, 100);
 		});
 
-	// Add textareas on page load.
-		$window.on('load', function() {
-			$('.written').each( function (index) {
-        var writeHere = document.createElement("textarea");
-        writeHere.placeholder = "Type your answer here. Clicking the question text will reveal the answer.";
-        this.parentNode.insertBefore(writeHere, this);        
-      })
-		});
+
+    $('.written').each( function (index) {
+      var writeHere = document.createElement("textarea");
+      writeHere.placeholder = "Type your answer here. Clicking the question text will reveal the answer.";
+      this.parentNode.insertBefore(writeHere, this);        
+    })
 
 	// Scrolly.
 		$('.scrolly').scrolly();
