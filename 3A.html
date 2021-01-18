@@ -170,6 +170,54 @@
 							</div>
             </div>
             <div class="row">
+              <div class='col-8 col-12-narrow'>
+                <p>
+                  Identify the modes of selection associated with the trait optima (orange) sketched below.
+                  For each mode of selection, sketch how you would expect the frequency
+                  of trait occurrence (red line) to change over time:
+                </p>
+                <style>                          
+                  #paint {background-color: #bac0c4;
+                          background-image: url('images/selection.png');
+                          min-width: 600px;
+                          width: 100%;
+                          height: 440px;
+                          }
+                </style>
+                
+                <div id="sketch" class="sketchable">
+                  <canvas id="paint" class="paintable"></canvas>
+                </div>
+
+                <div class='featured settings'>
+                  <button onclick="getColor('#3d3d3d88');" style='background-color:#3d3d3d'>&bull;</button>
+                  <button onclick="getColor('#56b4e988');" style='background-color:#56b4e9'>&bull;</button>
+                  <button onclick="getColor('#feb30488');" style='background-color:#feb304'>&bull;</button>
+                  <button onclick="getColor('#db050b88');" style='background-color:#db050b'>&bull;</button>
+                  <button onclick="getColor('#009e7388');" style='background-color:#009e73'>&bull;</button>
+                  <button onclick="getColor('#bac0c488'); getSize(20);" 
+                          ondblclick="clearCanvas();"
+                          title="Double-click to clear canvas"
+                          style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>×</button>
+                    <br />
+                    Brush:
+                      <button onclick="getSize('2');">Small</button>
+                      <button onclick="getSize('5');">Med</button>
+                      <button onclick="getSize('10');">Large</button>
+                      <button onclick="getSize('20');">X Large</button>
+                    
+                </div>
+                
+                <script defer src='assets/js/canvas1.js'></script>
+                <ul>
+                  <li class="bulb">
+                    Double click the white "×" button to reset the canvas.
+                  </li>
+                </ul>
+              
+              </div>
+            </div>
+            <div class="row">            
               <div class="col-8 col-12-narrow">
                 <p>
                   Describe each mode of selection, and explain how it might lead 
@@ -183,11 +231,10 @@
                   <li class="question" onclick="Reveal('seln3');">Disruptive selection</li>
                   <li class="hidden written answer" id="seln3">A population diverges to form separate species adapted to each of two non-overlapping optima</li>
                 </ul>
-              </div>
-							
+              </div>							
 						</div>
             <div class="row">
-							<div class="col-8 col-12-narrow">
+              <div class="col-8 col-12-narrow">
                 <h3>Case study on Anagenesis: Change through time</h3>
               </div>
             </div>
@@ -249,20 +296,29 @@
             </div>
 						<div class="row">
               <div class="col-4 col-12-narrow">
-              
-                Lineage splitting – which leads to one species becoming two – can occur through 
-                <strong>sympatric</strong> (‘same land’) or 
-                <strong>allopatric</strong> (‘other lands’) processes.  
-                Sympatric speciation is generally thought to be rare,  as it requires populations that share a space to become reproductively isolated. 
-                Allopatric speciation enforces reproductive isolation by the establishment of a geographical barrier, whether temporary or permanent – often at the periphery of a population (where it is given the more specific term peripatric speciation).  
-                If sufficient evolution has occurred (whether by natural selection or neutral genetic drift), the populations will be unable to interbreed when (if) the barrier is removed. 
+                <p>
+                  Lineage splitting – which leads to one species becoming two – can occur through 
+                  <strong>sympatric</strong> (‘same land’) or 
+                  <strong>allopatric</strong> (‘other lands’) processes.  
+                </p>
+                <p>
+                  Sympatric speciation is generally thought to be rare,  as it requires populations that share a space to become reproductively isolated. 
+                  Allopatric speciation enforces reproductive isolation by the establishment of a geographical barrier, whether temporary or permanent – often at the periphery of a population (where it is given the more specific term peripatric speciation).  
+                  If sufficient evolution has occurred (whether by natural selection or neutral genetic drift), the populations will be unable to interbreed when (if) the barrier is removed. 
+                </p>
               </div>
-                
 							<div class="col-8 col-12-narrow">
 								<iframe src="https://durham.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=763e0289-b39f-4fd4-9095-acb400b9ce23" 
                 height="360" width="640" allow="fullscreen" loading="lazy"></iframe>
 							</div>
             </div>
+            <div class="row">
+							<div class="col-8 col-12-narrow">
+                <ul>
+                
+                </ul>
+              </div>
+						</div>
             <div class="row">
 							<div class="col-8 col-12-narrow">
                 <h3>Tempo and mode of evolution</h3>

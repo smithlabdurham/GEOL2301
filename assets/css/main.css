@@ -2650,6 +2650,28 @@ kbd {
 
 	}
   
+  
+  /* Canvas */
+#settings, .settings { 
+  display: block;
+  text-align:center;
+  padding: 0.5em;
+}
+
+canvas.paintable {
+  border: 1px solid black;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+ }
+ 
+ .sketchable {
+  margin-top: 1em;
+ }
+
+ /* Print */
   @media print {
     iframe, video,
     .image.featured, .scrolly, .feature-icon,
