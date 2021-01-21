@@ -295,6 +295,24 @@ input, select, textarea {
 .question {
   font-style: italic;
 }
+
+body {
+  counter-reset: section-number -2;
+}
+
+section {
+  counter-reset: question-number;
+}
+
+h2 {
+  counter-increment: section-number;
+}
+
+li.question::before {
+  counter-increment: question-number;
+  content: "[" counter(section-number) "." counter(question-number) "] ";  
+}
+
 li.question, li.discuss {
   margin-top: 1.6em;
 }
