@@ -302,9 +302,6 @@ body {
 
 section {
   counter-reset: question-number;
-}
-
-h2 {
   counter-increment: section-number;
 }
 
