@@ -408,6 +408,14 @@ li.right::marker {
   color: #22cc33;
   content: "\f058";
 }
+li.rightish::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  color: #b3e615;
+  content: "\f059";
+}
 
 li.bare {
   list-style-type: none;
@@ -1696,6 +1704,18 @@ kbd {
 			width: 100%;
 			border-radius: 0.5em;
 		}
+    
+    .alphapad, .whitepad {
+      padding: 1em;
+    }
+    
+    .whitepad {
+      background: #ffffff;      
+    }
+    
+    .alphapad {
+      background: rgba(255, 255, 255, 0.65);
+    }
 
 		.image.featured {
 			display: block;

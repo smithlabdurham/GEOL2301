@@ -45,6 +45,11 @@ function Right(el, id) {
   $(el).removeClass('option');
   $(el).addClass('right');
 }
+function Rightish(el, id) {
+  $('#' + id).slideDown();
+  $(el).removeClass('option');
+  $(el).addClass('rightish');
+}
 function Wrong(el, id) {
   $('#' + id).slideDown();
   $(el).removeClass('option');
