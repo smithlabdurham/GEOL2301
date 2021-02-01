@@ -346,13 +346,57 @@
 
               </div>
             </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <ul>
+                  <li class="question" onclick="Reveal('caco3');">
+                    Which form of calcium carbonate is most likely to persist through
+                    geological time?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 'caco3');">
+                    Aragonite
+                  </li>
+                  <li class="option" onclick="Right(this, 'caco3');">
+                    Low-magnesium calcite
+                  </li>
+                  <li class="option" onclick="Wrong(this, 'caco3');">
+                    High-magnesium calcite
+                  </li>
+                  <li class="hidden answer" id="caco3">
+                    Aragonite is metastable; input energy and it'll recrystalize. 
+                    Mg atoms introduce irregularities and thus strain into the
+                    CaCO<sub>3</sub> crystal lattice; the more Mg is involved, the less
+                    stable the calcite will prove.
+                  </li>
+                  <li class="question" onclick="Reveal('redu');">
+                    Which common skeletal biomaterial will be most likely to survive
+                    diagenesis in an acidic, reducing environment?
+                  </li>
+                  <li class="option" onclick="Rightish(this, 'redu');">
+                    Pyrite
+                  </li>
+                  <li class="option" onclick="Wrong(this, 'redu');">
+                    Carbonate
+                  </li>
+                  <li class="option" onclick="Right(this, 'redu');">
+                    Organic carbon
+                  </li>                  
+                  <li class="hidden answer" id="redu">
+                    [Calcium] carbonate dissolves quickly in acid.
+                    Pyrite is stable – but it's not a widespread biomineral.
+                    (Search for the Scaly-Footed Snail to find a curious exception.)
+                    Organic carbon survives well in these conditions: picture the yukky leaf matter at the bottom of an oft-stagnant pond.
+                  </li>                  
+                </ul>
+              </div>
+            </div>
             <div class="hidden row">
-            <!-- TODO move to practical? -->
+            <!-- TODO move to practical?>
               <div class="col-8 col-12-narrow">
                 <p>
                   A compositionally unstable shell can be subject to a range of fates: metastable aragonite may recrystallize, obliterating the original structure; or dissolution of the original material may leave a void that may later be filled with mud or other minerals. It’s important to distinguish a mould (an impression of the surface of a fossil) from a cast (an infilling of a mould).
                 </p>
-              </div>
+              </div-->
             </div>
           </div>
         </div>
@@ -387,6 +431,44 @@
               <div class="col-8 col-12-narrow">
                 <iframe src="https://durham.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7319f62b-d118-4e33-9797-acc200f30623"
                 height="360" width="640" allow="fullscreen" loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-12-narrow">
+                <ul>
+                  <li class="question" onclick="Reveal('lxd');">
+                    Why might a species appear in a life assemblage, but not a death 
+                    assemblage?
+                  </li>
+                  <li class="hidden written answer" id="lxd">
+                    This low preservation potential may reflect composition (lack of
+                    durable hard parts), ecology (preservation potential of infaunal 
+                    <i>vs.</i> epifaunal taxa? Succeptibility to end up in a predator's gut?), transportability (buoyancy?)&hellip; what else?
+                  </li>
+                  <li class="question" onclick="Reveal('dxl');">
+                    Why might a species appear in a death assemblage, but not a life
+                    assemblage?
+                  </li>
+                  <li class="hidden written answer" id="dxl">
+                    A species may be a temporary resident (seasonal abundance? migration?)
+                    or may be transported in from elsewhere.
+                    Time-averaging may reflect a community that preceded a long-term change (outcompeted pioneer species? local extinction?)
+                  </li>
+                  <li class="question" onclick="Reveal('ID');">
+                    How can one be confident that ecological interpretations are not simply taphonomic biases?
+                  </li>
+                  <li class="hidden written answer" id="ID">
+                    It's tricky!  If a reconstruction matches a bias that is known to occur (e.g. dominance of suspension feeders in biomass counts?), 
+                    then we might treat the conclusion with a little suspicion.
+                    Organisms themselves might give indirect evidence: for example, 
+                    apedunculate brachiopods might struggle to stay put in a high-energy
+                    environment; low-energy environments may struggle to support a 
+                    highly tiered community of suspension feeders.
+                    It's definitely worth evaluating whether a quantitatively derived
+                    reconstruction is consistent with what you know and can infer
+                    about the actual organisms that are preserved.
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="row">
