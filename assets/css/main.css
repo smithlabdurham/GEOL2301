@@ -334,7 +334,7 @@ li.discuss::marker {
   content: "\f086"; /* dots: f4ad; solid: f075, multi: f086 */
 }
 
-.hidden {
+.hidden, .image img.hidden {
   display: none;
 }
 
@@ -2202,6 +2202,7 @@ kbd {
 		display: inline-block;
 		background: #3d3d3d;
 		padding: 0.85em 3em 0.85em 3em;
+		margin-bottom: 3px;
 		border-radius: 0.25em;
 		cursor: pointer;
 		border: 0;
