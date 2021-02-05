@@ -338,6 +338,13 @@ li.discuss::marker {
   display: none;
 }
 
+.image img.paired {
+  width: 48%;
+  float: left;
+  margin: 0 1%;
+  object-fit: cover;
+}
+
 li.answer::marker {
   text-transform: none !important;
   font-style: normal;
