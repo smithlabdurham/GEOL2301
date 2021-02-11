@@ -398,6 +398,24 @@ li.option::marker {
   content: "\f101";
 }
 
+li.do::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f101";
+}
+li.how {
+  margin-left: 2em;
+}
+li.how::marker {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  content: "\f0a4";
+}
+
 li.wrong::marker {
   text-transform: none !important;
   font-style: normal;
