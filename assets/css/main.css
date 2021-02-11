@@ -464,6 +464,13 @@ kbd {
   border-radius: 0.25em;
 }
 
+kbd.shift:after {
+  content: "Shift\A0\21E7"
+}
+kbd.enter:after {
+  content: "Enter\A0\23CE"
+}
+
 /* Row */
 
 	.row {
