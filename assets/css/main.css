@@ -471,6 +471,22 @@ kbd.enter:after {
   content: "Enter\A0\23CE"
 }
 
+/* Resource box */
+
+div.resources {
+  border: double 1px;
+  padding: 1em;
+}
+
+div.resources > h4:before {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+  /*content: "\f0c3"; /* flask */
+  content: "\f00e"; /* search+*/
+}
+
 /* Row */
 
 	.row {
