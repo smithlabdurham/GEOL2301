@@ -484,6 +484,10 @@
             <div class="col-8 col-12-narrow">
               <p>
                 As it happens, the predictions of our ‘succession analogy’ are not too wide of the mark.
+                In particular, the Cambrian is often viewed as 'less competitive' than
+                later periods, conjuring a harmonic idyll in which predation only 
+                exerted a secondary influence on ecosystem structure.                
+              </p><p>                
                 This raises an interesting question: do we need to invoke large-scale macroevolutionary processes to explain the replacement of biotas and the pattern of diversity through time, or do the first-order patterns in biodiversity simply represent the null expectation as life gradually conquers an uninhabited realm?
               </p>
             </div>
@@ -614,7 +618,7 @@
           <div class="row">
             <div class="col-8 col-12-narrow">
               <h3>
-                Thinking about data
+                How to count the data
               </h3>
             </div>
           </div>
@@ -629,6 +633,9 @@
                 Conway Morris takes three different counts: all individuals; living individuals only (e.g. discounting empty shells); and biovolume.  
                 These results differ in certain respects (see figure).
               </p>
+              <p>
+                 Explain the following trends:
+              </p>
             </div>
             <div class="col-4 col-12-narrow">
               <span class="image">
@@ -638,28 +645,118 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6 col-12-narrow">
+            <div class="col-5 col-12-narrow">
+              
+              <ul>
+                <li class="question" onclick="Reveal('trend-ar');">
+                  Super-abundant in all ways of counting 
+                  <span style="color: #f6c8c8CC;">(arthropods)</span>
+                </li>
+                <li class="hidden written answer" id="trend-ar">
+                  Arthropods just really are dominant – however you measure them! And about 50-60% dominant too. 
+                </li>
+                <li class="question" onclick="Reveal('trend-hc');">
+                 Many individuals, little biovolume <span style="color: #f6eac9CC;">(hemichordates)</span>
+                </li>
+                <li class="hidden written answer" id="trend-hc">
+                  Individuals are small.
+                </li>
+                <li class="question" onclick="Reveal('trend-sp');">
+                   Few individuals, much biovolume <span style="color: #d3cbf7CC;">(e.g. sponges)</span>
+                </li>
+                <li class="hidden written answer" id="trend-sp">
+                  Individuals are disproportionately large.
+                  Interesting caveat with sponges – they are mostly hollow, so mostly water – does biovolume overestimate their true biomass?
+                </li>
+              </ul>
+            </div>
+            
+            <div class="col-7 col-12-narrow">
               <span class="image alphapad">
                 <img src="images/8/ConwayCounts.png" />
               </span>
             </div>
-            <div class="col-6 col-12-narrow">
+            <div class="col-8 col-12-narrow">
+              <ul>
+                <li class="question" onclick="Reveal('trend-mb');">
+                 Many individuals, few live individuals (<span style="color: #e9f3c7CC;">molluscs</span>, <span style="color: #cbebf7CC;">brachiopods)</span>
+                </li>
+                <li class="hidden written answer" id="trend-mb">
+                  Most individuals are empty shells.
+                  If the shells weren't biomineralized, they'd've rotted (and thus not 
+                  be countable).
+                </li>
+                <li class="question" onclick="Reveal('trend-pw');">
+                  Consistently in the middle <span style="color: #cbf7e3CC;">(priapulid worms)</span>
+                </li>
+                <li class="hidden written answer" id="trend-pw">
+                  Perhaps counting individuals overestimates because they are smallish,
+                  whereas biovolume overestimates because priapulids are mostly (metabolically inert) gut?
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <h3>
+                Habitat and feeding
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">
               <p>
-                 Explain the following trends:
+                Trends in habitat and feeding habit also vary depending on counting mechanism – but some observations are robust to this.
               </p>
+              <p>
+                Use the slides below to interpret the ecology of the Burgess Shale.
+                (Advance the slides to colour-code the habits.)
+              </p>
+                
+              <iframe src="https://durhamuniversity-my.sharepoint.com/personal/pjjg18_durham_ac_uk/_layouts/15/Doc.aspx?sourcedoc={f969cedb-2602-42ae-ac7e-575e39c37004}&amp;action=embedview&amp;wdAr=1.3333333333333333" width="640px" height="480px" frameborder="0">
+              </iframe>
+              
+              <ul>
+                <li class="bulb">
+                  Habitat bars are ordered from ‘more to less active’ from left to right;
+                feeding habit categories are DC, DS: Deposit; SU: Suspension; PC: Predator / carnivore / scavenger.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8 col-12-narrow">
               <ul>
                 <li class="question" onclick="Reveal('TODO');">
-                  Super-abundant in all ways of counting 
-                  <span style="color: #f6c8c8CC;">(arthropods)</span>
-                  Many individuals, little biovolume <span style="color: #f6eac9CC;">(hemichordates)</span>
-                  Few individuals, much biovolume <span style="color: #d3cbf7CC;">(e.g. sponges)</span>
-                  Many individuals, few live individuals (<span style="color: #e9f3c7CC;">molluscs</span>, <span style="color: #cbebf7CC;">brachiopods)</span>
-                  Consistently in the middle <span style="color: #cbf7e3CC;">(priapulid worms)</span>
+                  
+                </li>
+                <li class="hidden written answer" id="TODO">
+                  
+                </li>
+                <li class="question" onclick="Reveal('pirce');">
+                  Did predators play an important role in Cambrian ecosystems?
+                </li>
+                <li class="hidden written answer" id="pirce">
+                  
+                </li>
+                <li class="question" onclick="Reveal('TODO');">
+                  Does the composition of individuals in the Burgess Shale correspond to the distribution of habitats and feeding habits in a modern-day marine ecosystem? 
+                  Account for any differences.                  
                 </li>
                 <li class="hidden written answer" id="TODO">
                   
                 </li>
               </ul>
+
+
+              </p>
+            </div>
+            <div class="col-4 col-12-narrow">
+              <span class="image">
+                <img src="images/8/brach.jpg" />
+              </span>
             </div>
           </div>
           
