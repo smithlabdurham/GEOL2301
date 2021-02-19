@@ -126,7 +126,7 @@
           <div class="row">
             <div class="col-4 col-12-narrow">
               <p>
-                In a seminal palaeontological study, Jack Sepkoski showed that a ‘Cambrian fauna’ with a distinctive taxonomic composition arose in this period, before waning almost immediately during the Ordovician radiation.
+                In a seminal palaeontological study, Jack Sepkoski showed that a ‘Cambrian fauna’ (marked <span style="font-family: serif">I</span> in figure) with a distinctive taxonomic composition arose in this period, before waning almost immediately during the Ordovician radiation.
               </p>
               <p>
                 Sepkoski compiled a database of the stratigraphic occurrence of marine families, allowing the first detailed analysis of the diversity of each invertebrate class (the Linnean rank below a phylum) through time.
@@ -231,13 +231,24 @@
                   <button onclick="getColor('#56b4e988');" style='background-color:#56b4e9'>Hawthorns</button>
                   <button onclick="getColor('#009e7388');" style='background-color:#009e73'>Oaks</button>
                   <button onclick="getColor('#bac0c488'); getSize(20);" 
-                          ondblclick="clearCanvas();"
+                          ondblclick="clearCanvas();$('#paint').css('background-image', 'url(images/8/NHO_analogy.png)');"
                           title="Double-click to clear canvas"
                           style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>×</button>
                 </div>
                 
                 <script defer src='assets/js/canvas1.js'></script>
             </div>
+          </div>
+          <div class="row">
+            <ul>
+                <li class="bulb" ondblclick="$('#paint').css('background-image', 'url(images/8/NHO_analogy_ans.png)'); Reveal('nho');">
+                  Double-click here to show my approximate answer.
+                </li>
+                <li class="hidden answer" id="nho">
+                  Your image should resemble Sepkoski's plot of the success of faunas 
+                  I, II and III through time, albeit without the effect of mass extinctions.
+                </li>
+              </ul>
           </div>
           
         </div>
