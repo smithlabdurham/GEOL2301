@@ -76,9 +76,9 @@
       <header>
         <div class="container">
           <span class="image featured">
-            <img src="images/IMAGE"
-                 title=""
-                 alt="Credit: " />
+            <img src="images/8/Tamisiocaris_.jpg"
+                 title="Children of the explosion: An arthropod 'whale', alongside vetulicolians and other oddballs."
+                 alt="Credit: Rob Nicholls, Palaeocreations" />
           </span>
           <h2>The Cambrian Explosion</h2>
         </div>
@@ -93,7 +93,7 @@
           <div class="row">
             <div class="col-4 col-12-narrow">
               <p>
-                The Cambrian explosion marked the sudden onset of complex animal-dominated
+                The Cambrian &ldquo;explosion&rdquo; marked the sudden onset of complex animal-dominated
                 ecosystems, and the origin of the modern animal groups, in a geologically
                 brief window of time.
               </p>
@@ -103,8 +103,8 @@
                 others because there was so little there before it?
               </p>
               <p>
-                This is the focus of my own research interest, and today we're going to 
-                look in some depth at a Cambrian community.
+                This is the focus of my own research.
+                Today we're going to look in some depth at a Cambrian community.
               </p>
             </div>
             <div class="col-8 col-12-narrow">
@@ -113,6 +113,130 @@
                 Clueless about the Cambrian? Catch up with this optional refresher video,
                 which will set the scene for this session.
               </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <h3>
+                The Cambrian Fauna
+              </h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-narrow">
+              <p>
+                In a seminal palaeontological study, Jack Sepkoski showed that a ‘Cambrian fauna’ with a distinctive taxonomic composition arose in this period, before waning almost immediately during the Ordovician radiation.
+              </p>
+              <p>
+                Sepkoski compiled a database of the stratigraphic occurrence of marine families, allowing the first detailed analysis of the diversity of each invertebrate class (the Linnean rank below a phylum) through time.
+                Elegant statistical analysis showed, remarkably, that the diversity of each class could be described as a blending of three ‘fundamental trends’ (factors).
+              </p>
+            </div>
+            <div class="col-8 col-12-narrow">
+              <span class="image alphapad">
+                <img src="images/8/Sepkoski5.png" />
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <p>
+                Blending these three factors together accounts for the vast majority (>90%) of the pattern of diversity through time; the residuals largely correspond to times of mass extinction or rapid diversification.
+              </p>
+              <p>
+                Some classes’ trends (e.g. Trilobites, articulate brachiopods, gastropod molluscs) map almost exactly onto one of the three factors – these groups are considered to represent a ‘Cambrian’, ‘Palaeozoic’ and ‘Recent’ fauna.
+                Other groups (e.g. ostracod arthropods, corals) represent a blending of two or three factors.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+          
+            <div class="col-4 col-12-narrow">
+              <span class="alphapad image">
+                <img src="images/8/SepkoskiFactors.png" />
+              </span>
+              <ul>
+                <li class="question" onclick="Reveal('facOst');">
+                  Which factors blend to account for the diversity of corals 
+                  (Anthozoa, rightmost column) through time?
+                </li>
+                <li class="option" onclick="Wrong(this);">
+                  Factor I
+                </li>
+                <li class="option" onclick="Right(this);">
+                  Factor II
+                </li>
+                <li class="option" onclick="Right(this);">
+                  Factor III
+                </li>
+                <li class="question" onclick="Reveal('yCorl');">
+                  Many classes map to a single factor (find some examples).
+                  Why might corals represent a blending of two?
+                </li>
+                <li class="hidden written answer" id="yCorl">
+                  Factor II maps to the success of rugose and tabulate corals; 
+                  Factor III might represent the emergence of scleractinians.
+                </li>
+              </ul>
+            </div>
+             <div class="col-8 col-12-narrow">
+              <span class="image alphapad">
+                <img src="images/8/SepkoskiClasses.png" />
+              </span>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <h3>
+                Characterizing the faunas
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <p>
+                Sepkoski suggested that members the three different faunas might be characterised by different evolutionary parameters.
+                We’re going to explore this now with an ecological <strong>analogy</strong>.
+                Could the Precambrian oceans, essentially devoid of macroscopic life, be analogous to a patch of ground recently cleared and about to undergo ecological succession?
+                If so, the first animal species to evolve in the Cambrian might have something in common with the first individuals to arrive on a patch of new earth.
+              </p>
+              <p>
+                Let’s refresh our memory of succession.
+                Imagine that a nettle seed, a hawthorn berry, and an acorn (oak seed) germinate on a patch of bare earth.
+                In the left-hand plot, draw three curves, corresponding to the population size of each population (of nettles, hawthorn shrubs, and oak trees).
+                In the right-hand plot, stack these curves vertically to depict the proportion of individuals that are (i), nettles; (ii), hawthorns; (iii) oaks.
+              </p>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-12-narrow" style="background-color: #bac0c4; margin-top: 2em;">
+               <style>                          
+                  #paint {background-image: url('images/8/NHO_analogy.png');
+                          width: 888px;
+                          height: 527px;
+                          border: none;
+                          }
+                </style>
+                
+                <div id="sketch" style="margin-top: 1em;">
+                  <canvas id="paint" class="paintable"></canvas>
+                </div>
+
+                <div id="settings" class='featured' style='width: 823px;'>
+                  <button onclick="getColor('#3d3d3d88');" style='background-color:#3d3d3d'>?</button>
+                  <button onclick="getColor('#e69f0088');" style='background-color:#e69f00'>Nettles</button>
+                  <button onclick="getColor('#56b4e988');" style='background-color:#56b4e9'>Hawthorns</button>
+                  <button onclick="getColor('#009e7388');" style='background-color:#009e73'>Oaks</button>
+                  <button onclick="getColor('#bac0c488'); getSize(20);" 
+                          ondblclick="clearCanvas();"
+                          title="Double-click to clear canvas"
+                          style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>×</button>
+                </div>
+                
+                <script defer src='assets/js/canvas1.js'></script>
             </div>
           </div>
           
@@ -174,13 +298,24 @@
         <div class="content style4">
           <ul>
             <li class="reference">
-              * Conway Morris, S. (1986). The community structure of the Middle Cambrian Phyllopod Bed (Burgess Shale). Palaeontology, 29(3), 423–467.
+              * Conway Morris, S. (1986).
+              The community structure of the Middle Cambrian Phyllopod Bed (Burgess Shale).
+              <i>Palaeontology</i>, 29(3), 423–467.
             </li>
             <li class="reference">
-              Caron, J.-B., & Jackson, D. A. (2008). Paleoecology of the Greater Phyllopod Bed community, Burgess Shale. Palaeogeography, Palaeoclimatology, Palaeoecology, 258(3), 222–256. 
+              Sepkoski, J. J. (1981).
+              A Factor Analytic Description of the Phanerozoic Marine Fossil Record.
+              <i>Paleobiology</i>, 7, 36–53.
+            </li>            
+            <li class="reference">
+              Caron, J.-B., & Jackson, D. A. (2008).
+              Paleoecology of the Greater Phyllopod Bed community, Burgess Shale.
+              <i>Palaeogeography, Palaeoclimatology, Palaeoecology</i>, 258(3), 222–256. 
             </li>
             <li class="reference">
-              Caron, J.-B., & Jackson, D. A. (2006). Taphonomy of the Greater Phyllopod Bed community, Burgess Shale. Palaios, 21, 451–465.
+              Caron, J.-B., & Jackson, D. A. (2006). 
+              Taphonomy of the Greater Phyllopod Bed community, Burgess Shale. 
+              <i>Palaios</i>, 21, 451–465.
             </li>
             <li class="reference">
               Now might also be a good time to refer back to your notes on previous sessions, particularly those on Palaeoecology and Succession.
