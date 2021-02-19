@@ -80,7 +80,7 @@
                  title="Children of the explosion: An arthropod 'whale', alongside vetulicolians and other oddballs."
                  alt="Credit: Rob Nicholls, Palaeocreations" />
           </span>
-          <h2>The Cambrian Explosion</h2>
+          <h2>The Cambrian Fauna</h2>
         </div>
       </header>
       <div class="content dark style3">
@@ -264,12 +264,12 @@
           <div class="row">
             <div class="col-8 col-12-narrow">
               <p>
-                Let’s pretend for a moment that <strong class="col1">families</strong>, 
-                each containing many <strong class="col2">species</strong>,
-                come to fill empty ecospace over <strong class="col3"><em>evolutionary</em> timescales</strong>
-                in the same way that <strong class="col1">populations</strong>, 
-                each containing many <strong class="col2">individuals</strong>,
-                come to fill empty ecospace over <strong class="col3"><em>ecological</em> timescales</strong>.
+                Let’s pretend for a moment that <strong class="clr1">families</strong>, 
+                each containing many <strong class="clr2">species</strong>,
+                come to fill empty ecospace over <strong class="clr3"><em>evolutionary</em> timescales</strong>
+                in the same way that <strong class="clr1">populations</strong>, 
+                each containing many <strong class="clr2">individuals</strong>,
+                come to fill empty ecospace over <strong class="clr3"><em>ecological</em> timescales</strong>.
               </p>
               <p>
                 Let’s explore this analogy further (without worrying, yet, whether it is a good analogy).
@@ -278,83 +278,323 @@
               <table>
                 <tr>
                   <th>
-                    Ecological succession
+                    <span class="clr3">Ecological</span> succession
                   </th>
                   <th>
-                    Evolutionary analogue
+                    <span class="clr3">Evolutionary</span> analogue
+                  </th>
+                  <th>
+                    Hint
                   </th>
                 </tr>
                 <tr>
-                  <td>Population of individuals</td>
-                  
-                  <td><input placeholder="Evolutionary analogue" value="Family of species" disabled /></td>
+                  <td><span class="clr1">Population</span> of <span class="clr2">individuals</span></td>
+                  <td contenteditable="true"><span class="clr1">Family</span> of <span class="clr2">species</span></td>
+                  <td></td>
                 </tr>
                 <tr>
-                  <td>Birth of new individual
+                  <td><span class="clr4">Birth</span> of new <span class="clr2">individual</span>
                   </td>
-                  <td>
-                    <input placeholder="🖉" />
+                  <td contenteditable="true">
+                    <span class="clr4">🖉_______</span> of a new <span class="clr2">species</span>
                   </td>
-                  </tr>
-                <tr>
-                  <td>
-                    Death of an individual
-                  </td>
-                  <td>
-                    <input placeholder="🖉" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Reproductive rate
-                  </td>
-                  <td>
-                    <input placeholder="🖉" />
+                  <td style="width: 33%;">
+                    <ul>
+                      <li class="bulb" style="display: inline-list;" onclick="$('#hint1').slideToggle();">
+                        <span class="hidden" id="hint1">
+                          Birth is when an individual appears for the first time.
+                          What is the equivalent for a species?
+                        </span>
+                      </li>
+                    </ul>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    Death rate	
+                    <span class="clr4">Death</span> of an <span class="clr2">individual</span>
                   </td>
-                  <td>
-                    <input placeholder="🖉" />
+                  <td contenteditable="true">
+                    <span class="clr4">🖉_______</span> of a <span class="clr2">species</span>
+                  </td>
+                  <td style="width: 33%;">
+                    <ul>
+                      <li class="bulb" style="display: inline-list;" onclick="$('#hint2').slideToggle();">
+                        <span class="hidden" id="hint2">
+                          Death is when an individual's existence comes to an end.
+                          What is the equivalent for a species?
+                        </span>
+                      </li>
+                    </ul>
                   </td>
                 </tr>
                 <tr>
-                  <td>Life expectancy
-                  </td>
                   <td>
-                    <input placeholder="🖉" />
+                    <span class="clr4">Reproductive</span> rate
+                  </td>
+                  <td contenteditable="true">
+                    <span class="clr4">🖉_______</span> rate
+                  </td>
+                  <td style="width: 33%;">
+                    <ul>
+                      <li class="bulb" style="display: inline-list;" onclick="$('#hint3').slideToggle();">
+                        <span class="hidden" id="hint3">
+                          Reproduction sees one individual become more than one individual.
+                          What is the equivalent for a species?
+                        </span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="clr4">Death</span> rate	
+                  </td>
+                  <td contenteditable="true">
+                    <span class="clr4">🖉_______</span> rate
+                  </td>                  
+                  <td style="width: 33%;">
+                    <ul>
+                      <li class="bulb" style="display: inline-list;" onclick="$('#hint4').slideToggle();">
+                        <span class="hidden" id="hint4">
+                          The death rate is how many individuals no longer exist after a unit of time.
+                          What is the equivalent for a species?
+                        </span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="clr4">Life expectancy</span>
+                  </td>
+                  <td contenteditable="true">
+                    <span class="clr4">🖉_______</span>
+                  </td>
+                  <td style="width: 33%;">
+                    <ul>
+                      <li class="bulb" style="display: inline-list;" onclick="$('#hint5').slideToggle();">
+                        <span class="hidden" id="hint5">
+                          Life expectancy is the average time from birth to death.
+                          What is the equivalent for a species?
+                        </span>
+                      </li>
+                    </ul>
                   </td>
                 </tr>
               </table>
             </div>
           </div>
           
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <p>
+                Remind yourself of the trajectories of the 
+                Cambrian (I), Palæozoic (II) and Recent (III) faunas in Sepkoski's 
+                diversity plot.
+              </p>
+              <p>
+                Assuming that the analogy with ecological succession holds true,
+                infer the properties of each fauna:
+              </p>
+              <table>
+                <tr>
+                  <th />
+                  <th style="width: 28%;" >Cambrian Fauna (I)</th>
+                  <th style="width: 28%;" >Palæozoic Fauna (II)</th>
+                  <th style="width: 28%;" >Recent Fauna (III)</th>
+                </tr>
+                <tr>
+                  <th style="text-align: right; padding-right: 0.8em;">Speciation rate</th>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    🖉high / medium / low
+                  </td>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    high / medium / low
+                  </td>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    high / medium / low
+                  </td>
+                </tr>
+                <tr>
+                  <th style="text-align: right; padding-right: 0.8em;">Species longevity</th>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    🖉high / medium / low
+                  </td>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    high / medium / low
+                  </td>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    high / medium / low
+                  </td>
+                </tr>
+                <tr>
+                  <th style="text-align: right; padding-right: 0.8em;">Competitivity</th>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    🖉high / medium / low
+                  </td>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    high / medium / low
+                  </td>
+                  <td style="text-align: center;" class="clr5" contenteditable="true">
+                    high / medium / low
+                  </td>
+                </tr>
+              </table>
+              <ul>
+                <li class="bulb">
+                  If you get stuck, come back to this table later.
+                </li>
+              </ul>
+              <ul>
+                <li class="question" onclick="Reveal('eccn');">
+                  In an ecological context, what sort of life strategy is associated with the lifespan and reproductive rate you reconstructed for the Cambrian and Recent faunas?
+                </li>
+                <li class="hidden written answer" id="eccn">
+                  <p>
+                    Cambrian: rapid speciation / high species turnover is equivalent to
+                    the high reproductive rate / short lifespan we'd see in an 
+                    <i>r</i>-selected species.
+                  </p>
+                  <p> 
+                    Recent: <i>vice versa</i> for <i>K</i>-selected species.
+                  </p>                  
+                </li>
+                <li class="question" onclick="Reveal('ecoc');">
+                  What other characteristics do you associate with these life strategies?
+                </li>
+                <li class="hidden written answer" id="ecoc">
+                  <i>r</i>-selected species tend to be generalists / opportunists; 
+                  <i>K</i>-selected species tend to be specialized competitors.
+                </li>
+                <li class="question" onclick="Reveal('assh');">
+                  Assuming that the analogy with succession holds, what characteristics would you predict might characterise (i), the Cambrian fauna; (ii), the Recent fauna? 
+                </li>
+                <li class="hidden written answer" id="assh">
+                  <p>
+                    Might the Cambrian fauna be dominated by generalists / opportunists,
+                    and the Recent fauna specialized competitors?
+                    Does this fit with what you know of the increased specialization through
+                    time, for example of predators during the Mesozoic Marine Revolution?
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <p>
+                As it happens, the predictions of our ‘succession analogy’ are not too wide of the mark.
+                This raises an interesting question: do we need to invoke large-scale macroevolutionary processes to explain the replacement of biotas and the pattern of diversity through time, or do the first-order patterns in biodiversity simply represent the null expectation as life gradually conquers an uninhabited realm?
+              </p>
+            </div>
+          </div>
           
         </div>
       </div>
     </section>
 
-    <section id="SECTION_ID" class="main">
+    <section id="Burgess" class="main">
       <header>
         <div class="container">
           <span class="image featured">
-            <img src="images/IMAGE"
-                 title=""
-                 alt="Credit: " />
+            <img src="images/8/Nectocaris.jpg"
+                 title="Nectocaris, a Burgess Shale wonder"
+                 alt="Credit: Martin R. Smith / Royal Ontario Museum" />
           </span>
-          <h2>TODO_SECTION_HEADING</h2>
+          <h2>The Burgess Shale</h2>
+          <p>
+            A case study of a Cambrian community
+          </p>
         </div>
       </header>
       <div class="content dark style3">
         <div class="container">
           <div class="row">
             <div class="col-8 col-12-narrow">
-              <h3>TODO_SUBHEADING</h3>
+              <h3>Preservation</h3>
             </div>
           </div>
           <div class="row">
+            <div class="col-4 col-12-narrow">
+              <p>
+                The Burgess Shale is an exceptional fossil deposit that offers an unrivalled glimpse into Cambrian ecology. 
+                Event beds, packed with fossilized 'soft' anatomy, range from 2–200&nbsp;mm thick, separated by fossil-poor background sedimentation; each corresponds to a single obrution event.
+              </p>
+              <p>
+                As always, it's worth worrying to what extent the fossil
+                assemblage is representative of the living community, and to what extent
+                the living community was representative of Cambrian communities more 
+                generally.
+              </p>
+            </div>
+            <div class="col-8 col-12-narrow">
+              <iframe src="https://durham.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0430d24d-f53c-4ac7-91d3-acd400e84ce5"
+                height="360" width="640" allow="fullscreen" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <ul>
+                <li class="question" onclick="Reveal('stp');">
+                  What factors make the Burgess Shale promising for ecological study?
+                </li>
+                <li class="hidden written answer" id="stp">
+                  <ul>
+                    <li>Soft tissue preservation: Everything's there [?]</li>
+                    <li>Discrete burial horizons: Snapshots in time [?] (and space??)</li>
+                  </ul>
+                </li>
+                <li class="question" onclick="Reveal('wicc');">
+                  Is it legitimate to draw conclusions about Cambrian communities in general from the Burgess Shale?
+                </li>
+                <li class="hidden written answer" id="wicc">
+                  <ul>
+                    <li>
+                      Low Palaeolatitude (15° N) → potentially increased diversity,
+                      as more primary productivity possible
+                    </li>
+                    <li>
+                      Connection to open ocean present, so not isolated basin;
+                      supported by pelagic trilobites; few endemic species
+                    </li>
+                    <li>
+                      Shelly taxa match other Cambrian assemblages… so presumably non-shelly taxa in common too?
+                    </li>
+                  </ul>
+                </li>
+                <li class="question" onclick="Reveal('biass');">
+                  How is the taxonomic composition of fossil assemblages likely to relate to that of the original (live) communities? What biases might be in play – and how might we evaluate their effects?
+                </li>
+                <li class="hidden written answer" id="biass">
+                  <p>
+                  Size? (Might large organisms manage to estape obrution events by swimming away or burrowing free?)
+                  </p>
+                  <p>
+                  Habitat? (Could burrowers be protected from transport, or better able to escape when transported?)
+                  </p>
+                  <p>
+                  Time averaging? (What was dying on the sea floor during an event?)
+                  </p>
+                  <p>
+                  Mineralized parts? (Might they provide ballast and reduce transport?)
+                  </p>
+                  <p>
+                  Decay?
+                  </p>
+                  <p>
+                  Collection bias? (What don't we spot, because we don't prepare it out, or we leave it in the field because it's not interesting enough to lug back to camp, or because the rock doesn't split along that plane?)
+                     
+                  </p>
+                  <p>               
+                  Finding the same taxon in multiple beds is instructive: when that taxon
+                  is better preserved, do we see other taxa that don't appear elsewhere
+                  (and thus are presumably the most succeptible to decay)?
+                  As it happens, this sort of analysis suggests that decay does
+                  not systematically distort assemblage composition.
+                  </p>
+                </li>
+              </ul>
+            </div>
             <div class="col-4 col-12-narrow">
               <div class="resources" style="background: transparent url(https://burgess-shale.rom.on.ca/images/home-odyssey.jpg) no-repeat; background-size: cover;">
                 <h4>
@@ -371,6 +611,58 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <h3>
+                Thinking about data
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <p>
+                We're going to look at data from two studies:
+                Conway Morris 1986, which uses ‘familiar’ techniques on ‘old’ collections, which incorporate talus material and were not collected systematically (anything dubbed inferior was chucked down the hillside);
+                and Caron & Jackson 2008, which performs a bed-by-bed analysis and some more sophisticated stats for additional insight.
+              </p>
+              <p>
+                Conway Morris takes three different counts: all individuals; living individuals only (e.g. discounting empty shells); and biovolume.  
+                These results differ in certain respects (see figure).
+              </p>
+            </div>
+            <div class="col-4 col-12-narrow">
+              <span class="image">
+                <img src="images/8/caronHammer.jpg" />
+                Systematic sampling allows Caron (foreground) to link samples to specific horizons.
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-12-narrow">
+              <span class="image alphapad">
+                <img src="images/8/ConwayCounts.png" />
+              </span>
+            </div>
+            <div class="col-6 col-12-narrow">
+              <p>
+                 Explain the following trends:
+              </p>
+              <ul>
+                <li class="question" onclick="Reveal('TODO');">
+                  Super-abundant in all ways of counting 
+                  <span style="color: #f6c8c8CC;">(arthropods)</span>
+                  Many individuals, little biovolume <span style="color: #f6eac9CC;">(hemichordates)</span>
+                  Few individuals, much biovolume <span style="color: #d3cbf7CC;">(e.g. sponges)</span>
+                  Many individuals, few live individuals (<span style="color: #e9f3c7CC;">molluscs</span>, <span style="color: #cbebf7CC;">brachiopods)</span>
+                  Consistently in the middle <span style="color: #cbf7e3CC;">(priapulid worms)</span>
+                </li>
+                <li class="hidden written answer" id="TODO">
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>

@@ -148,22 +148,22 @@ input, select, textarea {
 	}
   
    /* Tol text colour palette; https://personal.sron.nl/~pault/ */
-  .dark strong.col1, span.col1 {
+  .dark strong.clr1, .clr1 {
     color: #BCEC;
   }
-  .dark strong.col2, span.col2 {
+  .dark strong.clr2, .clr2 {
     color: #CDAC;
   }
-  .dark strong.col3, span.col3 {
+  .dark strong.clr3, .clr3 {
     color: #FCCC;
   }
-  .dark strong.col4, span.col4 {
+  .dark strong.clr4, .clr4 {
     color: #CEFC;
   }
-  .dark strong.col5, span.col5 {
+  .dark strong.clr5, .clr5 {
     color: #EEBC;
   }
-  .dark strong.col6, span.col6 {
+  .dark strong.clr6, .clr6 {
     color: #DDDC;
   }
 
