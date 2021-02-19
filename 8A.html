@@ -724,29 +724,95 @@
                 </li>
               </ul>
             </div>
+            <div class="col-4 col-12-narrow">
+              <span class="image">
+                <img src="images/8/brach.jpg" />
+              </span>
+            </div>
           </div>
 
           <div class="row">
             <div class="col-8 col-12-narrow">
               <ul>
-                <li class="question" onclick="Reveal('TODO');">
-                  
+                <li class="question" onclick="Reveal('lhr');">
+                  How does the mode of counting influence the patterns in life habits (habitat)?
                 </li>
-                <li class="hidden written answer" id="TODO">
-                  
+                <li class="hidden written answer" id="lhr">
+                  Hemichordates are many but tiny, so “I.S.” inflated by counting individuals.                  
                 </li>
                 <li class="question" onclick="Reveal('pirce');">
                   Did predators play an important role in Cambrian ecosystems?
                 </li>
                 <li class="hidden written answer" id="pirce">
-                  
+                  <p>
+                    Yes, a surprisingly large role, if you look at biovolume.
+                    No, if you look at numbers of individuals.
+                    Which measure is more appropriate here?
+                  </p>
+                  <p>
+                    Biovolume is important in quantifying the contribution of different trophic roles to ecosystems, because that’s how energy is passed up a food chain.
+                  </p>
+                  <p>
+                    Clearly deposit feeding AND suspension feeding are both important.
+                    Perhaps there are periodic currents so food sometime settles?
+                    Perhaps suspension feeders are less efficient in the Cambrian, so more food slips through the net?
+                  </p>
                 </li>
-                <li class="question" onclick="Reveal('TODO');">
-                  Does the composition of individuals in the Burgess Shale correspond to the distribution of habitats and feeding habits in a modern-day marine ecosystem? 
+              </ul>
+              <p>
+                Use the percentage data to (approximately) plot the Burgess Shale
+                assemblage on Scott's (1978) ternary diagrams of Cenozoic environments.
+              </p>
+              <style>                          
+                #settings2 { display: block; text-align:center; padding: 0.5em;}
+                #paint2 {border: 1px solid black;
+                        background-color: #bdc4c5;
+                        background-image: url('images/8/Scott1978.png');
+                        background-repeat: no-repeat;
+                        background-size: 75%;
+                        background-position: center;
+                        width: 660px;
+                        height: 310px;
+                        margin-left: auto; margin-right: auto; display: block;}
+              </style>
+              
+                <div id="sketch2" style="margin-top: 1em;">
+                  <canvas id="paint2"></canvas>
+                </div>
+                
+                <script src="assets/js/canvas2.js"></script>
+                <script>
+                  canvas2.width = 660;
+                  canvas2.height = 310;
+                  ctx2.lineJoin = 'round';
+                  ctx2.lineCap = 'round';
+                  ctx2.lineWidth = '4';
+                  ctx2.strokeStyle = "#56b4e911";
+                </script>
+              
+                <button onclick="getColor2('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
+                <button onclick="getColor2('#e69f0011');" style='background-color:#e69f00'>&bull;</button>
+                <button onclick="getColor2('#009e7311');" style='background-color:#009e73'>&bull;</button>
+                <button onclick="getColor2('#3d3d3d11');" style='background-color:#3d3d3d'>&bull;</button>
+                <button onclick="getColor2('#d2c2c788'); getSize2(20);" 
+                        ondblclick="clearCanvas2()"
+                        title="Double-click to clear canvas"
+                        style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>&times;</button>                
+              <ul>
+                <li class="question" onclick="Reveal('cmpin');">
+                  Does the composition of individuals in the Burgess Shale correspond to the distribution of habitats and feeding habits in a Cenozoic marine ecosystem? 
                   Account for any differences.                  
                 </li>
-                <li class="hidden written answer" id="TODO">
-                  
+                <li class="hidden written answer" id="cmpin">
+                  <p>
+                    By biovolume: Fewer infaunal suspension feeders than any modern setting!  Was burrowing limited in the Cambrian? (YES)  Would infaunal feeders necessarily get swept up in mudflows? (NO)
+                  </p>
+                  <p>
+                  By individual count though: good match for middle shelf.
+                  </p>
+                  <p>
+                  Scott used abundance data (not biovolume) to generate these plots.
+                  </p>
                 </li>
               </ul>
 
@@ -754,8 +820,11 @@
               </p>
             </div>
             <div class="col-4 col-12-narrow">
-              <span class="image">
-                <img src="images/8/brach.jpg" />
+              <span class="image alphapad">
+                <img src="images/8/cmHabitat.png" />
+              </span>
+              <span class="image alphapad">
+                <img src="images/8/cmFeedingHabits.png" />
               </span>
             </div>
           </div>
