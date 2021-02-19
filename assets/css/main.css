@@ -146,6 +146,26 @@ input, select, textarea {
 		color: #fff;
 		color: rgba(255, 255, 255, 0.85);
 	}
+  
+   /* Tol text colour palette; https://personal.sron.nl/~pault/ */
+  .dark strong.col1, span.col1 {
+    color: #BCEC;
+  }
+  .dark strong.col2, span.col2 {
+    color: #CDAC;
+  }
+  .dark strong.col3, span.col3 {
+    color: #FCCC;
+  }
+  .dark strong.col4, span.col4 {
+    color: #CEFC;
+  }
+  .dark strong.col5, span.col5 {
+    color: #EEBC;
+  }
+  .dark strong.col6, span.col6 {
+    color: #DDDC;
+  }
 
 	em, i {
 		font-style: italic;
