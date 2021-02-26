@@ -1811,6 +1811,15 @@ div.resources > h4:before {
 				margin: 0 auto;
 				width: auto;
 			}
+      
+      .source {
+        text-align: right;
+        font-size: smaller;
+      }
+      
+      .source:before{
+        content: "Source: ";
+      }
 
 /* List */
 
