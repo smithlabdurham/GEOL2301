@@ -312,7 +312,7 @@ input, select, textarea {
 
 		}
 
-.question {
+.question, .flush-question {
   font-style: italic;
 }
 
@@ -325,7 +325,7 @@ section {
   counter-increment: section-number;
 }
 
-li.question::before {
+li.question::before, li.flush-question::before {
   counter-increment: question-number;
   content: "[" counter(section-number) "." counter(question-number) "] ";  
 }
@@ -338,7 +338,7 @@ li.discuss {
   margin-bottom: 3.2em;  
 }
 
-li.question::marker {
+li.question::marker, li.flush-question::marker {
   text-transform: none !important;
   font-style: normal;
   font-weight: 900;
@@ -1813,7 +1813,7 @@ div.resources > h4:before {
 			}
       
       .source {
-        text-align: right;
+        text-align: right !important;
         font-size: smaller;
       }
       
