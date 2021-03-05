@@ -316,6 +316,10 @@ input, select, textarea {
   font-style: italic;
 }
 
+.question em {
+  font-style: normal;
+}
+
 body {
   counter-reset: section-number -2;
 }
