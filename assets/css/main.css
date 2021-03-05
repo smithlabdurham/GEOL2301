@@ -316,7 +316,7 @@ input, select, textarea {
   font-style: italic;
 }
 
-.question em {
+.question em, .flush-question em {
   font-style: normal;
 }
 
