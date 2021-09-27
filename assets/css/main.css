@@ -312,7 +312,7 @@ input, select, textarea {
 
 		}
 
-.question, .flush-question {
+.question, .flush-question, .task {
   font-style: italic;
 }
 
