@@ -429,10 +429,10 @@ li.do::marker {
 	font-family: "Font Awesome 5 Free";
   content: "\f101";
 }
-li.how {
+li.how, li.pointer {
   margin-left: 2em;
 }
-li.how::marker {
+li.how::marker , li.pointer::marker {
   text-transform: none !important;
   font-style: normal;
   font-weight: 900;
