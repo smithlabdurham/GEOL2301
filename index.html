@@ -84,6 +84,18 @@
                     <th class="col-4 col-12-narrow">Practical exercises</th>
                   </thead>
                   <tbody id="timetable">
+                    <tr>
+                      <td class="col-2 col-12-narrow">Week 1</td>
+                      <td class="col-2 col-12-narrow"><span week="1"></span></td>
+                      <td class="col-4 col-12-narrow"><a href='1.html'>Palaeoecology</a></td>
+                      <td class="col-4 col-12-narrow">
+                        <p>Ecosystems and environments</p>
+                        <p>
+                          <a href="1S.html">Part A</a> | <a class="jupyter">Part B</a> | <a href="https://notes.dmaitre.phyip3.dur.ac.uk/notebooks/manual/workingwitthenotebook/">Using Jupyter</a>
+                        </p>
+                      </td>
+                          
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -178,7 +190,7 @@
           const tpcA = document.createElement('a');
           tpcA.innerHTML = topic;
           tpcA.href = i + '.html';
-          tpc.appendChild(tpcA);                
+          tpc.appendChild(tpcA);
           const xrcs = document.createElement('td');
           xrc1 = document.createElement('p');
           xrc1.innerHTML = exercise;
@@ -203,7 +215,6 @@
           row.appendChild(xrcs);
           timetable.appendChild(row);
         }
-        addRow(1, "Palaeoecology", "Ecosystems and environments");
         addRow(2, "Succession", "Measures of diversity (Computer required)");
         addRow(3, "Systematic Palaeontology", "Key Palaeozoic Fossils");
         addRow(4, "Higher classification", 
