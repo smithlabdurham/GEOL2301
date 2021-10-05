@@ -1,4 +1,6 @@
 firstClass = new Date("2021-10-07");
+wenlockDeadline = new Date(firstClass.valueOf());
+wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17);
 
 days = document.querySelectorAll('[day]');
 for (var i = 0; i != days.length; i++) {

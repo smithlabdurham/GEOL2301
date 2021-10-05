@@ -231,11 +231,9 @@
         ddl1.innerHTML = 'Deadline';
         addWidth(ddl1, 2);
         const dat = document.createElement('td');
-        ddlDate = new Date(firstClass.valueOf());
-        ddlDate.setDate(ddlDate.getDate() + 72 + 2);
         ddl2 = document.createElement('td');
         addWidth(ddl2, 2);
-        ddl2.innerHTML = ddlDate.toDateString();
+        ddl2.innerHTML = wenlockDeadline.toDateString();
         ddl3 = document.createElement('td');
         ddl3.colSpan = 2;
         addWidth(ddl3, 8);
