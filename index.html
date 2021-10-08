@@ -91,7 +91,11 @@
                       <td class="col-4 col-12-narrow">
                         <p>Ecosystems and environments</p>
                         <p>
-                          <a href="1S.html">Part A</a> | <a class="jupyter">Part B</a> | <a href="https://notes.dmaitre.phyip3.dur.ac.uk/notebooks/manual/workingwitthenotebook/">Using Jupyter</a>
+                          <a href="1S.html">Part A</a> 
+                            <span style="display:none" id='Ans1A'>(<a href="1SA.html">answers</a>)</span>
+                          | <a class="jupyter">Part B</a> 
+                          | <a href="https://notes.dmaitre.phyip3.dur.ac.uk/notebooks/manual/workingwitthenotebook/">Using Jupyter</a>
+                           
                         </p>
                       </td>
                           
@@ -214,6 +218,11 @@
           row.appendChild(tpc);
           row.appendChild(xrcs);
           timetable.appendChild(row);
+        }
+        release1 = new Date(firstClass.valueOf());
+        release1.setDate(release1.getDate() + 1);
+        if (new Date().getTime() > release1.getTime()) {
+          document.getElementById('Ans1A').style.display = 'inline';
         }
         addRow(2, "Succession", "<a href='2S.html'>Measures of diversity</a> (Computer required)");
         addRow(3, "Systematic Palaeontology", "Key Palaeozoic Fossils");
