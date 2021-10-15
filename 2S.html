@@ -64,39 +64,55 @@
                     Download and install RStudio, available
                      <a href="https://rstudio.com/products/rstudio/download/" 
                     target="_blank" rel="noreferrer noopener">directly</a>
-                    or via
+                    (recommended) or via
                     <a href="https://appsanywhere.durham.ac.uk/" title="Apps Anywhere" 
-                    target="_blank" rel="noreferrer noopener">AppsAnywhere</a>.
+                    target="_blank" rel="noreferrer noopener">AppsAnywhere</a>.                    
+                    
                     <ul>
-                    <li class="bulb">
-                      If running Windows, you will also need RTools – select the
-                      appropriate RStudio version in AppsAnywhere, or install it 
-                      separately – Google will lead you to instructions.
-                    </li>
-                  </ul>
+                      <li class="bulb">
+                        If you install RStudio via AppsAnywhere, you may also need to launch all
+                        other software (e.g. File explorer, internet browser) via AppsAnywhere
+                        in order for files to be visible to RStudio.
+                      </li>
+                      <!--li class="bulb">
+                        If running Windows, you will also need RTools – select the
+                        appropriate RStudio version in AppsAnywhere, or install it 
+                        separately – Google will lead you to instructions.
+                      </li-->
+                    </ul>
                   </li>
                   <li>
-                    From within RStudio, install the packages 'devtools' and 'Ternary'
+                    From within RStudio, install the packages 'remotes' and 'Ternary'
                     (case sensitive).
                     <ul>
                       <li>
-                      Method 1: Use the toolbar Tools → Install Packages:
+                        Method 1: Use the toolbar Tools → Install Packages:
                         <ul>
-                          <li>Install from: CRAN</li>
-                          <li>Packages: devtools, Ternary</li>
+                          <li>Install from: <code>CRAN</code></li>
+                          <li>Packages: <code>remotes, Ternary</code></li>
                           <li>Install dependencies: ticked</li>
                         </ul>
                       </li>
+                      <!--li>
+                        OR Method 2: Use the "Packages" tab (lower right-hand panel)
+                        <ul>
+                          <li>Select the "Packages" tab</li>
+                          <li>Click the "Install" button</li>
+                          <li>Install from: CRAN</li>
+                          <li>Packages: remotes, Ternary</li>
+                          <li>Install dependencies: ticked</li>
+                        </ul>
+                      </li-->
                       <li>
-                        Method 2: Run the command 
-                        <code>install.packages("&Lt;PACKAGE NAME&Gt;")</code> 
+                        OR Method 2: Run the command 
+                        <code>install.packages("<em>PACKAGE NAME</em>")</code> 
                         in the console.
                       </li>
                     </li>
                   </ul>
                   <li>
-                    Install the teaching package 'palec' by running the command
-                    <code>devtools::install_github("smithlabdurham/palec", dependencies = TRUE)</code>
+                    Then, install the teaching package 'palec' by running the command
+                    <code>remotes::install_github("smithlabdurham/palec", dependencies = TRUE)</code>
                     in the console.
                   </li>
                   <li class="bulb">
