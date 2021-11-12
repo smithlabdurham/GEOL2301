@@ -72,8 +72,27 @@
                       <li class="bulb">
                         If you install RStudio via AppsAnywhere, you may also need to launch all
                         other software (e.g. File explorer, internet browser) via AppsAnywhere
-                        in order for files to be visible to RStudio.
+                        in order for files to be visible to RStudio. <a onclick='$("#aa-help").slideDown(); $(this).hide()'>[details]</a>
                       </li>
+                      <li class="hidden bulb" id="aa-help">
+                        <p style='font-style:italic;'>Our demonstrator Alavya explains:</p>
+                        <p>
+                          I would try to recommend not using Apps Anywhere (AA) on Mac systems as it can get very fiddly unnecessarily.
+                        </p>
+                        <p>
+                          When using RStudio on AA - using the 'Browse files' redirects you to the Durham Files Explorer (e.g., 
+                         the Desktop, Documents that you would see if you logged into a MDS controlled device using a Durham login).
+                        <p>
+                          To be able to import files on AA RStudio you need to transfer them to the Durham systems 
+                          (e.g. CIS Desktop or Documents folders) - which can be done using the 'Durham File Explorer' on AA.
+                          On windows systems you can drag the file or copy/paste from the local computer window to the 
+                          'Durham File Explorer' ; it seems on Mac systems it can be more complicated (see below).
+                          If, however you download the file from AA 'Internet explorer' this does not download into your local
+                          device but on the downloads section of your Durham based folders, 
+                          so AA RStudio is able to 'see' this downloaded file. 
+                        </p>
+                      </li>
+                      
                       <!--li class="bulb">
                         If running Windows, you will also need RTools – select the
                         appropriate RStudio version in AppsAnywhere, or install it 
