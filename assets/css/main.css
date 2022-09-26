@@ -494,6 +494,9 @@ kbd.shift:after {
 kbd.enter:after {
   content: "Enter\A0\23CE"
 }
+kbd.space:after {
+  content: "[\A0Space\A0 bar\A0]"
+}
 
 /* Resource box */
 
