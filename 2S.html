@@ -61,21 +61,20 @@
                 </p>
                 <ul>
                   <li>
-                    Download and install RStudio, available
-                     <a href="https://rstudio.com/products/rstudio/download/" 
-                    target="_blank" rel="noreferrer noopener">directly</a>
-                    (recommended) or via
-                    <a href="https://appsanywhere.durham.ac.uk/" title="Apps Anywhere" 
-                    target="_blank" rel="noreferrer noopener">AppsAnywhere</a>.                    
-                    
+                    Download and install <a href="https://cran.rstudio.com/">R</a>. Then, download and install
+                    <a href="https://www.rstudio.com/products/rstudio/download/#download" 
+                    target="_blank" rel="noreferrer noopener">RStudio Desktop</a>.
                     <ul>
                       <li class="bulb">
-                        If you install RStudio via AppsAnywhere, you may also need to launch all
-                        other software (e.g. File explorer, internet browser) via AppsAnywhere
+                        We recommend that you do not use the 
+                        <a href="https://appsanywhere.durham.ac.uk/" title="Apps Anywhere" 
+                           target="_blank" rel="noreferrer noopener">AppsAnywhere</a>
+                        installer, as you must then launch all other software 
+                        (e.g. File explorer, internet browser) via AppsAnywhere
                         in order for files to be visible to RStudio. <a onclick='$("#aa-help").slideDown(); $(this).hide()'>[details]</a>
                       </li>
                       <li class="hidden bulb" id="aa-help">
-                        <p style='font-style:italic;'>Our demonstrator Alavya explains:</p>
+                        <p style='font-style:italic;'>Our demonstrator explains:</p>
                         <p>
                           I would try to recommend not using Apps Anywhere (AA) on Mac systems as it can get very fiddly unnecessarily.
                         </p>
@@ -101,42 +100,15 @@
                     </ul>
                   </li>
                   <li>
-                    From within RStudio, install the packages 'remotes' and 'Ternary'
-                    (case sensitive).
-                    <ul>
-                      <li>
-                        Method 1: Use the toolbar Tools → Install Packages:
-                        <ul>
-                          <li>Install from: <code>CRAN</code></li>
-                          <li>Packages: <code>remotes, Ternary</code></li>
-                          <li>Install dependencies: ticked</li>
-                        </ul>
-                      </li>
-                      <!--li>
-                        OR Method 2: Use the "Packages" tab (lower right-hand panel)
-                        <ul>
-                          <li>Select the "Packages" tab</li>
-                          <li>Click the "Install" button</li>
-                          <li>Install from: CRAN</li>
-                          <li>Packages: remotes, Ternary</li>
-                          <li>Install dependencies: ticked</li>
-                        </ul>
-                      </li-->
-                      <li>
-                        OR Method 2: Run the command 
-                        <code>install.packages("<em>PACKAGE NAME</em>")</code> 
-                        in the console.
-                      </li>
-                    </li>
-                  </ul>
-                  <li>
-                    Then, install the teaching package 'palec' by running the command
-                    <code>remotes::install_github("smithlabdurham/palec", dependencies = TRUE)</code>
+                    From within RStudio, install the teaching package 'palec' by running the command
+                    <code>install.packages("palec", repos = c(getOption("repos"), "https://ms609.github.io/packages"))</code>
                     in the console.
                   </li>
-                  <li class="bulb">
-                    There's no need to update packages, or to install packages from source, which is time consuming.
-                  </li>
+                  <ul>
+                    <li class="bulb">
+                      There's no need to update packages, or to install packages from source, which is time consuming.
+                    </li>
+                  </ul>
                 </ul>
                 <h4>Troubleshooting</h4>
                 
