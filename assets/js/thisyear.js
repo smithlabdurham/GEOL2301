@@ -1,4 +1,4 @@
-firstClass = new Date("2021-10-07");
+firstClass = new Date("2022-10-06");
 wenlockDeadline = new Date(firstClass.valueOf());
 wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17);
 
@@ -18,13 +18,13 @@ for (var i = 0; i != weeks.length; i++) {
 
 const links = {
   'wenlockGroups': 'https://docs.google.com/spreadsheets/d/1ABpa7W4V8ZStxXdezYaX3HtMmG7ms5vRleSv88YhuKU/edit',
-  'wenlockData': 'https://docs.google.com/spreadsheets/d/1WNVOwmHKelVqv0E4LokSrI9LzikeRA_GnRqRQG6mXE4/edit',
+  'wenlockData': 'https://docs.google.com/spreadsheets/d/1CQ9Gn4paj8qBJlILFFtDrvOFHufdtXG2DIEcXGiPJ3g/edit',
   'wenlockRubric': 'pdf/WenlockRubric.pdf',
   'notebookRubric': 'pdf/NotebookRubric.pdf',
   'wenlockSlabs': 'https://sketchfab.com/smithlabdurham/collections/wenlock-limestone-samples',
-  'discussionBoard': 'https://blackboard.durham.ac.uk/ultra/courses/_5402_1/outline/discussion/_90227_1?view=discussions&courseId=_5402_1',
-  'blackboard': 'https://blackboard.durham.ac.uk/ultra/courses/_5402_1/outline',
-  'readingList': 'https://rl.talis.com/3/durham/lists/719102AD-4B96-6917-9F03-5537497D5654.html',
+  'discussionBoard': 'https://blackboard.durham.ac.uk/ultra/courses/_43451_1/outline/discussion/_851150_1?courseId=_43451_1',
+  'blackboard': 'https://blackboard.durham.ac.uk/ultra/courses/_43451_1/outline',
+  'readingList': 'https://rl.talis.com/3/durham/lists/4B349AEB-4D6B-CCC6-19DB-560AD8E1A68A.html',
   'jupyter': 'https://notebooks.dmaitre.phyip3.dur.ac.uk/palaeoecosystems-2021/'
 };
 
@@ -34,4 +34,3 @@ for (const [aClass, aHref] of Object.entries(links)) {
     a[i].href = aHref;
   }
 }
-
