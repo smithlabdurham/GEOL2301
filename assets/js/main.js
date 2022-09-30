@@ -57,26 +57,28 @@ function FooterButton(liText, href, icon = '', label) {
     
     let footer = document.getElementById('footer');
     if (footer) {
-      let ansIcons = document.createElement('ul');
-      $(ansIcons).addClass("icons");
-      
-      if (AnswersVisible()) {
-        $(ansIcons)
-          .append($('<li>Answers:</li>'))
-          .append(FooterButton('hide', "javascript:$('.hidden').slideUp();",
-                               'fa-book', 'Hide answers'))
-          .append(FooterButton('show', "javascript:$('.hidden').slideDown();",
-                               'fa-book-open', 'Show all answers'))
-          .append(FooterButton('print', 'javascript:window.print();',
-                               'fa-print', 'Print page with answers'))
+      if (document.getElementsByTagName('textarea').length) {
+        let ansIcons = document.createElement('ul');
+        $(ansIcons).addClass("icons");
+        
+        if (AnswersVisible()) {
+          $(ansIcons)
+            .append($('<li>Answers:</li>'))
+            .append(FooterButton('hide', "javascript:$('.hidden').slideUp();",
+                                 'fa-book', 'Hide answers'))
+            .append(FooterButton('show', "javascript:$('.hidden').slideDown();",
+                                 'fa-book-open', 'Show all answers'))
+            .append(FooterButton('print', 'javascript:window.print();',
+                                 'fa-print', 'Print page with answers'))
+        }
+        else {
+          $(ansIcons)
+            .append(FooterButton('Print page with answers',
+                                 'javascript:window.print()', 'fa-print',
+                                 'Print page with answers'))
+        }
+        $(footer).prepend(ansIcons);
       }
-      else {
-        $(ansIcons)
-          .append(FooterButton('Print page with answers',
-                               'javascript:window.print()', 'fa-print',
-                               'Print page with answers'))
-      }
-      $(footer).prepend(ansIcons);
       
       gotoIcons = document.createElement('ul')
       $(gotoIcons).addClass('icons');
