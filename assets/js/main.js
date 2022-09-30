@@ -4,6 +4,22 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+function AnswersVisible() {
+  let params = new URLSearchParams(location.search);
+  if (params.get("quiz") == "qa") {
+    return true;
+  }
+  return false;
+}
+
+function FooterButton(liText, href, icon = '', label) {
+  return $('<li>' + liText + ' </li>')
+    .append($('<a href="' + href + '"></a>')
+    .addClass('icon solid ' + icon)
+    .append($('<span class="label">' + label + '</span>'))
+  );
+}
+
 (function($) {
 
 	var	$window = $(window),
@@ -27,9 +43,52 @@
 
     $('.written').each( function (index) {
       var writeHere = document.createElement("textarea");
-      writeHere.placeholder = "Type your answer here. Clicking the question text will reveal the answer.";
+      if (AnswersVisible()) {
+        writeHere.placeholder = "Type your answer here. Clicking the question text will reveal an answer.";
+      } else {
+        writeHere.placeholder = "Type your answer here. Save answers using the 'print' option at the end of the page.";
+      }
       this.parentNode.insertBefore(writeHere, this);        
     })
+    
+    if (AnswersVisible()) {
+      $('.onlyIfAnswersGiven').removeClass("onlyIfAnswersGiven");
+    }
+    
+    let footer = document.getElementById('footer');
+    if (footer) {
+      let ansIcons = document.createElement('ul');
+      $(ansIcons).addClass("icons");
+      
+      if (AnswersVisible()) {
+        $(ansIcons)
+          .append($('<li>Answers:</li>'))
+          .append(FooterButton('hide', "javascript:$('.hidden').slideUp();",
+                               'fa-book', 'Hide answers'))
+          .append(FooterButton('show', "javascript:$('.hidden').slideDown();",
+                               'fa-book-open', 'Show all answers'))
+          .append(FooterButton('print', 'javascript:window.print();',
+                               'fa-print', 'Print page with answers'))
+      }
+      else {
+        $(ansIcons)
+          .append(FooterButton('Print page with answers',
+                               'javascript:window.print()', 'fa-print',
+                               'Print page with answers'))
+      }
+      $(footer).prepend(ansIcons);
+      
+      gotoIcons = document.createElement('ul')
+      $(gotoIcons).addClass('icons');
+      $(gotoIcons)
+        .append('<li>Go to:</li>')
+        .append(FooterButton('top', '#', 'fa-arrow-up', 'Top'))
+        .append(FooterButton('discussion', '', 'discussionBoard fa-comment', 'Discussion board'))
+        .append(FooterButton('index', 'index.html', 'fa-bars', 'Index'))
+        .append(FooterButton('blackboard', '', 'blackboard fa-university', 'Blackboard'))
+      ;
+      $(footer).prepend(gotoIcons);
+    }
 
 	// Scrolly.
 		$('.scrolly').scrolly();
@@ -37,7 +96,9 @@
 })(jQuery);
 
 function Reveal(id) {
-  $('#' + id).slideToggle();
+  if (AnswersVisible()) {
+    $('#' + id).slideToggle();
+  }
 }
 
 function Right(el, id) {
