@@ -44,9 +44,9 @@ function FooterButton(liText, href, icon = '', label) {
     $('.written').each( function (index) {
       var writeHere = document.createElement("textarea");
       if (AnswersVisible()) {
-        writeHere.placeholder = "Type your answer here. Clicking the question text will reveal an answer.";
+        writeHere.placeholder = "Type your answer here.\u000AClicking the question text will reveal an answer.";
       } else {
-        writeHere.placeholder = "Type your answer here. Save answers using the 'print' option at the end of the page.";
+        writeHere.placeholder = "Type your answer here.\u000ASave answers using the 'print' option at the end of the page.";
       }
       this.parentNode.insertBefore(writeHere, this);        
     })
