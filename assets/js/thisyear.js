@@ -1,6 +1,6 @@
 firstClass = new Date("2022-10-06");
 wenlockDeadline = new Date(firstClass.valueOf());
-wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17 + 1);
+wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17 + 1); // +1 as concession to Bank Holiday
 
 days = document.querySelectorAll('[day]');
 for (var i = 0; i != days.length; i++) {
