@@ -55,6 +55,7 @@ function FooterButton(liText, href, icon = '', label) {
       $('.onlyIfAnswersGiven').removeClass("onlyIfAnswersGiven");
     }
     
+    
     let footer = document.getElementById('footer');
     if (footer) {
       if (document.getElementsByTagName('textarea').length) {
@@ -80,7 +81,7 @@ function FooterButton(liText, href, icon = '', label) {
         $(footer).prepend(ansIcons);
       }
       
-      gotoIcons = document.createElement('ul')
+      let gotoIcons = document.createElement('ul')
       $(gotoIcons).addClass('icons');
       $(gotoIcons)
         .append('<li>Go to:</li>')
@@ -93,6 +94,17 @@ function FooterButton(liText, href, icon = '', label) {
       $(footer).prepend(gotoIcons);
     }
 
+    let reading = document.getElementById('further-reading');
+    if (reading) {
+      let readingLinks = document.createElement('ul');
+      $(readingLinks).addClass('icons');
+      $(readingLinks)
+        .append(FooterButton('How to access articles', 'access-articles.html', 'fa-unlock', 'Access articles'))
+        .append(FooterButton('Course reading list', '', 'readingList fa-scroll', 'Reading list'))
+        ;
+      $(footer).prepend(readingLinks);
+    }
+    
 	// Scrolly.
 		$('.scrolly').scrolly();
 
