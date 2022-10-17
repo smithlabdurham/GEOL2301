@@ -85,8 +85,9 @@ function FooterButton(liText, href, icon = '', label) {
       $(gotoIcons)
         .append('<li>Go to:</li>')
         .append(FooterButton('top', '#', 'fa-arrow-up', 'Top'))
-        .append(FooterButton('discussion', '', 'discussionBoard fa-comment', 'Discussion board'))
         .append(FooterButton('index', 'index.html', 'fa-bars', 'Index'))
+        .append(FooterButton('discussion', '', 'discussionBoard fa-comment', 'Discussion board'))
+        .append(FooterButton('encore', 'https://durham.cloud.panopto.eu/', 'fa-play', 'Encore'))
         .append(FooterButton('blackboard', '', 'blackboard fa-university', 'Blackboard'))
       ;
       $(footer).prepend(gotoIcons);
