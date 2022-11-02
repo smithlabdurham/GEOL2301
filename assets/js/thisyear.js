@@ -16,7 +16,7 @@ for (var i = 0; i != weeks.length; i++) {
   weeks[i].innerHTML = dateI.toDateString();
 }
 
-const links = {
+const classLinks = {
   'wenlockGroups': 'https://docs.google.com/spreadsheets/d/1ABpa7W4V8ZStxXdezYaX3HtMmG7ms5vRleSv88YhuKU/edit',
   'wenlockData': 'https://docs.google.com/spreadsheets/d/1CQ9Gn4paj8qBJlILFFtDrvOFHufdtXG2DIEcXGiPJ3g/edit',
   'wenlockRubric': 'pdf/WenlockRubric.pdf',
@@ -28,7 +28,7 @@ const links = {
   'jupyter': 'https://notebooks.dmaitre.phyip3.dur.ac.uk/palaeoecosystems-2021/'
 };
 
-for (const [aClass, aHref] of Object.entries(links)) {
+for (const [aClass, aHref] of Object.entries(classLinks)) {
   const a = document.getElementsByClassName(aClass);
   for (var i = 0; i != a.length; i++) {
     a[i].href = aHref;
