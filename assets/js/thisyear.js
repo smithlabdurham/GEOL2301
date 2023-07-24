@@ -1,6 +1,6 @@
 firstClass = new Date("2023-10-02"); // In 2024: Remove hard-coded deadline on row 5 of index.html
 wenlockDeadline = new Date(firstClass.valueOf());
-wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17 + 1); // +1 as concession to Bank Holiday
+wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17 + 9);
 
 days = document.querySelectorAll('[day]');
 for (var i = 0; i != days.length; i++) {
