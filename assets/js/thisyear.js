@@ -1,4 +1,4 @@
-firstClass = new Date("2022-10-06");
+firstClass = new Date("2023-10-02");
 wenlockDeadline = new Date(firstClass.valueOf());
 wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17 + 1); // +1 as concession to Bank Holiday
 
