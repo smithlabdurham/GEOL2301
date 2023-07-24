@@ -237,11 +237,29 @@
         addRow(8,	"Case study: Burgess Shale", "Data analysis");
         addRow(9,	"Ichnology", "Data analysis / writeup");
         addRow(10, "Productivity and macroevolution", "Peer review exercise");
+        
+        draftDeadline = document.createElement('tr')
+        dddl1 = document.createElement('td');
+        dddl1.innerHTML = 'Deadline';
+        addWidth(dddl1, 2);
+        dddl2 = document.createElement('td');
+        addWidth(dddl2, 2);
+        draftDate = new Date(firstClass.valueOf());
+        draftDate.setDate(draftDate.getDate() + (7 * (10 - 1)) + 3);
+        dddl2.innerHTML = draftDate.toDateString();
+        dddl3 = document.createElement('td');
+        dddl3.colSpan = 2;
+        addWidth(dddl3, 8);
+        dddl3.innerHTML = '<strong>Draft submission</strong> of <a href="wenlock.html">Wenlock project</a>';
+        dddl3.classList.add('task');
+        draftDeadline.appendChild(dddl1);
+        draftDeadline.appendChild(dddl2);
+        draftDeadline.appendChild(dddl3);
+        
         deadline = document.createElement('tr')
         ddl1 = document.createElement('td');
         ddl1.innerHTML = 'Deadline';
         addWidth(ddl1, 2);
-        const dat = document.createElement('td');
         ddl2 = document.createElement('td');
         addWidth(ddl2, 2);
         ddl2.innerHTML = wenlockDeadline.toDateString();
@@ -253,6 +271,8 @@
         deadline.appendChild(ddl1);
         deadline.appendChild(ddl2);
         deadline.appendChild(ddl3);
+        
+        timetable.appendChild(draftDeadline)
         timetable.appendChild(deadline)
       </script>
 
