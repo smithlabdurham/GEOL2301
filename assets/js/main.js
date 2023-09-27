@@ -1,3 +1,12 @@
+/* Footer addition */
+function FooterButton(liText, href, icon = '', label) {
+  return $('<li>' + liText + ' </li>')
+    .append($('<a href="' + href + '"></a>')
+    .addClass('icon solid ' + icon)
+    .append($('<span class="label">' + label + '</span>'))
+  );
+}
+
 /*
 	Tessellate by HTML5 UP
 	html5up.net | @ajlkn
@@ -12,13 +21,6 @@ function AnswersVisible() {
   return false;
 }
 
-function FooterButton(liText, href, icon = '', label) {
-  return $('<li>' + liText + ' </li>')
-    .append($('<a href="' + href + '"></a>')
-    .addClass('icon solid ' + icon)
-    .append($('<span class="label">' + label + '</span>'))
-  );
-}
 
 (function($) {
 
@@ -55,7 +57,7 @@ function FooterButton(liText, href, icon = '', label) {
       $('.onlyIfAnswersGiven').removeClass("onlyIfAnswersGiven");
     }
     
-    
+    // Populate footer
     let footer = document.getElementById('footer');
     if (footer) {
       if (document.getElementsByTagName('textarea').length) {
