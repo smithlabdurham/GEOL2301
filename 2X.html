@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<!--
+	Template: Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>GEOL2301: Palaeoecosystems</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+    <section id="header" class="dark">
+      <header>
+        <h1>GEOL2301: Palaeoecosystems</h1>
+        <p>Colonizing the environment: Octave exercise</p>
+      </header>
+    </section>
+
+  <!-- First -->
+    <section id="first" class="main">
+      <header>
+        <div class="container">
+          <h2>Creating an assemblage</h2>
+        </div>
+      </header>
+      <div class="content dark style1">
+        <div class="container">
+          <div class="row">
+            <div class="col-8 col-12-narrow">
+              <h3>
+                Stage One: Settlement
+              </h3>
+              <p>Choose whether to stick your hand up or down.</p>
+              <ol>
+                <li>
+                  If you <strong>match</strong> the environment, you colonize:
+                  <ul>
+                    <li>Remain standing</li>
+                    <li>your species has one individual in this environment</li>
+                  </ul>
+                </li>
+                <li>
+                  If you <strong>do not match</strong> the environment, you die:
+                  <ul>
+                    <li>Sit down</li>
+                    <li>You have zero individuals in this environment</li>
+                </li>
+              </ol>
+              
+              <h3>
+                Stage Two: Proliferation
+              </h3>
+              <p>Choose whether to stick your hand up or down.</p>
+              <ol>
+                <li>
+                  If you <strong>match</strong> the environment, you reproduce:
+                  <ul>
+                    <li>Remain standing</li>
+                    <li>Double your species' individual count in this environment</li>
+                  </ul>
+                </li>
+                <li>
+                  If you <strong>do not match</strong> the environment, you die:
+                  <ul>
+                    <li>Sit down</li>
+                    <li>Record your final individual count in this environment</li>
+                </li>
+              </ol>
+              
+              <h3 ondblclick="ResetPop()">Stage Three: Disturbance (×2)</h3>
+              <p>The environment is peturbed!</p>
+              <p>Everything dies and a new settlement phase begins.</p>
+            </div>
+            <div class="col-4 col-12-narrow featured">
+              <script>
+                "use strict";
+                let pop = 1;
+                function ResetPop() {
+                  document.getElementById("count").innerHTML = 0;
+                  pop = 1;
+                  hand.classList.remove("fa-hand-point-up");
+                  hand.classList.remove("fa-hand-point-down");
+                  hand.classList.add("fa-question-circle");
+                  
+                }
+                function Handom() {
+                  let hand = document.getElementById("hand");
+                  // hand.classList.remove("fa-question-circle");
+                  // hand.classList.add("fa-hand-rock");
+                  hand.classList.add("fa-question-circle");
+                  new Promise(resolve => setTimeout(resolve, 600)).then(() => UpOrDown());
+                }
+                function UpOrDown() {
+                  let hand = document.getElementById("hand");
+                  hand.classList.remove("fa-hand-rock");
+                  hand.classList.remove("fa-question-circle");
+                  if (Math.floor(Math.random() * 2) == 0) {
+                    hand.classList.add("fa-hand-point-up");
+                    hand.classList.remove("fa-hand-point-down");
+                  } else {
+                    hand.classList.remove("fa-hand-point-up");
+                    hand.classList.add("fa-hand-point-down");
+                  }
+                  
+                  document.getElementById("count").innerHTML = pop;
+                  pop += pop;
+                }
+              </script>
+              <span id="hand" class="fa fa-8x fa-question-circle" onclick="Handom()"></span>
+              <p style="margin-top: 2.8em; ">The Hand of the Environment</p>
+              <p id="count" style="font-size: 8em; font-weight: bold; margin-top: 1em;">0</p>
+              <p style="margin-top: 2.8em;">Survivors&rsquo; population size</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-12-narrow">          
+              <h3>Stage Four: Discovery</h3>
+              <p>The remains of your species are discovered!</p>
+              <p>Sum the total individuals from <strong>all three iterations</strong>.</p>
+            </div>
+          </div>
+              
+          <div class="row">
+            <div class="col-8 col-12-narrow">        
+              <h3>Stage Five: Tabulation</h3>
+              <ol>
+                <li>Tabulate total individual counts in a Human Histogram</li>
+                <p>Bin boundaries: 
+                  <span style="font-size: xx-large">
+                    1–10; <strong>11–20;</strong> 21–30; <strong>31–&hellip;</strong>
+                  </span>
+                </p>
+                <li>Tabulate total individual counts in a Human Octave Plot</li>
+                <p>Bin boundaries: 
+                  <span style="font-size: xx-large">
+                    1; <strong>2–3;</strong> 4–7; <strong>8–15;</strong> 16–31; <strong>32–&hellip;</strong>
+                  </span>
+                </p>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<!-- Footer -->
+    <section id="footer">
+      <div class="copyright">
+        <ul class="menu">
+          <li>&copy; 2023 <a href="http://smithlabdurham.github.io/">Martin R. Smith</a>.</li>
+          <!--<li>All content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where noted.</li>-->
+          <li>Design: <a href="http://html5up.net" rel='noopener'>HTML5 UP</a></li>
+        </ul>
+      </div>
+    </section>
+
+		<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/thisyear.js"></script>
+
+	</body>
+</html>
