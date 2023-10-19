@@ -7,20 +7,50 @@ function FooterButton(liText, href, icon = '', label) {
   );
 }
 
-/*
-	Tessellate by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 function AnswersVisible() {
   let params = new URLSearchParams(location.search);
   if (params.get("quiz") == "qa") {
     return true;
   }
+  let path = window.location.pathname.split("/")
+  let week = path[path.length - 1].match(/^(\d+)S/);
+  if (week) {
+    let release = new Date(firstClass.valueOf());
+    // Release seven days after date of synchronous session
+    release.setDate(release.getDate() + (Number(week[1]) * 7));
+    console.log(release.toDateString())
+    return new Date().getTime() > release.getTime();
+  }
   return false;
 }
 
+function Reveal(id) {
+  if (AnswersVisible()) {
+    $('#' + id).slideToggle();
+  }
+}
+
+function Right(el, id) {
+  $('#' + id).slideDown();
+  $(el).removeClass('option');
+  $(el).addClass('right');
+}
+function Rightish(el, id) {
+  $('#' + id).slideDown();
+  $(el).removeClass('option');
+  $(el).addClass('rightish');
+}
+function Wrong(el, id) {
+  $('#' + id).slideDown();
+  $(el).removeClass('option');
+  $(el).addClass('wrong');
+}
+
+/*
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
 
 (function($) {
 
@@ -111,25 +141,3 @@ function AnswersVisible() {
 		$('.scrolly').scrolly();
 
 })(jQuery);
-
-function Reveal(id) {
-  if (AnswersVisible()) {
-    $('#' + id).slideToggle();
-  }
-}
-
-function Right(el, id) {
-  $('#' + id).slideDown();
-  $(el).removeClass('option');
-  $(el).addClass('right');
-}
-function Rightish(el, id) {
-  $('#' + id).slideDown();
-  $(el).removeClass('option');
-  $(el).addClass('rightish');
-}
-function Wrong(el, id) {
-  $('#' + id).slideDown();
-  $(el).removeClass('option');
-  $(el).addClass('wrong');
-}
