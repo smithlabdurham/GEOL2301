@@ -13,12 +13,11 @@ function AnswersVisible() {
     return true;
   }
   let path = window.location.pathname.split("/")
-  let week = path[path.length - 1].match(/^(\d+)S/);
+  let week = path[path.length - 1].match(/^(\d+)S?/);
   if (week) {
     let release = new Date(firstClass.valueOf());
     // Release seven days after date of synchronous session
     release.setDate(release.getDate() + (Number(week[1]) * 7));
-    console.log(release.toDateString())
     return new Date().getTime() > release.getTime();
   }
   return false;
@@ -74,17 +73,17 @@ function Wrong(el, id) {
 
 
     $('.written').each( function (index) {
-      var writeHere = document.createElement("textarea");
+      var writeHere = document.createElement('textarea');
       if (AnswersVisible()) {
         writeHere.placeholder = "Type your answer here.\u000AClicking the question text will reveal an answer.";
       } else {
         writeHere.placeholder = "Type your answer here.\u000ASave answers using the 'print' option at the end of the page.";
       }
       this.parentNode.insertBefore(writeHere, this);        
-    })
+    });
     
     if (AnswersVisible()) {
-      $('.onlyIfAnswersGiven').removeClass("onlyIfAnswersGiven");
+      $('.onlyIfAnswersGiven').removeClass('onlyIfAnswersGiven');
     }
     
     // Populate footer
