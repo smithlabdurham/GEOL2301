@@ -1,5 +1,7 @@
 firstClass = new Date("2023-10-02"); // In 2024: Remove hard-coded deadline on row 5 of index.html
 // wenlockDeadline = new Date("2024-01-08");
+// In 2024: Update classDatasetDeadline to day 40, unless teaching on Monday again; 
+// Better still, use a global variable to set this.
 wenlockDeadline = new Date(firstClass.valueOf());
 wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17 + 9);
 draftDeadline = new Date(firstClass.valueOf());
