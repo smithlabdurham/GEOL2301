@@ -1,3 +1,5 @@
+"use strict";
+
 /* Footer addition */
 function FooterButton(liText, href, icon = '', label) {
   return $('<li>' + liText + ' </li>')
