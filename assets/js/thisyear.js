@@ -30,7 +30,7 @@ const classLinks = {
   'discussionBoard': 'https://blackboard.durham.ac.uk/ultra/courses/_58040_1/outline/discussion/_2175474_1?view=discussions&courseId=_58040_1',
   'blackboard': 'https://blackboard.durham.ac.uk/ultra/courses/_58040_1/outline',
   'readingList': 'https://rl.talis.com/3/durham/lists/CEE9BDD6-054D-007A-93FF-F0D055AFDD3E.html',
-  'jupyter': 'https://notebooks.dmaitre.phyip3.dur.ac.uk/palaeoecosystems-2021/'
+  'jupyter': 'https://palaeoecosystems-2425.notebooks.danielmaitre.phyip3.dur.ac.uk/'
 };
 
 for (const [aClass, aHref] of Object.entries(classLinks)) {
