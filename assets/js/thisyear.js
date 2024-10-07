@@ -27,9 +27,9 @@ const classLinks = {
   'wenlockRubric': 'pdf/WenlockRubric.pdf',
   'notebookRubric': 'pdf/NotebookRubric.pdf',
   'wenlockSlabs': 'https://sketchfab.com/smithlabdurham/collections/wenlock-limestone-samples',
-  'discussionBoard': 'https://blackboard.durham.ac.uk/ultra/courses/_53963_1/outline/discussion/_1678911_1?courseId=_53963_1',
-  'blackboard': 'https://blackboard.durham.ac.uk/ultra/courses/_53963_1/outline',
-  'readingList': 'https://rl.talis.com/3/durham/lists/4E54C64F-DBE1-5B97-B7CD-BB56DBB4A229.html',
+  'discussionBoard': 'https://blackboard.durham.ac.uk/ultra/courses/_58040_1/outline/discussion/_2175474_1?view=discussions&courseId=_58040_1',
+  'blackboard': 'https://blackboard.durham.ac.uk/ultra/courses/_58040_1/outline',
+  'readingList': 'https://rl.talis.com/3/durham/lists/CEE9BDD6-054D-007A-93FF-F0D055AFDD3E.html',
   'jupyter': 'https://notebooks.dmaitre.phyip3.dur.ac.uk/palaeoecosystems-2021/'
 };
 
